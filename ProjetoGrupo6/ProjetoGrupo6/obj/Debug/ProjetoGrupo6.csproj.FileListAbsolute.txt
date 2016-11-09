@@ -138,3 +138,8 @@ C:\Users\clara\Desktop\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
 C:\Users\clara\Desktop\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
 C:\Users\clara\Desktop\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
 C:\Users\clara\Desktop\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
+C:\Users\clara\Documents\GitHub\cine7ProjetoIntegrador\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.dll
+C:\Users\clara\Documents\GitHub\cine7ProjetoIntegrador\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
+C:\Users\clara\Documents\GitHub\cine7ProjetoIntegrador\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
+C:\Users\clara\Documents\GitHub\cine7ProjetoIntegrador\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
+C:\Users\clara\Documents\GitHub\cine7ProjetoIntegrador\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
