@@ -1,0 +1,79 @@
+﻿* {
+margin:0;
+padding:0;
+list-style:none;
+vertical-align:baseline;
+}
+body {
+    font-family:'Century Gothic';
+}
+#logo {
+    font-size:22px;
+    color:#fff
+}
+a {
+    color:#fff;
+    text-decoration: none
+}
+#rodape {
+    font-family:'Century Gothic';
+    font-size:22px;
+    color:#fff;
+    text-align:right;
+    
+}
+.lista-menu-principal {
+    float:right;
+    top:30px;
+    font-family:'Century Gothic';
+    font-size:22px;
+}
+.lista-menu-principal li {
+    display: inline-block;
+}
+    .lista-menu-principal li a {
+    display: block;
+    padding: 40px 15px;
+}
+.pesquisa {
+    position:relative;
+    bottom:-52px;
+    left: 150px;
+    width: 144px;
+}
+.imagempesquisa {
+     position:relative;
+    bottom:-56px;
+    left: 126px;
+    height: 7px;
+    width: 14px;
+}
+#faleconosco {
+     position:relative;
+    bottom:25px;
+    left: -10px;
+
+}
+#cadastro {
+    position:relative;
+    left:80px;
+    font-size:20px;
+}
+
+/*FILME*/
+[id*="ContentPlaceHolder1_DataList1_usuarioLabel"]
+{  
+    font-weight:bold;
+}
+[id*="ContentPlaceHolder1_DataList1_descricaoLabel"]
+{
+    width:100%;
+    border:1px solid;
+    border-color:#000000;
+    border-radius:5px;
+    padding:5px;
+}
+#ContentPlaceHolder1_ImageButtonEstrela1
+{
+    background-image:url('/Imagens/estrelaAcesa.jpg');
+}
