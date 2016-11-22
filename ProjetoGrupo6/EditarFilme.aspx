@@ -35,7 +35,7 @@
         </asp:DetailsView>
     
     </div>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:2016TiiGrupo6ConnectionString %>" DeleteCommand="DELETE FROM filme WHERE (filme_id = @filme_id)" InsertCommand="INSERT INTO filme(filme_name, ano, sinopse, diretor, produtora, duracao) VALUES (@filme_name, @ano, @sinopse, @diretor, @produtora, @duracao)" SelectCommand="SELECT filme_id, filme_name, ano, sinopse, diretor, produtora, duracao FROM filme WHERE (filme_id = @filme_id)" UpdateCommand="UPDATE filme SET filme_name = @filme_name, ano = @ano, sinopse = @sinopse, diretor = @diretor, produtora = @produtora, duracao = @duracao WHERE (filme_id = @filme_id)">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:2016TiiGrupo6ConnectionString %>" DeleteCommand="DELETE FROM Filme WHERE (filme_id = @filme_id)" InsertCommand="INSERT INTO Filme(filme_name, ano, sinopse, diretor, produtora, duracao) VALUES (@filme_name, @ano, @sinopse, @diretor, @produtora, @duracao)" SelectCommand="SELECT filme_id, filme_name, ano, sinopse, diretor, produtora, duracao FROM Filme WHERE (filme_id = @filme_id)" UpdateCommand="UPDATE Filme SET filme_name = @filme_name, ano = @ano, sinopse = @sinopse, diretor = @diretor, produtora = @produtora, duracao = @duracao WHERE (filme_id = @filme_id)">
             <DeleteParameters>
                 <asp:Parameter Name="filme_id" />
             </DeleteParameters>
@@ -60,6 +60,8 @@
                 <asp:Parameter Name="filme_id" />
             </UpdateParameters>
         </asp:SqlDataSource>
+        &nbsp;<br />
+        <br />
         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/UsuarioAdministrador/UsuárioAdministrador.aspx">Voltar</asp:HyperLink>
     </form>
 </body>

@@ -13,5 +13,10 @@ namespace ProjetoGrupo6
         {
 
         }
+
+        protected void Login1_LoggedIn(object sender, EventArgs e)
+        {
+            Session["usuario"] = Login1.UserName;
+        }
     }
 }
