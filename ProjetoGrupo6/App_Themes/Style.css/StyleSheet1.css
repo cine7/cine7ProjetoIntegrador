@@ -69,11 +69,18 @@ a {
 {
     width:100%;
     border:1px solid;
-    border-color:#000000;
+    border-color:#f00;
     border-radius:5px;
     padding:5px;
 }
 #ContentPlaceHolder1_ImageButtonEstrela1
 {
     background-image:url('/Imagens/estrelaAcesa.jpg');
+}
+/*HOME USUÁRIO*/
+
+/*HOME USUÁRIO*/
+#ContentPlaceHolder1_ImagePerfil
+{
+   border-radius: 50%;
 }

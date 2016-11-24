@@ -40,7 +40,7 @@ namespace ProjetoGrupo6.CriarLogin
             aSQL.Parameters.AddWithValue("@dataNascimento", TextBoxDataNascimento.Text);
             aSQL.Parameters.AddWithValue("@pais", TextBoxPais.Text);
             aSQL.Parameters.AddWithValue("@sexo", TextBoxSexo.Text); 
-            aSQL.Parameters.AddWithValue("@caminhoImagem", "~/Imagens/" + FileUploadImagem.FileName);            
+            aSQL.Parameters.AddWithValue("@caminhoImagem", "~/Imagens/Perfil/" + FileUploadImagem.FileName);            
             UploadImagem();
             aSQL.ExecuteNonQuery();
             Response.Redirect("~/Login.aspx");
@@ -49,7 +49,7 @@ namespace ProjetoGrupo6.CriarLogin
         public void UploadImagem() 
         {
             string directory = Request.PhysicalApplicationPath;
-            FileUploadImagem.SaveAs(directory + FileUploadImagem.FileName);
+            FileUploadImagem.SaveAs(directory + "/Imagens/Perfil/" + FileUploadImagem.FileName);
         }
 
         

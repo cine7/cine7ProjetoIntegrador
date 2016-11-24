@@ -10,8 +10,6 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<script language="javascript" type="text/javascript">
-</script> 
 <body>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>

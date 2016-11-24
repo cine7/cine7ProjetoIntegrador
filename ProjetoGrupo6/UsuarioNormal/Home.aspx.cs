@@ -44,5 +44,15 @@ namespace ProjetoGrupo6.UsuarioNormal
 
             ImagePerfil.ImageUrl = caminhoImagem;
         }
+
+        protected void LinkButtonUsuarioPre(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void LinkButtonUsuario_PreRender(object sender, EventArgs e)
+        {
+
+        }
     }
 }

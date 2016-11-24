@@ -38,7 +38,7 @@ namespace ProjetoGrupo6.UsuarioNormal
             SqlCommand cmd4 = aSQLCon.CreateCommand();
             // define SQL do comando
             cmd4.CommandText = "Select usuarioSeguido FROM Segue where usuarioSeguidor = @usuarioSeguidor and usuarioSeguido = @usuarioSeguido";
-            cmd4.Parameters.AddWithValue("@usuarioSeguido", Request.QueryString["Usuario"].ToString());
+            cmd4.Parameters.AddWithValue("@usuarioSeguido", Request.QueryString["usuario"].ToString());
             cmd4.Parameters.AddWithValue("@usuarioSeguidor", usuario);
 
             SqlDataReader dr4 = cmd4.ExecuteReader();

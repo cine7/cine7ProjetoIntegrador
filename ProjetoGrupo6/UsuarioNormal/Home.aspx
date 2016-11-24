@@ -4,12 +4,11 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <p>
-        <asp:Image ID="ImagePerfil" runat="server" BorderStyle="Solid" />
+        <asp:Image ID="ImagePerfil" runat="server" BorderStyle="None" Width="100px" />
 </p>
     <p>
     FEED<asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1">
             <ItemTemplate>
-                <asp:LinkButton ID="LinkButtonUsuario" runat="server" ForeColor="Black">LinkButton</asp:LinkButton>
                 <asp:Label ID="nomeLabel" runat="server" Text='<%# Eval("nome") %>' />
                 <br />
                 tipo
