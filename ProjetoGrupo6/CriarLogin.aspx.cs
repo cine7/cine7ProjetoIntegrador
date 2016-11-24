@@ -40,7 +40,7 @@ namespace ProjetoGrupo6.CriarLogin
             aSQL.Parameters.AddWithValue("@dataNascimento", TextBoxDataNascimento.Text);
             aSQL.Parameters.AddWithValue("@pais", TextBoxPais.Text);
             aSQL.Parameters.AddWithValue("@sexo", TextBoxSexo.Text); 
-            aSQL.Parameters.AddWithValue("@caminhoImagem", Request.PhysicalApplicationPath + FileUploadImagem.FileName);            
+            aSQL.Parameters.AddWithValue("@caminhoImagem", "~/Imagens/" + FileUploadImagem.FileName);            
             UploadImagem();
             aSQL.ExecuteNonQuery();
             Response.Redirect("~/Login.aspx");
