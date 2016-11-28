@@ -39,7 +39,7 @@ namespace ProjetoGrupo6.DAL
         }
 
 
-        //DELETAR UM FILME DA LISTA DE FAVORITOS DE UM USUÁRIO
+        //DELETAR UM POST
         [DataObjectMethod(DataObjectMethodType.Delete)]
         public void Delete(Modelo.Post obj)
         {
@@ -56,5 +56,49 @@ namespace ProjetoGrupo6.DAL
             // Executa Comando
             cmd.ExecuteNonQuery();
         }
+
+        //SELECT NOS POST DE UM USUÁRIO
+        [DataObjectMethod(DataObjectMethodType.Select)]
+        public List<Modelo.Post> SelectAll()
+        {
+            // Variavel para armazenar um livro
+            Modelo.Post aPost;
+            // Cria Lista Vazia
+            List<Modelo.Post> aListPost = new List<Modelo.Post>();
+            // Cria Conexão com banco de dados
+            SqlConnection conn = new SqlConnection(connectionString);
+            // Abre conexão com o banco de dados
+            conn.Open();
+            // Cria comando SQL
+            SqlCommand cmd = conn.CreateCommand();
+            // define SQL do comando
+            cmd.CommandText = "Select * from Titles";
+            // Executa comando, gerando objeto DbDataReader
+            SqlDataReader dr = cmd.ExecuteReader();
+            // Le titulo do livro do resultado e apresenta no segundo rótulo
+            if (dr.HasRows)
+            {
+
+                while (dr.Read()) // Le o proximo registro
+                {
+                    // Cria objeto com dados lidos do banco de dados
+                    aPost = new Modelo.Post(
+                        Convert.ToInt32(dr["post_id"]),
+                        Convert.ToInt32(dr["tipo"]),
+                        Convert.ToInt32(dr["filme_id"]),
+                        dr["usuario"].ToString()
+                        );
+                    // Adiciona o livro lido à lista
+                    aListPost.Add(aPost);
+                }
+            }
+            // Fecha DataReader
+            dr.Close();
+            // Fecha Conexão
+            conn.Close();
+
+            return aListPost;
+        }
+
     }
 }

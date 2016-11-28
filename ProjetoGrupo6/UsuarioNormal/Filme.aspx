@@ -35,7 +35,7 @@
         <br />
         <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" RepeatColumns="1" DataKeyField="comentario_id" RepeatLayout="Flow" OnSelectedIndexChanged="DataList1_SelectedIndexChanged">
             <ItemTemplate>
-                &nbsp;<asp:Label ID="comentario_idLabel" runat="server" OnPreRender="comentario_idLabel_PreRender" Text='<%# Eval("comentario_id") %>' />
+                <asp:Label ID="comentario_idLabel" runat="server" OnPreRender="comentario_idLabel_PreRender" Text='<%# Eval("comentario_id") %>' />
                 <br />
                 <asp:LinkButton ID="LinkButtonUsuario" runat="server" ForeColor="Black" OnClick="LinkButtonUsuario_Click" OnPreRender="LinkButtonUsuario_PreRender" Text='<%# Eval("usuario") %>'></asp:LinkButton>
                 <br />
