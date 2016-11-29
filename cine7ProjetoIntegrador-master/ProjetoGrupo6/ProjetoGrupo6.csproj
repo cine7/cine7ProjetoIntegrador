@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{55E6C248-1514-4981-9586-70067605EAB3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjetoGrupo6</RootNamespace>
+    <AssemblyName>ProjetoGrupo6</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Style.css\bootstrap-theme.min.css" />
+    <Content Include="App_Themes\Style.css\bootstrap.min.css" />
+    <Content Include="App_Themes\Style.css\StyleSheet1.css" />
+    <Content Include="Imagens\cancelarInteresseButton.png" />
+    <Content Include="Imagens\cancelarVisto.png" />
+    <Content Include="Imagens\desfavoritarButton.png" />
+    <Content Include="Imagens\estrelaAcesa.jpg" />
+    <Content Include="Imagens\estrelaAcesa.png" />
+    <Content Include="Imagens\estrelaApagada.jpg" />
+    <Content Include="Imagens\estrelaApagada.png" />
+    <Content Include="Imagens\favoritarButton.png" />
+    <Content Include="Imagens\logoBranco.png" />
+    <Content Include="Imagens\lupaPesquisar.png" />
+    <Content Include="Imagens\sairButton.png" />
+    <Content Include="Imagens\tvInteresseButton.png" />
+    <Content Include="Imagens\vistoButton.png" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="UsuarioAnonimo\Filme.aspx" />
+    <Content Include="UsuarioAnonimo\Home.aspx" />
+    <Content Include="UsuarioAnonimo\ResultadoPesquisa.aspx" />
+    <Content Include="UsuarioAdministrador\UsuárioAdministrador.aspx" />
+    <Content Include="CriarLogin.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="UsuarioNormal\Filme.aspx" />
+    <Content Include="UsuarioNormal\Home.aspx" />
+    <Content Include="UsuarioNormal\ResultadoPesquisa.aspx" />
+    <Content Include="UsuarioNormal\Usuario.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="FaleConosco.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cine7Anonimo.Master.cs">
+      <DependentUpon>Cine7Anonimo.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cine7Anonimo.Master.designer.cs">
+      <DependentUpon>Cine7Anonimo.Master</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DALComentario.cs" />
+    <Compile Include="DAL\DALFilme.cs" />
+    <Compile Include="DAL\DALPost.cs" />
+    <Compile Include="DAL\DALRelacaoAvaliacao.cs" />
+    <Compile Include="DAL\DALRelacaoFavorito.cs" />
+    <Compile Include="DAL\DALRelacaoInteresse.cs" />
+    <Compile Include="DAL\DALRelacaoVisto.cs" />
+    <Compile Include="DAL\DALUsuario.cs" />
+    <Compile Include="Cine7Normal.Master.cs">
+      <DependentUpon>Cine7Normal.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cine7Normal.Master.designer.cs">
+      <DependentUpon>Cine7Normal.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Comentario.cs" />
+    <Compile Include="Modelo\Filme.cs" />
+    <Compile Include="Modelo\Post.cs" />
+    <Compile Include="Modelo\RelacaoAvaliacao.cs" />
+    <Compile Include="Modelo\RelacaoFavorito.cs" />
+    <Compile Include="Modelo\RelacaoInteresse.cs" />
+    <Compile Include="Modelo\RelacaoVisto.cs" />
+    <Compile Include="Modelo\Usuario.cs" />
+    <Compile Include="UsuarioAnonimo\Filme.aspx.cs">
+      <DependentUpon>Filme.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioAnonimo\Filme.aspx.designer.cs">
+      <DependentUpon>Filme.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioAnonimo\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioAnonimo\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioAnonimo\ResultadoPesquisa.aspx.cs">
+      <DependentUpon>ResultadoPesquisa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioAnonimo\ResultadoPesquisa.aspx.designer.cs">
+      <DependentUpon>ResultadoPesquisa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioAdministrador\UsuárioAdministrador.aspx.cs">
+      <DependentUpon>UsuárioAdministrador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioAdministrador\UsuárioAdministrador.aspx.designer.cs">
+      <DependentUpon>UsuárioAdministrador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CriarLogin.aspx.cs">
+      <DependentUpon>CriarLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CriarLogin.aspx.designer.cs">
+      <DependentUpon>CriarLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuarioNormal\Filme.aspx.cs">
+      <DependentUpon>Filme.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioNormal\Filme.aspx.designer.cs">
+      <DependentUpon>Filme.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioNormal\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioNormal\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioNormal\ResultadoPesquisa.aspx.cs">
+      <DependentUpon>ResultadoPesquisa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioNormal\ResultadoPesquisa.aspx.designer.cs">
+      <DependentUpon>ResultadoPesquisa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioNormal\Usuario.aspx.cs">
+      <DependentUpon>Usuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioNormal\Usuario.aspx.designer.cs">
+      <DependentUpon>Usuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FaleConosco.aspx.cs">
+      <DependentUpon>FaleConosco.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FaleConosco.aspx.designer.cs">
+      <DependentUpon>FaleConosco.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Cine7Anonimo.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Cine7Normal.Master" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:56778/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
