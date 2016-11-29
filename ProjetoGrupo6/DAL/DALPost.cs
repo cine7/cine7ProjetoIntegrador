@@ -50,8 +50,10 @@ namespace ProjetoGrupo6.DAL
             // Cria comando SQL
             SqlCommand com = conn.CreateCommand();
             // Define comando de exclusão
-            SqlCommand cmd = new SqlCommand("DELETE FROM Post WHERE post_id = @post_id", conn);
-            cmd.Parameters.AddWithValue("@post_id", obj.post_id);
+            SqlCommand cmd = new SqlCommand("DELETE FROM Post WHERE filme_id = @filme_id and usuario = @usuario and tipo = @tipo", conn);
+            cmd.Parameters.AddWithValue("@filme_id", obj.filme_id);
+            cmd.Parameters.AddWithValue("@usuario", obj.usuario);
+            cmd.Parameters.AddWithValue("@tipo", obj.tipo);
 
             // Executa Comando
             cmd.ExecuteNonQuery();
@@ -83,7 +85,6 @@ namespace ProjetoGrupo6.DAL
                 {
                     // Cria objeto com dados lidos do banco de dados
                     aPost = new Modelo.Post(
-                        Convert.ToInt32(dr["post_id"]),
                         Convert.ToInt32(dr["tipo"]),
                         Convert.ToInt32(dr["filme_id"]),
                         dr["usuario"].ToString()

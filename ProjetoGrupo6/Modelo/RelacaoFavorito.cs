@@ -7,7 +7,7 @@ namespace ProjetoGrupo6.Modelo
 {
     public class RelacaoFavorito
     {
-        public int comentario_id { get; set; }
+        public int relacaofavorito_id { get; set; }
         public DateTime dataHora { get; set; }
         public int filme_id { get; set; }
         public string usuario { get; set; }
@@ -15,15 +15,13 @@ namespace ProjetoGrupo6.Modelo
         // Construtor
         public RelacaoFavorito()
         {
-            this.comentario_id = 0;
+            this.relacaofavorito_id = 0;
             this.dataHora = DateTime.Now;
             this.filme_id = 0;
             this.usuario = "";
         }
-        public RelacaoFavorito(int acomentario_id, string adescricao, DateTime adataHora, int afilme_id, string ausuario)
+        public RelacaoFavorito(int afilme_id, string ausuario)
         {
-            this.comentario_id = acomentario_id;
-            this.dataHora = adataHora;
             this.filme_id = afilme_id;
             this.usuario = ausuario;
         }

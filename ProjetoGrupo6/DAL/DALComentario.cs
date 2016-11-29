@@ -44,9 +44,7 @@ namespace ProjetoGrupo6.DAL
                 {
                     // Cria objeto com dados lidos do banco de dados
                     aComentario = new Modelo.Comentario(
-                        Convert.ToInt32(dr["comentario_id"]),
                         dr["descricao"].ToString(),
-                        Convert.ToDateTime(dr["data"].ToString()),
                         Convert.ToInt32(dr["filme_id"].ToString()),
                         dr["usuario"].ToString()
                         );

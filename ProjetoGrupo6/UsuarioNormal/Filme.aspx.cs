@@ -22,6 +22,15 @@ namespace ProjetoGrupo6.UsuarioNormal
             }
 
             LabelFilme.Text = Request.QueryString["Filme"];
+
+            DAL.DALFilme DALFilme = new DAL.DALFilme();
+            Modelo.Filme filme = DALFilme.SelectFilme(LabelFilme.Text);
+            LabelFilme_id.Text = filme.filme_id.ToString();
+            LabelAno.Text = filme.ano.ToString();
+            LabelSinopse.Text = filme.sinopse.ToString();
+            LabelDiretor.Text = filme.diretor.ToString();
+            LabelProdutora.Text = filme.produtora.ToString();
+            LabelDuracao.Text = filme.duracao.ToString();
             string aSQLConecStr;
 
             // Lendo a conexão de dados do Web.Config
@@ -29,9 +38,9 @@ namespace ProjetoGrupo6.UsuarioNormal
 
             // Abrindo a Conexão com o banco de dados
             SqlConnection aSQLCon = new SqlConnection(aSQLConecStr);
-            aSQLCon.Open();
+            /*aSQLCon.Open();
 
-
+            
             // Cria comando SQL
             SqlCommand cmd = aSQLCon.CreateCommand();
             // define SQL do comando
@@ -55,7 +64,7 @@ namespace ProjetoGrupo6.UsuarioNormal
             }
 
             dr.Close();
-            aSQLCon.Close();
+            aSQLCon.Close();*/
 
             Session["filme_id"] = int.Parse(LabelFilme_id.Text);
 
@@ -299,52 +308,37 @@ namespace ProjetoGrupo6.UsuarioNormal
         {
             if (ImageButtonFavorito.ImageUrl == "~/Imagens/desfavoritarButton.png")
             {
-                string aSQLConecStr;
-
-                // Lendo a conexão de dados do Web.Config
-                aSQLConecStr = ConfigurationManager.ConnectionStrings["2016TiiGrupo6ConnectionString"].ConnectionString;
-
-                // Abrindo a Conexão com o banco de dados
-                SqlConnection aSQLCon = new SqlConnection(aSQLConecStr);
-                aSQLCon.Open();
-
-                // Executando o comando
-                SqlCommand aSQL = new SqlCommand("DELETE FROM RelacaoFavorito WHERE filme_id = @filme_id and usuario = @usuario", aSQLCon);
-                aSQL.Parameters.AddWithValue("@filme_id", int.Parse(LabelFilme_id.Text));
-                aSQL.Parameters.AddWithValue("@usuario", Session["usuario"].ToString());
-                aSQL.ExecuteNonQuery();
+                DAL.DALRelacaoFavorito DALRelacaofavorito = new DAL.DALRelacaoFavorito();
+                Modelo.RelacaoFavorito relacaofavorito = new Modelo.RelacaoFavorito(int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
+                DALRelacaofavorito.Delete(relacaofavorito);
                 ImageButtonFavorito.ImageUrl = "~/Imagens/favoritarButton.png";
 
+                DAL.DALPost DALPost = new DAL.DALPost();
+                Modelo.Post post = new Modelo.Post(1, int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
+                DALPost.Delete(post);
+
                 // Executando o comando
-                SqlCommand aSQL2 = new SqlCommand("DELETE FROM Post WHERE filme_id = @filme_id and usuario = @usuario and tipo = 1", aSQLCon);
+                /*SqlCommand aSQL2 = new SqlCommand("DELETE FROM Post WHERE filme_id = @filme_id and usuario = @usuario and tipo = 1", aSQLCon);
                 aSQL2.Parameters.AddWithValue("@filme_id", int.Parse(LabelFilme_id.Text));
                 aSQL2.Parameters.AddWithValue("@usuario", Session["usuario"].ToString());
-                aSQL2.ExecuteNonQuery();
+                aSQL2.ExecuteNonQuery();*/
             }
             else
             {
-                string aSQLConecStr;
-
-                // Lendo a conexão de dados do Web.Config
-                aSQLConecStr = ConfigurationManager.ConnectionStrings["2016TiiGrupo6ConnectionString"].ConnectionString;
-
-                // Abrindo a Conexão com o banco de dados
-                SqlConnection aSQLCon = new SqlConnection(aSQLConecStr);
-                aSQLCon.Open();
-
-                // Executando o comando
-                SqlCommand aSQL = new SqlCommand("INSERT INTO RelacaoFavorito(filme_id, usuario) VALUES (@filme_id, @usuario)", aSQLCon);
-                aSQL.Parameters.AddWithValue("@filme_id", int.Parse(LabelFilme_id.Text));
-                aSQL.Parameters.AddWithValue("@usuario", Session["usuario"].ToString());
-                aSQL.ExecuteNonQuery();
+                DAL.DALRelacaoFavorito DALRelacaofavorito = new DAL.DALRelacaoFavorito();
+                Modelo.RelacaoFavorito relacaofavorito = new Modelo.RelacaoFavorito(int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
+                DALRelacaofavorito.Insert(relacaofavorito);
                 ImageButtonFavorito.ImageUrl = "~/Imagens/desfavoritarButton.png";
 
+                DAL.DALPost DALPost = new DAL.DALPost();
+                Modelo.Post post = new Modelo.Post(1, int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
+                DALPost.Insert(post);
 
                 // Executando o comando
-                SqlCommand aSQL2 = new SqlCommand("INSERT INTO Post(tipo, filme_id, usuario) VALUES (1, @filme_id, @usuario)", aSQLCon);
+                /*SqlCommand aSQL2 = new SqlCommand("INSERT INTO Post(tipo, filme_id, usuario) VALUES (1, @filme_id, @usuario)", aSQLCon);
                 aSQL2.Parameters.AddWithValue("@filme_id", int.Parse(LabelFilme_id.Text));
                 aSQL2.Parameters.AddWithValue("@usuario", Session["usuario"].ToString());
-                aSQL2.ExecuteNonQuery();
+                aSQL2.ExecuteNonQuery();*/
 
             }
         }

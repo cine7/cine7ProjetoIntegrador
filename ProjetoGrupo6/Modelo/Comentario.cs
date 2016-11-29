@@ -16,17 +16,13 @@ namespace ProjetoGrupo6.Modelo
         // Construtor
         public Comentario()
         {
-            this.comentario_id = 0;
             this.descricao = "";
-            this.data = DateTime.Now;
             this.filme_id = 0;
             this.usuario = "";
         }
-        public Comentario(int acomentario_id, string adescricao, DateTime adata, int afilme_id, string ausuario)
+        public Comentario(string adescricao, int afilme_id, string ausuario)
         {
-            this.comentario_id = acomentario_id;
             this.descricao = adescricao;
-            this.data = adata;
             this.filme_id = afilme_id;
             this.usuario = ausuario;
         }

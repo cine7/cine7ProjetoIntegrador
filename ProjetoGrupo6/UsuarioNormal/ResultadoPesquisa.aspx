@@ -2,16 +2,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" AllowSorting="True" Width="80px" OnRowCommand="GridView1_RowCommand" CellPadding="4" ForeColor="#333333" GridLines="None">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" AllowSorting="True" Width="80px" OnRowCommand="GridView1_RowCommand" CellPadding="4" ForeColor="#333333" GridLines="None">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
-<asp:BoundField DataField="filme_id" HeaderText="filme_id" SortExpression="filme_id"></asp:BoundField>
                 <asp:BoundField DataField="filme_name" HeaderText="filme_name" SortExpression="filme_name" />
-                <asp:BoundField DataField="ano" HeaderText="ano" SortExpression="ano" />
-                <asp:BoundField DataField="sinopse" HeaderText="sinopse" SortExpression="sinopse" />
-                <asp:BoundField DataField="diretor" HeaderText="diretor" SortExpression="diretor" />
-                <asp:BoundField DataField="produtora" HeaderText="produtora" SortExpression="produtora" />
-                <asp:BoundField DataField="duracao" HeaderText="duracao" SortExpression="duracao" />
+                <asp:ButtonField CommandName="Acessar" Text="Acessar" />
             </Columns>
             <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
             <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
@@ -28,13 +23,19 @@
                 <asp:SessionParameter Name="obj" SessionField="filme_name" Type="Object" />
             </SelectParameters>
     </asp:ObjectDataSource>
-    <asp:DataList ID="DataList1" runat="server">
+    <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1">
+        <ItemTemplate>
+            filme_name:
+            <asp:Label ID="filme_nameLabel" runat="server" Text='<%# Eval("filme_name") %>' />
+            <br />
+            <br />
+        </ItemTemplate>
     </asp:DataList>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:2016TiiGrupo6ConnectionString %>" SelectCommand="select filme_name from Filme
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:2016TiiGrupo6ConnectionString %>" SelectCommand="Select filme_name from Filme
 where filme_name like '%' + @filme_name + '%'">
             <SelectParameters>
                 <asp:SessionParameter Name="filme_name" SessionField="filme_name" />
             </SelectParameters>
-        </asp:SqlDataSource>
+    </asp:SqlDataSource>
         <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/UsuarioNormal/Home.aspx">Voltar</asp:HyperLink>
 </asp:Content>
