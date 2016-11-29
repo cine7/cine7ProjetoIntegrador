@@ -13,22 +13,13 @@ namespace ProjetoGrupo6.UsuarioNormal {
     public partial class Filme {
         
         /// <summary>
-        /// LabelFilme control.
+        /// Image1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelFilme;
-        
-        /// <summary>
-        /// LabelFilme_id control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelFilme_id;
+        protected global::System.Web.UI.WebControls.Image Image1;
         
         /// <summary>
         /// ImageButtonFavorito control.
@@ -56,6 +47,24 @@ namespace ProjetoGrupo6.UsuarioNormal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton ImageButtonInteresse;
+        
+        /// <summary>
+        /// LabelFilme control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelFilme;
+        
+        /// <summary>
+        /// LabelFilme_id control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelFilme_id;
         
         /// <summary>
         /// LabelAno control.

@@ -3,6 +3,10 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-3"></div>
+            
         <asp:Label ID="LabelFilme" runat="server" Text="Label"></asp:Label>
             <asp:Label ID="LabelFilme_id" runat="server" Text="Label" Visible="False"></asp:Label>
             <br />
@@ -20,10 +24,8 @@
             <br />
             <br />
             <asp:Label ID="LabelDuracao" runat="server" Text="Label"></asp:Label>
-            <br />S
-            <div class="row">
-                <div class="col-md-3 col-sm-6"></div>
-                <div class="col-md-6 col-sm-6">
+            <br />
+        </div>
                     <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" RepeatColumns="1">
                         <ItemTemplate>
                             <br />
@@ -36,14 +38,11 @@
                         </ItemTemplate>
            
                   </asp:DataList>
-                </div>
-                <div class="col-md-3 col-sm-3"></div>
-            </div>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:2016TiiGrupo6ConnectionString %>" SelectCommand="SELECT [descricao], [usuario], [data] FROM [Comentario] WHERE filme_id = @filme_id">
                 <SelectParameters>
                     <asp:SessionParameter Name="filme_id" SessionField="filme_id" />
                 </SelectParameters>
             </asp:SqlDataSource>
             <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Voltar</asp:LinkButton>
-        </div>
+    </div>
 </asp:Content>

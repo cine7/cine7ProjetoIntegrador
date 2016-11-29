@@ -45,11 +45,11 @@ namespace ProjetoGrupo6.DAL
                     aFilme = new Modelo.Filme(
                         Convert.ToInt32(dr["filme_id"]),
                         dr["filme_name"].ToString(),
-                        Convert.ToInt32(dr["filme_id"]),
-                        dr["filme_name"].ToString(),
-                        dr["filme_name"].ToString(),
-                        dr["filme_name"].ToString(),
-                        Convert.ToInt32(dr["filme_id"])
+                        Convert.ToInt32(dr["ano"]),
+                        dr["sinopse"].ToString(),
+                        dr["diretor"].ToString(),
+                        dr["produtora"].ToString(),
+                        Convert.ToInt32(dr["duracao"])
                         );
                     // Adiciona o livro lido à lista
                     aListFilme.Add(aFilme);

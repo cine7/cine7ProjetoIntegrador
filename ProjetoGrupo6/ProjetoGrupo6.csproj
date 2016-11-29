@@ -58,6 +58,8 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Themes\Style.css\bootstrap-theme.min.css" />
+    <Content Include="App_Themes\Style.css\bootstrap.min.css" />
     <Content Include="App_Themes\Style.css\StyleSheet1.css" />
     <Content Include="Imagens\cancelarInteresseButton.png" />
     <Content Include="Imagens\cancelarVisto.png" />
@@ -200,10 +202,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Cine7Normal.Master" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_Themes\Style.css\bootstrap-theme.min.css.map" />
-    <Content Include="App_Themes\Style.css\bootstrap.min.css.map" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

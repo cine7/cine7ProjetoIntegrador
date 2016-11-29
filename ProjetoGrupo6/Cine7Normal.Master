@@ -5,14 +5,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title></title>
-     <link href="App_Themes/Style.css/bootstrap-theme-min.css.map" rel="stylesheet" />
+    <link href="/App_Themes/Style.css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/App_Themes/Style.css/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="App_Themes/Style.css/StyleSheet1.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
     <form id="form1" runat="server">
     <div>
           <div class="clearfix" style=" width:auto; height:100px; background-color:#3D0207">
