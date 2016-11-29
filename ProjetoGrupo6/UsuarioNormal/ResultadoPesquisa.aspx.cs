@@ -45,5 +45,11 @@ namespace ProjetoGrupo6.UsuarioNormal
             }
         }
 
+        protected void LinkButtonFilme_name_Click(object sender, EventArgs e)
+        {
+            String filme_name = (sender as LinkButton).Text;
+            Response.Redirect("~/UsuarioNormal/Usuario.aspx?Usuario=" + filme_name);
+        }
+
     }
 }

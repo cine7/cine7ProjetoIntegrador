@@ -18,19 +18,11 @@
             <SortedDescendingCellStyle BackColor="#FCF6C0" />
             <SortedDescendingHeaderStyle BackColor="#820000" />
         </asp:GridView>
-        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="SelectFilme" TypeName="ProjetoGrupo6.DAL.DALFilme">
+        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="SelectAllFilme" TypeName="ProjetoGrupo6.DAL.DALFilme">
             <SelectParameters>
                 <asp:SessionParameter Name="obj" SessionField="filme_name" Type="Object" />
             </SelectParameters>
     </asp:ObjectDataSource>
-    <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1">
-        <ItemTemplate>
-            filme_name:
-            <asp:Label ID="filme_nameLabel" runat="server" Text='<%# Eval("filme_name") %>' />
-            <br />
-            <br />
-        </ItemTemplate>
-    </asp:DataList>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:2016TiiGrupo6ConnectionString %>" SelectCommand="Select filme_name from Filme
 where filme_name like '%' + @filme_name + '%'">
             <SelectParameters>

@@ -56,5 +56,42 @@ namespace ProjetoGrupo6.DAL
             // Executa Comando
             cmd.ExecuteNonQuery();
         }
+
+        //SELECT PARA CONFERIR SE HÁ UM REGISTRO
+        [DataObjectMethod(DataObjectMethodType.Select)]
+        public bool Select(Modelo.RelacaoVisto obj)
+        {
+            bool validar = true;
+            // Cria Conexão com banco de dados
+            SqlConnection conn = new SqlConnection(connectionString);
+            // Abre conexão com o banco de dados
+            conn.Open();
+            // Cria comando SQL
+            SqlCommand com = conn.CreateCommand();
+            // Define comando de exclusão
+            SqlCommand cmd = new SqlCommand("Select dataHora FROM RelacaoVisto where filme_id = @filme_id and usuario = @usuario", conn);
+            cmd.Parameters.AddWithValue("@filme_id", obj.filme_id);
+            cmd.Parameters.AddWithValue("@usuario", obj.usuario);
+            // Executa comando, gerando objeto DbDataReader
+            SqlDataReader dr = cmd.ExecuteReader();
+            // Le titulo do livro do resultado e apresenta no segundo rótulo
+            if (dr.HasRows)
+            {
+                while (dr.Read()) // Le o proximo registro
+                {
+                    // Cria objeto com dados lidos do banco de dados
+                    if (dr["dataHora"] != null)
+                    {
+                        validar = false;
+                    }
+                    // Adiciona o livro lido à lista
+                }
+            }
+            // Fecha DataReader
+            dr.Close();
+            // Fecha Conexão
+            conn.Close();
+            return validar;
+        }
     }
 }

@@ -28,7 +28,8 @@ namespace ProjetoGrupo6.DAL
             // Cria comando SQL
             SqlCommand com = conn.CreateCommand();
             // Define comando de exclusão
-            SqlCommand cmd = new SqlCommand("INSERT INTO RelacaoFavorito(filme_id, usuario) VALUES (@filme_id, @usuario)", conn);
+            SqlCommand cmd = new SqlCommand("INSERT INTO RelacaoAvaliacao(avaliacao, filme_id, usuario) VALUES (@avaliacao, @filme_id, @usuario)", conn);
+            cmd.Parameters.AddWithValue("@avaliacao", obj.avaliacao);
             cmd.Parameters.AddWithValue("@filme_id", obj.filme_id);
             cmd.Parameters.AddWithValue("@usuario", obj.usuario);
 
@@ -39,7 +40,7 @@ namespace ProjetoGrupo6.DAL
 
 
         //DELETAR UM FILME DA LISTA DE FAVORITOS DE UM USUÁRIO
-        [DataObjectMethod(DataObjectMethodType.Delete)]
+        [DataObjectMethod(DataObjectMethodType.Update)]
         public void Delete(Modelo.RelacaoAvaliacao obj)
         {
             // Cria Conexão com banco de dados
@@ -49,7 +50,8 @@ namespace ProjetoGrupo6.DAL
             // Cria comando SQL
             SqlCommand com = conn.CreateCommand();
             // Define comando de exclusão
-            SqlCommand cmd = new SqlCommand("DELETE FROM RelacaoFavorito WHERE filme_id = @filme_id and usuario = @usuario", conn);
+            SqlCommand cmd = new SqlCommand("UPDATE FROM RelacaoAvaliacao set avaliacao = @avaliacao WHERE filme_id = @filme_id and usuario = @usuario", conn);
+            cmd.Parameters.AddWithValue("@avaliacao", obj.avaliacao);
             cmd.Parameters.AddWithValue("@filme_id", obj.filme_id);
             cmd.Parameters.AddWithValue("@usuario", obj.usuario);
 
