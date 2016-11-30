@@ -1,0 +1,165 @@
+C:\Users\20141011110018\Downloads\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.dll
+C:\Users\20141011110018\Downloads\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
+C:\Users\20141011110018\Downloads\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
+C:\Users\20141011110018\Downloads\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
+C:\Users\20141011110018\Downloads\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
+C:\Users\20141011110018\Documents\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.dll
+C:\Users\20141011110018\Documents\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
+C:\Users\20141011110018\Documents\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
+C:\Users\20141011110018\Documents\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
+C:\Users\20141011110018\Documents\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
+C:\Users\JoãoMendes\Documents\IFRN\3º ano\Projeto Integrador\2º bim\CRUD\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.dll
+C:\Users\JoãoMendes\Documents\IFRN\3º ano\Projeto Integrador\2º bim\CRUD\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
+C:\Users\JoãoMendes\Documents\IFRN\3º ano\Projeto Integrador\2º bim\CRUD\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
+C:\Users\JoãoMendes\Documents\IFRN\3º ano\Projeto Integrador\2º bim\CRUD\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
+C:\Users\JoãoMendes\Documents\IFRN\3º ano\Projeto Integrador\2º bim\CRUD\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
+C:\Users\20141011110212\Downloads\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.dll
+C:\Users\20141011110212\Downloads\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
+C:\Users\20141011110212\Downloads\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
+C:\Users\20141011110212\Downloads\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
+C:\Users\20141011110212\Downloads\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
+C:\Users\Rute\Downloads\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.dll
+C:\Users\Rute\Downloads\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
+C:\Users\Rute\Downloads\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
+C:\Users\Rute\Downloads\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
+C:\Users\Rute\Downloads\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
+C:\Users\clara\Documents\IFRN\Projeto Integrador\ProjetoGrupo62.0\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.dll
+C:\Users\clara\Documents\IFRN\Projeto Integrador\ProjetoGrupo62.0\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
+C:\Users\clara\Documents\IFRN\Projeto Integrador\ProjetoGrupo62.0\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
+C:\Users\clara\Documents\IFRN\Projeto Integrador\ProjetoGrupo62.0\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
+C:\Users\clara\Documents\IFRN\Projeto Integrador\ProjetoGrupo62.0\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
+C:\Users\20141011110212\Downloads\ProjetoGrupo6semhyperlink\ProjetoGrupo62.0\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.dll
+C:\Users\20141011110212\Downloads\ProjetoGrupo6semhyperlink\ProjetoGrupo62.0\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
+C:\Users\20141011110212\Downloads\ProjetoGrupo6semhyperlink\ProjetoGrupo62.0\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
+C:\Users\20141011110212\Downloads\ProjetoGrupo6semhyperlink\ProjetoGrupo62.0\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
+C:\Users\20141011110212\Downloads\ProjetoGrupo6semhyperlink\ProjetoGrupo62.0\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
+C:\Users\20141011110212\Downloads\ProjetoGrupo6PRONTO\ProjetoGrupo6semhyperlink\ProjetoGrupo62.0\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.dll
+C:\Users\20141011110212\Downloads\ProjetoGrupo6PRONTO\ProjetoGrupo6semhyperlink\ProjetoGrupo62.0\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
+C:\Users\20141011110212\Downloads\ProjetoGrupo6PRONTO\ProjetoGrupo6semhyperlink\ProjetoGrupo62.0\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
+C:\Users\20141011110212\Downloads\ProjetoGrupo6PRONTO\ProjetoGrupo6semhyperlink\ProjetoGrupo62.0\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
+C:\Users\20141011110212\Downloads\ProjetoGrupo6PRONTO\ProjetoGrupo6semhyperlink\ProjetoGrupo62.0\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
+C:\Users\20141011110018.IFRN.000\Downloads\ProjetoGrupo6PRONTO\ProjetoGrupo6PRONTO\ProjetoGrupo6semhyperlink\ProjetoGrupo62.0\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.dll
+C:\Users\20141011110018.IFRN.000\Downloads\ProjetoGrupo6PRONTO\ProjetoGrupo6PRONTO\ProjetoGrupo6semhyperlink\ProjetoGrupo62.0\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
+C:\Users\20141011110018.IFRN.000\Downloads\ProjetoGrupo6PRONTO\ProjetoGrupo6PRONTO\ProjetoGrupo6semhyperlink\ProjetoGrupo62.0\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
+C:\Users\20141011110018.IFRN.000\Downloads\ProjetoGrupo6PRONTO\ProjetoGrupo6PRONTO\ProjetoGrupo6semhyperlink\ProjetoGrupo62.0\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
+C:\Users\20141011110018.IFRN.000\Downloads\ProjetoGrupo6PRONTO\ProjetoGrupo6PRONTO\ProjetoGrupo6semhyperlink\ProjetoGrupo62.0\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
+C:\Users\clara\Documents\IFRN\Projeto Integrador\30.09\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.dll
+C:\Users\clara\Documents\IFRN\Projeto Integrador\30.09\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
+C:\Users\clara\Documents\IFRN\Projeto Integrador\30.09\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
+C:\Users\clara\Documents\IFRN\Projeto Integrador\30.09\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
+C:\Users\clara\Documents\IFRN\Projeto Integrador\30.09\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
+C:\Users\clara\Documents\IFRN\Projeto Integrador\17.10\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
+C:\Users\clara\Documents\IFRN\Projeto Integrador\17.10\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
+C:\Users\clara\Documents\IFRN\Projeto Integrador\17.10\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.dll
+C:\Users\clara\Documents\IFRN\Projeto Integrador\17.10\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
+C:\Users\clara\Documents\IFRN\Projeto Integrador\17.10\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
+C:\Users\20141011110018.IFRN.000\Documents\Projeto Integrador\17.10 atualização 01\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.dll
+C:\Users\20141011110018.IFRN.000\Documents\Projeto Integrador\17.10 atualização 01\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
+C:\Users\20141011110018.IFRN.000\Documents\Projeto Integrador\17.10 atualização 01\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
+C:\Users\20141011110018.IFRN.000\Documents\Projeto Integrador\17.10 atualização 01\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
+C:\Users\20141011110018.IFRN.000\Documents\Projeto Integrador\17.10 atualização 01\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
+C:\Users\20141011110212.IFRN\Downloads\17.10 atualização com pesquisar\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.dll
+C:\Users\20141011110212.IFRN\Downloads\17.10 atualização com pesquisar\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
+C:\Users\20141011110212.IFRN\Downloads\17.10 atualização com pesquisar\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
+C:\Users\20141011110212.IFRN\Downloads\17.10 atualização com pesquisar\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
+C:\Users\20141011110212.IFRN\Downloads\17.10 atualização com pesquisar\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
+C:\Users\20141011110263\Downloads\18.10 atualização com pesquisar\17.10 atualização com pesquisar\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.dll
+C:\Users\20141011110263\Downloads\18.10 atualização com pesquisar\17.10 atualização com pesquisar\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
+C:\Users\20141011110263\Downloads\18.10 atualização com pesquisar\17.10 atualização com pesquisar\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
+C:\Users\20141011110263\Downloads\18.10 atualização com pesquisar\17.10 atualização com pesquisar\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
+C:\Users\20141011110263\Downloads\18.10 atualização com pesquisar\17.10 atualização com pesquisar\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
+C:\Users\20141011110018\Documents\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.dll
+C:\Users\20141011110018\Documents\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
+C:\Users\20141011110018\Documents\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
+C:\Users\20141011110018\Documents\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
+C:\Users\20141011110018\Documents\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
+C:\Users\20141011110263\Documents\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.dll
+C:\Users\20141011110263\Documents\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
+C:\Users\20141011110263\Documents\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
+C:\Users\20141011110263\Documents\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
+C:\Users\20141011110263\Documents\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
+C:\Users\20141011110263\Downloads\19.10 - Depois PI\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.dll
+C:\Users\20141011110263\Downloads\19.10 - Depois PI\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
+C:\Users\20141011110263\Downloads\19.10 - Depois PI\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
+C:\Users\20141011110263\Downloads\19.10 - Depois PI\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
+C:\Users\20141011110263\Downloads\19.10 - Depois PI\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
+C:\Users\20141011110263\Desktop\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
+C:\Users\20141011110263\Desktop\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
+C:\Users\20141011110263\Desktop\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
+C:\Users\20141011110263\Desktop\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.dll
+C:\Users\20141011110263\Desktop\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
+C:\Users\20141011110018\Documents\21.10\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
+C:\Users\20141011110018\Documents\21.10\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
+C:\Users\20141011110018\Documents\21.10\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.dll
+C:\Users\20141011110018\Documents\21.10\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
+C:\Users\20141011110018\Documents\21.10\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
+C:\Users\20141011110018\Pictures\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.dll
+C:\Users\20141011110018\Pictures\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
+C:\Users\20141011110018\Pictures\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
+C:\Users\20141011110018\Pictures\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
+C:\Users\20141011110018\Pictures\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
+C:\Users\20141011110212\Downloads\26.10 SERVIDORES\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
+C:\Users\20141011110212\Downloads\26.10 SERVIDORES\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
+C:\Users\20141011110212\Downloads\26.10 SERVIDORES\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.dll
+C:\Users\20141011110212\Downloads\26.10 SERVIDORES\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
+C:\Users\20141011110212\Downloads\26.10 SERVIDORES\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
+C:\Users\clara\Documents\IFRN\Projeto Integrador\26.10 SERVIDORES\26.10 SERVIDORES\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.dll
+C:\Users\clara\Documents\IFRN\Projeto Integrador\26.10 SERVIDORES\26.10 SERVIDORES\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
+C:\Users\clara\Documents\IFRN\Projeto Integrador\26.10 SERVIDORES\26.10 SERVIDORES\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
+C:\Users\clara\Documents\IFRN\Projeto Integrador\26.10 SERVIDORES\26.10 SERVIDORES\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
+C:\Users\clara\Documents\IFRN\Projeto Integrador\26.10 SERVIDORES\26.10 SERVIDORES\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
+C:\Users\clara\Documents\IFRN\Projeto Integrador\esse porra\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.dll
+C:\Users\clara\Documents\IFRN\Projeto Integrador\esse porra\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
+C:\Users\clara\Documents\IFRN\Projeto Integrador\esse porra\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
+C:\Users\clara\Documents\IFRN\Projeto Integrador\esse porra\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
+C:\Users\clara\Documents\IFRN\Projeto Integrador\esse porra\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
+C:\Users\20141011110018.IFRN.000\Documents\Projeto Integrador\26.10\ProjetoGrupo6 (1)\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.dll
+C:\Users\20141011110018.IFRN.000\Documents\Projeto Integrador\26.10\ProjetoGrupo6 (1)\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
+C:\Users\20141011110018.IFRN.000\Documents\Projeto Integrador\26.10\ProjetoGrupo6 (1)\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
+C:\Users\20141011110018.IFRN.000\Documents\Projeto Integrador\26.10\ProjetoGrupo6 (1)\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
+C:\Users\20141011110018.IFRN.000\Documents\Projeto Integrador\26.10\ProjetoGrupo6 (1)\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
+C:\Users\20141011110263\Downloads\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.dll
+C:\Users\20141011110263\Downloads\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
+C:\Users\20141011110263\Downloads\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
+C:\Users\20141011110263\Downloads\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
+C:\Users\20141011110263\Downloads\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
+C:\Users\20141011110018.IFRN.000\Downloads\ProjetoGrupo64.11\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.dll
+C:\Users\20141011110018.IFRN.000\Downloads\ProjetoGrupo64.11\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
+C:\Users\20141011110018.IFRN.000\Downloads\ProjetoGrupo64.11\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
+C:\Users\20141011110018.IFRN.000\Downloads\ProjetoGrupo64.11\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
+C:\Users\20141011110018.IFRN.000\Downloads\ProjetoGrupo64.11\ProjetoGrupo6\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
+C:\Users\20141011110018.IFRN.000\Documents\Projeto Integrador\07.11\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.dll
+C:\Users\20141011110018.IFRN.000\Documents\Projeto Integrador\07.11\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
+C:\Users\20141011110018.IFRN.000\Documents\Projeto Integrador\07.11\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
+C:\Users\20141011110018.IFRN.000\Documents\Projeto Integrador\07.11\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
+C:\Users\20141011110018.IFRN.000\Documents\Projeto Integrador\07.11\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
+C:\Users\20141011110123\Downloads\07.11\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.dll
+C:\Users\20141011110123\Downloads\07.11\ProjetoGrupo6\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
+C:\Users\20141011110123\Downloads\07.11\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
+C:\Users\20141011110123\Downloads\07.11\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
+C:\Users\20141011110123\Downloads\07.11\ProjetoGrupo6\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
+C:\Users\20141011110018\Documents\projetoIntegrador\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
+C:\Users\20141011110018\Documents\projetoIntegrador\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
+C:\Users\20141011110018\Documents\projetoIntegrador\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
+C:\Users\20141011110018\Documents\projetoIntegrador\ProjetoGrupo6\bin\ProjetoGrupo6.dll
+C:\Users\20141011110018\Documents\projetoIntegrador\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
+C:\Users\Rute\Downloads\projeto integrador\ProjetoGrupo6\bin\ProjetoGrupo6.dll
+C:\Users\Rute\Downloads\projeto integrador\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
+C:\Users\Rute\Downloads\projeto integrador\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
+C:\Users\Rute\Downloads\projeto integrador\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
+C:\Users\Rute\Downloads\projeto integrador\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
+C:\Users\20141011110018\Downloads\Projeto Integrador\Projeto\22.11\ProjetoGrupo6\bin\ProjetoGrupo6.dll
+C:\Users\20141011110018\Downloads\Projeto Integrador\Projeto\22.11\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
+C:\Users\20141011110018\Downloads\Projeto Integrador\Projeto\22.11\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
+C:\Users\20141011110018\Downloads\Projeto Integrador\Projeto\22.11\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
+C:\Users\20141011110018\Downloads\Projeto Integrador\Projeto\22.11\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
+C:\Users\20141011110018\Documents\GitHub\cine7ProjetoIntegrador\ProjetoGrupo6\bin\ProjetoGrupo6.dll
+C:\Users\20141011110018\Documents\GitHub\cine7ProjetoIntegrador\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
+C:\Users\20141011110018\Documents\GitHub\cine7ProjetoIntegrador\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
+C:\Users\20141011110018\Documents\GitHub\cine7ProjetoIntegrador\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
+C:\Users\20141011110018\Documents\GitHub\cine7ProjetoIntegrador\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
+C:\Users\20141011110018\Documents\GitHub\cine7ProjetoIntegrador\projeto\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
+C:\Users\20141011110018\Documents\GitHub\cine7ProjetoIntegrador\projeto\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
+C:\Users\20141011110018\Documents\GitHub\cine7ProjetoIntegrador\projeto\ProjetoGrupo6\bin\ProjetoGrupo6.dll
+C:\Users\20141011110018\Documents\GitHub\cine7ProjetoIntegrador\projeto\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
+C:\Users\20141011110018\Documents\GitHub\cine7ProjetoIntegrador\projeto\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
