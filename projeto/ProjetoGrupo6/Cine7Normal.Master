@@ -30,7 +30,7 @@
                </div>
            </li>
           
-           <li><asp:HyperLink ID="HyperLinkUsuario" runat="server" NavigateUrl="~/UsuarioNormal/Usuario.aspx">HyperLink</asp:HyperLink></li>
+           <asp:LinkButton ID="LinkButtonSessao" runat="server" OnClick="LinkButtonSessao_Click">LinkButton</asp:LinkButton>
            <li><asp:ImageButton ID="ImageButtonSair" runat="server" Height="18px" Width="18px" OnClick="ImageButtonSair_Click" CssClass="Sair" ImageUrl="~/Imagens/sairButton.png" /></li>
        </ul>
             <asp:ImageButton ID="ImageButtonPesquisar" runat="server" Height="17px" Width="17px" OnClick="ImageButtonPesquisar_Click" CssClass="imagempesquisa" ImageUrl="~/Imagens/lupaPesquisar.png" />

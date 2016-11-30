@@ -15,7 +15,7 @@ namespace ProjetoGrupo6
             {
                 Response.Redirect("~/Login.aspx");
             }
-            HyperLinkUsuario.Text = Session["usuario"].ToString();
+            LinkButtonSessao.Text = Session["usuario"].ToString();
 
         }
 
@@ -33,6 +33,11 @@ namespace ProjetoGrupo6
         protected void ImageButtonLogo_Click(object sender, ImageClickEventArgs e)
         {
             Response.Redirect("~/UsuarioNormal/Home.aspx");
+        }
+
+        protected void LinkButtonSessao_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/UsuarioNormal/Usuario.aspx?Usuario=" + LinkButtonSessao.Text);
         }
     }
 }

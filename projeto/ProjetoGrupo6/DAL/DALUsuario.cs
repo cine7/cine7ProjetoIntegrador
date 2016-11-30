@@ -17,47 +17,6 @@ namespace ProjetoGrupo6.DAL
             connectionString = ConfigurationManager.ConnectionStrings["2016TiiGrupo6ConnectionString"].ConnectionString;
         }
 
-        // SELECT NOS COMENTÁRIOS DE UM FILME
-        /*[DataObjectMethod(DataObjectMethodType.Select)]
-        public List<Modelo.Comentario> SelectComentario(Modelo.Comentario obj)
-        {
-            // Variavel para armazenar um comentário
-            Modelo.Comentario aComentario;
-            // Cria Lista Vazia
-            List<Modelo.Comentario> aListComentario = new List<Modelo.Comentario> ();
-            // Cria Conexão com banco de dados
-            SqlConnection conn = new SqlConnection(connectionString);
-            // Abre conexão com o banco de dados
-            conn.Open();
-            // Cria comando SQL
-            SqlCommand cmd = conn.CreateCommand();
-            // define SQL do comando
-            cmd.CommandText = "SELECT comentario_id, descricao, data, filme_id, usuario FROM Comentario where filme_id = @filme_id";
-            cmd.Parameters.AddWithValue("@filme_id", obj.filme_id);
-            // Executa comando, gerando objeto DbDataReader
-            SqlDataReader dr = cmd.ExecuteReader();
-            // Le titulo do livro do resultado e apresenta no segundo rótulo
-            if (dr.HasRows)
-            {
-                while (dr.Read()) // Le o proximo registro
-                {
-                    // Cria objeto com dados lidos do banco de dados
-                    aComentario = new Modelo.Comentario(
-                    dr["descricao"].ToString(),
-                    Convert.ToInt32(dr["filme_id"].ToString()),
-                    dr["usuario"].ToString()
-                    );
-                    // Adiciona o livro lido à lista
-                    aListComentario.Add(aComentario);
-                }
-            }
-            // Fecha DataReader
-            dr.Close();
-            // Fecha Conexão
-            conn.Close();
-            return aListComentario;
-        }*/
-
         //INSERT EM UM COMENTÁRIO
         [DataObjectMethod(DataObjectMethodType.Insert)]
         public void Insert(Modelo.Usuario obj)
@@ -69,14 +28,15 @@ namespace ProjetoGrupo6.DAL
             // Cria comando SQL
             SqlCommand com = conn.CreateCommand();
             // Define comando de exclusão
-            SqlCommand cmd = new SqlCommand("INSERT INTO Usuario(usuario, nome, email, dataNascimento, pais, senha, caminhoImagem) VALUES (@usuario, @nome, @email, @dataNascimento, @pais, @senha, @caminhoImagem)", conn);
+            SqlCommand cmd = new SqlCommand("INSERT INTO Usuario(usuario, senha, nome, email, dataNascimento, pais, caminhoImagem) VALUES (@usuario, @nome, @email, @dataNascimento, @pais, @senha, @caminhoImagem)", conn);
             cmd.Parameters.AddWithValue("@usuario", obj.usuario);
+            cmd.Parameters.AddWithValue("@senha", obj.senha);
             cmd.Parameters.AddWithValue("@nome", obj.nome);
             cmd.Parameters.AddWithValue("@email", obj.email);
             cmd.Parameters.AddWithValue("@dataNascimento", obj.dataNascimento);
             cmd.Parameters.AddWithValue("@pais", obj.pais);
-            cmd.Parameters.AddWithValue("@senha", obj.senha);
-            cmd.Parameters.AddWithValue("@caminhoImagem", obj.caminhoImagem);
+            cmd.Parameters.AddWithValue("@sexo", obj.sexo);
+            cmd.Parameters.AddWithValue("@caminhoImagem", "~/Imagens/Perfil/" + obj.caminhoImagem);
 
             // Executa Comando
             cmd.ExecuteNonQuery();

@@ -8,18 +8,18 @@ using System.Web;
 
 namespace ProjetoGrupo6.DAL
 {
-    public class DALRelacaoVisto
+    public class DALSegue
     {
         string connectionString = "";
 
-        public DALRelacaoVisto()
+        public DALSegue()
         {
             connectionString = ConfigurationManager.ConnectionStrings["2016TiiGrupo6ConnectionString"].ConnectionString;
         }
-
-        //INSERT UM FILME NA LISTA DE FAVORITOS DE UM USUÁRIO
+        
+        //INSERT NUMA RELAÇÃO DE SEGUIR
         [DataObjectMethod(DataObjectMethodType.Insert)]
-        public void Insert(Modelo.RelacaoVisto obj)
+        public void Insert(Modelo.Segue obj)
         {
             // Cria Conexão com banco de dados
             SqlConnection conn = new SqlConnection(connectionString);
@@ -28,18 +28,18 @@ namespace ProjetoGrupo6.DAL
             // Cria comando SQL
             SqlCommand com = conn.CreateCommand();
             // Define comando de exclusão
-            SqlCommand cmd = new SqlCommand("INSERT INTO RelacaoVisto(filme_id, usuario) VALUES (@filme_id, @usuario)", conn);
-            cmd.Parameters.AddWithValue("@filme_id", obj.filme_id);
-            cmd.Parameters.AddWithValue("@usuario", obj.usuario);
+            SqlCommand cmd = new SqlCommand("INSERT INTO Segue(usuarioSeguido, usuarioSeguidor) VALUES(@usuarioSeguido, @usuarioSeguidor)", conn);
+            cmd.Parameters.AddWithValue("@usuarioSeguido", obj.usuarioSeguido);
+            cmd.Parameters.AddWithValue("@usuarioSeguidor", obj.usuarioSeguidor);
 
             // Executa Comando
             cmd.ExecuteNonQuery();
 
         }
 
-        //DELETAR UM FILME DA LISTA DE FAVORITOS DE UM USUÁRIO
+        //DELETE NUMA RELAÇÃO DE SEGUIR
         [DataObjectMethod(DataObjectMethodType.Delete)]
-        public void Delete(Modelo.RelacaoVisto obj)
+        public void Delete(Modelo.Segue obj)
         {
             // Cria Conexão com banco de dados
             SqlConnection conn = new SqlConnection(connectionString);
@@ -48,19 +48,19 @@ namespace ProjetoGrupo6.DAL
             // Cria comando SQL
             SqlCommand com = conn.CreateCommand();
             // Define comando de exclusão
-            SqlCommand cmd = new SqlCommand("DELETE FROM RelacaoVisto WHERE filme_id = @filme_id and usuario = @usuario", conn);
-            cmd.Parameters.AddWithValue("@filme_id", obj.filme_id);
-            cmd.Parameters.AddWithValue("@usuario", obj.usuario);
+            SqlCommand cmd = new SqlCommand("DELETE FROM Segue WHERE usuarioSeguido = @usuarioSeguido and usuarioSeguidor = @usuarioSeguidor", conn);
+            cmd.Parameters.AddWithValue("@usuarioSeguido", obj.usuarioSeguido);
+            cmd.Parameters.AddWithValue("@usuarioSeguidor", obj.usuarioSeguidor);
 
             // Executa Comando
             cmd.ExecuteNonQuery();
         }
 
-        //SELECT PARA CONFERIR SE HÁ UM REGISTRO
+        //SELECT PARA CONFERIR SE UM USUÁRIO SEGUE OUTRO
         [DataObjectMethod(DataObjectMethodType.Select)]
-        public bool Select(Modelo.RelacaoVisto obj)
+        public bool SelectValidar(Modelo.Segue obj)
         {
-            bool validar = true;
+            bool validar = false;
             // Cria Conexão com banco de dados
             SqlConnection conn = new SqlConnection(connectionString);
             // Abre conexão com o banco de dados
@@ -68,9 +68,9 @@ namespace ProjetoGrupo6.DAL
             // Cria comando SQL
             SqlCommand com = conn.CreateCommand();
             // Define comando de exclusão
-            SqlCommand cmd = new SqlCommand("Select dataHora FROM RelacaoVisto where filme_id = @filme_id and usuario = @usuario", conn);
-            cmd.Parameters.AddWithValue("@filme_id", obj.filme_id);
-            cmd.Parameters.AddWithValue("@usuario", obj.usuario);
+            SqlCommand cmd = new SqlCommand("Select usuarioSeguido FROM Segue where usuarioSeguidor = @usuarioSeguidor and usuarioSeguido = @usuarioSeguido", conn);
+            cmd.Parameters.AddWithValue("@usuarioSeguido", obj.usuarioSeguido);
+            cmd.Parameters.AddWithValue("@usuarioSeguidor", obj.usuarioSeguidor);
             // Executa comando, gerando objeto DbDataReader
             SqlDataReader dr = cmd.ExecuteReader();
             // Le titulo do livro do resultado e apresenta no segundo rótulo
@@ -79,9 +79,9 @@ namespace ProjetoGrupo6.DAL
                 while (dr.Read()) // Le o proximo registro
                 {
                     // Cria objeto com dados lidos do banco de dados
-                    if (dr["dataHora"] != null)
+                    if (dr["usuarioSeguido"] != null)
                     {
-                        validar = false;
+                        validar = true;
                     }
                     // Adiciona o livro lido à lista
                 }

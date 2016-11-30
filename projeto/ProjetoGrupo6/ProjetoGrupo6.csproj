@@ -102,6 +102,7 @@
     <Compile Include="DAL\DALRelacaoFavorito.cs" />
     <Compile Include="DAL\DALRelacaoInteresse.cs" />
     <Compile Include="DAL\DALRelacaoVisto.cs" />
+    <Compile Include="DAL\DALSegue.cs" />
     <Compile Include="DAL\DALUsuario.cs" />
     <Compile Include="Cine7Normal.Master.cs">
       <DependentUpon>Cine7Normal.Master</DependentUpon>
@@ -117,6 +118,7 @@
     <Compile Include="Modelo\RelacaoFavorito.cs" />
     <Compile Include="Modelo\RelacaoInteresse.cs" />
     <Compile Include="Modelo\RelacaoVisto.cs" />
+    <Compile Include="Modelo\Segue.cs" />
     <Compile Include="Modelo\Usuario.cs" />
     <Compile Include="UsuarioAnonimo\Filme.aspx.cs">
       <DependentUpon>Filme.aspx</DependentUpon>

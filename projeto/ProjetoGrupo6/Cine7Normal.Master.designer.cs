@@ -58,13 +58,13 @@ namespace ProjetoGrupo6 {
         protected global::System.Web.UI.WebControls.TextBox TextBoxPesquisar;
         
         /// <summary>
-        /// HyperLinkUsuario control.
+        /// LinkButtonSessao control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLinkUsuario;
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonSessao;
         
         /// <summary>
         /// ImageButtonSair control.

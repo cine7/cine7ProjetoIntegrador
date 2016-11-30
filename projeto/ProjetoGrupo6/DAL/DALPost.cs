@@ -74,13 +74,12 @@ namespace ProjetoGrupo6.DAL
             // Cria comando SQL
             SqlCommand cmd = conn.CreateCommand();
             // define SQL do comando
-            cmd.CommandText = "Select * from Titles";
+            cmd.CommandText = "Select * from Post";
             // Executa comando, gerando objeto DbDataReader
             SqlDataReader dr = cmd.ExecuteReader();
             // Le titulo do livro do resultado e apresenta no segundo rótulo
             if (dr.HasRows)
             {
-
                 while (dr.Read()) // Le o proximo registro
                 {
                     // Cria objeto com dados lidos do banco de dados
@@ -101,5 +100,48 @@ namespace ProjetoGrupo6.DAL
             return aListPost;
         }
 
+
+        //SELECT NOS POSTS DO FEED DE UM USUÁRIO
+        [DataObjectMethod(DataObjectMethodType.Select)]
+        public List<Modelo.Post> SelectFeed(string perfil)
+        {
+            // Variavel para armazenar um livro
+            Modelo.Post aPost;
+            // Cria Lista Vazia
+            List<Modelo.Post> aListPost = new List<Modelo.Post>();
+            // Cria Conexão com banco de dados
+            SqlConnection conn = new SqlConnection(connectionString);
+            // Abre conexão com o banco de dados
+            conn.Open();
+            // Cria comando SQL
+            SqlCommand cmd = conn.CreateCommand();
+            // define SQL do comando
+            cmd.CommandText = "Select tipo, Filme.filme_name, Usuario.nome from Post INNER JOIN Usuario on Usuario.usuario = Post.usuario INNER JOIN Segue on Segue.usuarioSeguido = Usuario.usuario INNER JOIN Filme on Filme.filme_id = Post.filme_id WHERE Segue.usuarioSeguidor = @perfil";
+            cmd.Parameters.AddWithValue("@perfil", perfil);
+            // Executa comando, gerando objeto DbDataReader
+            SqlDataReader dr = cmd.ExecuteReader();
+            // Le titulo do livro do resultado e apresenta no segundo rótulo
+            if (dr.HasRows)
+            {
+
+                while (dr.Read()) // Le o proximo registro
+                {
+                    // Cria objeto com dados lidos do banco de dados
+                    aPost = new Modelo.Post(
+                        Convert.ToInt32(dr["tipo"]),
+                        Convert.ToInt32(dr["Filme.filme_name"]),
+                        dr["Usuario.nome"].ToString()
+                        );
+                    // Adiciona o livro lido à lista
+                    aListPost.Add(aPost);
+                }
+            }
+            // Fecha DataReader
+            dr.Close();
+            // Fecha Conexão
+            conn.Close();
+
+            return aListPost;
+        }
     }
 }

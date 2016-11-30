@@ -55,18 +55,19 @@ where usuario = @perfil">
     <br>
     <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource4">
         <ItemTemplate>
-            nome:
-            <asp:Label ID="nomeLabel" runat="server" Text='<%# Eval("nome") %>' />
-            <br />
             tipo:
             <asp:Label ID="tipoLabel" runat="server" Text='<%# Eval("tipo") %>' />
             <br />
             filme_name:
             <asp:Label ID="filme_nameLabel" runat="server" Text='<%# Eval("filme_name") %>' />
             <br />
+            nome:
+            <asp:Label ID="nomeLabel" runat="server" Text='<%# Eval("nome") %>' />
             <br />
+<br />
         </ItemTemplate>
     </asp:DataList>
+    <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="SelectAll" TypeName="ProjetoGrupo6.DAL.DALPost"></asp:ObjectDataSource>
     <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:2016TiiGrupo6ConnectionString %>" SelectCommand="SELECT tipo,
 	   Filme.filme_name,
 	   Usuario.nome

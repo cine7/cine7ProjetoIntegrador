@@ -39,7 +39,7 @@ namespace ProjetoGrupo6.UsuarioNormal
                 }
             }
 
-            dr.Close();
+            //dr.Close();
             aSQLCon.Close();
 
             ImagePerfil.ImageUrl = caminhoImagem;
