@@ -1,45 +1,54 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Cine7Normal.Master" AutoEventWireup="true" CodeBehind="Filme.aspx.cs" Inherits="ProjetoGrupo6.UsuarioNormal.Filme" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        #estrela {
+            width: 317px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <asp:Image ID="Image1" runat="server" />
-                <asp:ImageButton ID="ImageButtonFavorito" runat="server" Height="46px" ImageUrl="~/Imagens/favoritarButton.png" OnClick="ImageButton1_Click" Width="69px" />
-                <asp:ImageButton ID="ImageButtonVisto" runat="server" Height="43px" ImageUrl="~/Imagens/vistoButton.png" OnClick="ImageButtonVisto_Click" />
-                <asp:ImageButton ID="ImageButtonInteresse" runat="server" Height="45px" ImageUrl="~/Imagens/tvInteresseButton.png" OnClick="ImageButtonInteresse_Click" Width="48px" />
+                <asp:ImageButton ID="ImageButtonFavorito" runat="server" Height="45px" ImageUrl="~/Imagens/favoritarButton.png" OnClick="ImageButton1_Click" Width="45px" />
+                <asp:ImageButton ID="ImageButtonVisto" runat="server" Height="45px" ImageUrl="~/Imagens/vistoButton.png" OnClick="ImageButtonVisto_Click" />
+                <asp:ImageButton ID="ImageButtonInteresse" runat="server" Height="45px" ImageUrl="~/Imagens/tvInteresseButton.png" OnClick="ImageButtonInteresse_Click" Width="45px" />
             </div>
-            <div class="col-md-4">
-                <asp:Label ID="LabelFilme" runat="server" Text="Label"></asp:Label>
+            <div class="col-md-6">
+                <div id="sobreFilme">
+                <b><asp:Label ID="LabelFilme" runat="server" Text="Label"></asp:Label></b>
                 <asp:Label ID="LabelFilme_id" runat="server" Text="Label" Visible="False"></asp:Label>
        
                 <br />
                 <br />
-                <asp:Label ID="LabelAno" runat="server" Text="Label"></asp:Label>
+                Ano:&nbsp<asp:Label ID="LabelAno" runat="server" Text="Label"></asp:Label>
                 <br />
                 <br />
-                <asp:Label ID="LabelSinopse" runat="server" Text="Label"></asp:Label>
+                Sinopse:&nbsp<asp:Label ID="LabelSinopse" runat="server" Text="Label"></asp:Label>
                 <br />
                 <br />
-                <asp:Label ID="LabelDiretor" runat="server" Text="Label"></asp:Label>
+                Diretor:&nbsp<asp:Label ID="LabelDiretor" runat="server" Text="Label"></asp:Label>
                 <br />
                 <br />
-                <asp:Label ID="LabelProdutora" runat="server" Text="Label"></asp:Label>
+                Produtora:&nbsp<asp:Label ID="LabelProdutora" runat="server" Text="Label"></asp:Label>
                 <br />
                 <br />
-                <asp:Label ID="LabelDuracao" runat="server" Text="Label"></asp:Label>
+                Duração:&nbsp<asp:Label ID="LabelDuracao" runat="server" Text="Label"></asp:Label>
+                <div id="estrela" style="position: relative; top: 34px; left: 357px; width: 325px;">
+            <asp:ImageButton ID="ImageButtonEstrela1" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" onmouseover="acenderImagem()" Width="45px" OnClick="ImageButtonEstrela1_Click" />
+                <asp:ImageButton ID="ImageButtonEstrela2" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela2_Click" />
+                <asp:ImageButton ID="ImageButtonEstrela3" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela3_Click" />
+                <asp:ImageButton ID="ImageButtonEstrela4" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela4_Click" />
+                <asp:ImageButton ID="ImageButtonEstrela5" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela5_Click" />
+                <asp:ImageButton ID="ImageButtonEstrela6" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela6_Click" />
+                <asp:ImageButton ID="ImageButtonEstrela7" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela7_Click" />
+                </div>
                 <br />
                 <br />
+                </div>
             </div>
-            <div class="col-md-4">
-            <asp:ImageButton ID="ImageButtonEstrela1" runat="server" ImageUrl="~/Imagens/estrelaApagada.jpg" onmouseover="acenderImagem()" Width="100px" OnClick="ImageButtonEstrela1_Click" />
-                <asp:ImageButton ID="ImageButtonEstrela2" runat="server" ImageUrl="~/Imagens/estrelaApagada.jpg" Width="100px" OnClick="ImageButtonEstrela2_Click" />
-                <asp:ImageButton ID="ImageButtonEstrela3" runat="server" ImageUrl="~/Imagens/estrelaApagada.jpg" Width="100px" OnClick="ImageButtonEstrela3_Click" />
-                <asp:ImageButton ID="ImageButtonEstrela4" runat="server" ImageUrl="~/Imagens/estrelaApagada.jpg" Width="100px" OnClick="ImageButtonEstrela4_Click" />
-                <asp:ImageButton ID="ImageButtonEstrela5" runat="server" ImageUrl="~/Imagens/estrelaApagada.jpg" Width="100px" OnClick="ImageButtonEstrela5_Click" />
-                <asp:ImageButton ID="ImageButtonEstrela6" runat="server" ImageUrl="~/Imagens/estrelaApagada.jpg" Width="100px" OnClick="ImageButtonEstrela6_Click" />
-                <asp:ImageButton ID="ImageButtonEstrela7" runat="server" ImageUrl="~/Imagens/estrelaApagada.jpg" Width="100px" OnClick="ImageButtonEstrela7_Click" />
+            <div class="col-md-3">
             </div>
         </div>
     

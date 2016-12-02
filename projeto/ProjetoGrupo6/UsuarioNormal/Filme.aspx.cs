@@ -76,26 +76,26 @@ namespace ProjetoGrupo6.UsuarioNormal
             }
 
             /*ESTRELAS DE AVALIAÇÃO*/
-            ImageButtonEstrela1.Attributes.Add("onmouseover", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaAcesa.jpg'");
-            ImageButtonEstrela1.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaApagada.jpg'");
+            ImageButtonEstrela1.Attributes.Add("onmouseover", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaAcesa.png");
+            ImageButtonEstrela1.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaApagada.png'");
 
-            ImageButtonEstrela2.Attributes.Add("onmouseover", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaAcesa.jpg'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaAcesa.jpg';");
-            ImageButtonEstrela2.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaApagada.jpg'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaApagada.jpg';");
+            ImageButtonEstrela2.Attributes.Add("onmouseover", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaAcesa.png';");
+            ImageButtonEstrela2.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaApagada.png';");
 
-            ImageButtonEstrela3.Attributes.Add("onmouseover", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaAcesa.jpg'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaAcesa.jpg'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaAcesa.jpg';");
-            ImageButtonEstrela3.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaApagada.jpg'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaApagada.jpg'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaApagada.jpg';");
+            ImageButtonEstrela3.Attributes.Add("onmouseover", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaAcesa.png';");
+            ImageButtonEstrela3.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaApagada.png';");
 
-            ImageButtonEstrela4.Attributes.Add("onmouseover", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaAcesa.jpg'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaAcesa.jpg'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaAcesa.jpg'; ContentPlaceHolder1_ImageButtonEstrela4.src = '/Imagens/estrelaAcesa.jpg';");
-            ImageButtonEstrela4.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaApagada.jpg'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaApagada.jpg'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaApagada.jpg'; ContentPlaceHolder1_ImageButtonEstrela4.src = '/Imagens/estrelaApagada.jpg';");
+            ImageButtonEstrela4.Attributes.Add("onmouseover", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela4.src = '/Imagens/estrelaAcesa.png';");
+            ImageButtonEstrela4.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela4.src = '/Imagens/estrelaApagada.png';");
 
-            ImageButtonEstrela5.Attributes.Add("onmouseover", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaAcesa.jpg'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaAcesa.jpg'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaAcesa.jpg'; ContentPlaceHolder1_ImageButtonEstrela4.src = '/Imagens/estrelaAcesa.jpg'; ContentPlaceHolder1_ImageButtonEstrela5.src = '/Imagens/estrelaAcesa.jpg';");
-            ImageButtonEstrela5.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaApagada.jpg'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaApagada.jpg'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaApagada.jpg'; ContentPlaceHolder1_ImageButtonEstrela4.src = '/Imagens/estrelaApagada.jpg'; ContentPlaceHolder1_ImageButtonEstrela5.src = '/Imagens/estrelaApagada.jpg';");
+            ImageButtonEstrela5.Attributes.Add("onmouseover", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela4.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela5.src = '/Imagens/estrelaAcesa.png';");
+            ImageButtonEstrela5.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela4.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela5.src = '/Imagens/estrelaApagada.png';");
 
-            ImageButtonEstrela6.Attributes.Add("onmouseover", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaAcesa.jpg'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaAcesa.jpg'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaAcesa.jpg'; ContentPlaceHolder1_ImageButtonEstrela4.src = '/Imagens/estrelaAcesa.jpg'; ContentPlaceHolder1_ImageButtonEstrela5.src = '/Imagens/estrelaAcesa.jpg'; ContentPlaceHolder1_ImageButtonEstrela6.src = '/Imagens/estrelaAcesa.jpg'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaAcesa.jpg';");
-            ImageButtonEstrela6.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaApagada.jpg'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaApagada.jpg'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaApagada.jpg'; ContentPlaceHolder1_ImageButtonEstrela4.src = '/Imagens/estrelaApagada.jpg'; ContentPlaceHolder1_ImageButtonEstrela5.src = '/Imagens/estrelaApagada.jpg'; ContentPlaceHolder1_ImageButtonEstrela6.src = '/Imagens/estrelaApagada.jpg';");
+            ImageButtonEstrela6.Attributes.Add("onmouseover", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela4.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela5.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela6.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaAcesa.png';");
+            ImageButtonEstrela6.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela4.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela5.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela6.src = '/Imagens/estrelaApagada.png';");
 
-            ImageButtonEstrela7.Attributes.Add("onmouseover", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaAcesa.jpg'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaAcesa.jpg'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaAcesa.jpg'; ContentPlaceHolder1_ImageButtonEstrela4.src = '/Imagens/estrelaAcesa.jpg'; ContentPlaceHolder1_ImageButtonEstrela5.src = '/Imagens/estrelaAcesa.jpg'; ContentPlaceHolder1_ImageButtonEstrela6.src = '/Imagens/estrelaAcesa.jpg'; ContentPlaceHolder1_ImageButtonEstrela7.src = '/Imagens/estrelaAcesa.jpg';");
-            ImageButtonEstrela7.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaApagada.jpg'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaApagada.jpg'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaApagada.jpg'; ContentPlaceHolder1_ImageButtonEstrela4.src = '/Imagens/estrelaApagada.jpg'; ContentPlaceHolder1_ImageButtonEstrela5.src = '/Imagens/estrelaApagada.jpg'; ContentPlaceHolder1_ImageButtonEstrela6.src = '/Imagens/estrelaApagada.jpg'; ContentPlaceHolder1_ImageButtonEstrela7.src = '/Imagens/estrelaApagada.jpg';");
+            ImageButtonEstrela7.Attributes.Add("onmouseover", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela4.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela5.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela6.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela7.src = '/Imagens/estrelaAcesa.png';");
+            ImageButtonEstrela7.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela4.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela5.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela6.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela7.src = '/Imagens/estrelaApagada.png';");
 
             /*ESTRELA ACESA CASO O FILME ESTEJA AVALIADO*/
             DAL.DALRelacaoAvaliacao DALRelacaoAvaliacao = new DAL.DALRelacaoAvaliacao();
@@ -104,73 +104,73 @@ namespace ProjetoGrupo6.UsuarioNormal
 
             if (avaliacaoInt == 1)
             {
-                ImageButtonEstrela1.ImageUrl = "/Imagens/estrelaAcesa.jpg";
-                ImageButtonEstrela2.ImageUrl = "/Imagens/estrelaApagada.jpg";
-                ImageButtonEstrela3.ImageUrl = "/Imagens/estrelaApagada.jpg";
-                ImageButtonEstrela4.ImageUrl = "/Imagens/estrelaApagada.jpg";
-                ImageButtonEstrela5.ImageUrl = "/Imagens/estrelaApagada.jpg";
-                ImageButtonEstrela6.ImageUrl = "/Imagens/estrelaApagada.jpg";
-                ImageButtonEstrela7.ImageUrl = "/Imagens/estrelaApagada.jpg";
+                ImageButtonEstrela1.ImageUrl = "/Imagens/estrelaAcesa.png";
+                ImageButtonEstrela2.ImageUrl = "/Imagens/estrelaApagada.png";
+                ImageButtonEstrela3.ImageUrl = "/Imagens/estrelaApagada.png";
+                ImageButtonEstrela4.ImageUrl = "/Imagens/estrelaApagada.png";
+                ImageButtonEstrela5.ImageUrl = "/Imagens/estrelaApagada.png";
+                ImageButtonEstrela6.ImageUrl = "/Imagens/estrelaApagada.png";
+                ImageButtonEstrela7.ImageUrl = "/Imagens/estrelaApagada.png";
             }
             if (avaliacaoInt == 2)
             {
-                ImageButtonEstrela1.ImageUrl = "/Imagens/estrelaAcesa.jpg";
-                ImageButtonEstrela2.ImageUrl = "/Imagens/estrelaAcesa.jpg";
-                ImageButtonEstrela3.ImageUrl = "/Imagens/estrelaApagada.jpg";
-                ImageButtonEstrela4.ImageUrl = "/Imagens/estrelaApagada.jpg";
-                ImageButtonEstrela5.ImageUrl = "/Imagens/estrelaApagada.jpg";
-                ImageButtonEstrela6.ImageUrl = "/Imagens/estrelaApagada.jpg";
-                ImageButtonEstrela7.ImageUrl = "/Imagens/estrelaApagada.jpg";
+                ImageButtonEstrela1.ImageUrl = "/Imagens/estrelaAcesa.png";
+                ImageButtonEstrela2.ImageUrl = "/Imagens/estrelaAcesa.png";
+                ImageButtonEstrela3.ImageUrl = "/Imagens/estrelaApagada.png";
+                ImageButtonEstrela4.ImageUrl = "/Imagens/estrelaApagada.png";
+                ImageButtonEstrela5.ImageUrl = "/Imagens/estrelaApagada.png";
+                ImageButtonEstrela6.ImageUrl = "/Imagens/estrelaApagada.png";
+                ImageButtonEstrela7.ImageUrl = "/Imagens/estrelaApagada.png";
             }
             if (avaliacaoInt == 3)
             {
-                ImageButtonEstrela1.ImageUrl = "/Imagens/estrelaAcesa.jpg";
-                ImageButtonEstrela2.ImageUrl = "/Imagens/estrelaAcesa.jpg";
-                ImageButtonEstrela3.ImageUrl = "/Imagens/estrelaAcesa.jpg";
-                ImageButtonEstrela4.ImageUrl = "/Imagens/estrelaApagada.jpg";
-                ImageButtonEstrela5.ImageUrl = "/Imagens/estrelaApagada.jpg";
-                ImageButtonEstrela6.ImageUrl = "/Imagens/estrelaApagada.jpg";
-                ImageButtonEstrela7.ImageUrl = "/Imagens/estrelaApagada.jpg";
+                ImageButtonEstrela1.ImageUrl = "/Imagens/estrelaAcesa.png";
+                ImageButtonEstrela2.ImageUrl = "/Imagens/estrelaAcesa.png";
+                ImageButtonEstrela3.ImageUrl = "/Imagens/estrelaAcesa.png";
+                ImageButtonEstrela4.ImageUrl = "/Imagens/estrelaApagada.png";
+                ImageButtonEstrela5.ImageUrl = "/Imagens/estrelaApagada.png";
+                ImageButtonEstrela6.ImageUrl = "/Imagens/estrelaApagada.png";
+                ImageButtonEstrela7.ImageUrl = "/Imagens/estrelaApagada.png";
             }
             if (avaliacaoInt == 4)
             {
-                ImageButtonEstrela1.ImageUrl = "/Imagens/estrelaAcesa.jpg";
-                ImageButtonEstrela2.ImageUrl = "/Imagens/estrelaAcesa.jpg";
-                ImageButtonEstrela3.ImageUrl = "/Imagens/estrelaAcesa.jpg";
-                ImageButtonEstrela4.ImageUrl = "/Imagens/estrelaAcesa.jpg";
-                ImageButtonEstrela5.ImageUrl = "/Imagens/estrelaApagada.jpg";
-                ImageButtonEstrela6.ImageUrl = "/Imagens/estrelaApagada.jpg";
-                ImageButtonEstrela7.ImageUrl = "/Imagens/estrelaApagada.jpg";
+                ImageButtonEstrela1.ImageUrl = "/Imagens/estrelaAcesa.png";
+                ImageButtonEstrela2.ImageUrl = "/Imagens/estrelaAcesa.png";
+                ImageButtonEstrela3.ImageUrl = "/Imagens/estrelaAcesa.png";
+                ImageButtonEstrela4.ImageUrl = "/Imagens/estrelaAcesa.png";
+                ImageButtonEstrela5.ImageUrl = "/Imagens/estrelaApagada.png";
+                ImageButtonEstrela6.ImageUrl = "/Imagens/estrelaApagada.png";
+                ImageButtonEstrela7.ImageUrl = "/Imagens/estrelaApagada.png";
             }
             if (avaliacaoInt == 5)
             {
-                ImageButtonEstrela1.ImageUrl = "/Imagens/estrelaAcesa.jpg";
-                ImageButtonEstrela2.ImageUrl = "/Imagens/estrelaAcesa.jpg";
-                ImageButtonEstrela3.ImageUrl = "/Imagens/estrelaAcesa.jpg";
-                ImageButtonEstrela4.ImageUrl = "/Imagens/estrelaAcesa.jpg";
-                ImageButtonEstrela5.ImageUrl = "/Imagens/estrelaAcesa.jpg";
-                ImageButtonEstrela6.ImageUrl = "/Imagens/estrelaApagada.jpg";
-                ImageButtonEstrela7.ImageUrl = "/Imagens/estrelaApagada.jpg";
+                ImageButtonEstrela1.ImageUrl = "/Imagens/estrelaAcesa.png";
+                ImageButtonEstrela2.ImageUrl = "/Imagens/estrelaAcesa.png";
+                ImageButtonEstrela3.ImageUrl = "/Imagens/estrelaAcesa.png";
+                ImageButtonEstrela4.ImageUrl = "/Imagens/estrelaAcesa.png";
+                ImageButtonEstrela5.ImageUrl = "/Imagens/estrelaAcesa.png";
+                ImageButtonEstrela6.ImageUrl = "/Imagens/estrelaApagada.png";
+                ImageButtonEstrela7.ImageUrl = "/Imagens/estrelaApagada.png";
             }
             if (avaliacaoInt == 6)
             {
-                ImageButtonEstrela1.ImageUrl = "/Imagens/estrelaAcesa.jpg";
-                ImageButtonEstrela2.ImageUrl = "/Imagens/estrelaAcesa.jpg";
-                ImageButtonEstrela3.ImageUrl = "/Imagens/estrelaAcesa.jpg";
-                ImageButtonEstrela4.ImageUrl = "/Imagens/estrelaAcesa.jpg";
-                ImageButtonEstrela5.ImageUrl = "/Imagens/estrelaAcesa.jpg";
-                ImageButtonEstrela6.ImageUrl = "/Imagens/estrelaAcesa.jpg";
-                ImageButtonEstrela7.ImageUrl = "/Imagens/estrelaApagada.jpg";
+                ImageButtonEstrela1.ImageUrl = "/Imagens/estrelaAcesa.png";
+                ImageButtonEstrela2.ImageUrl = "/Imagens/estrelaAcesa.png";
+                ImageButtonEstrela3.ImageUrl = "/Imagens/estrelaAcesa.png";
+                ImageButtonEstrela4.ImageUrl = "/Imagens/estrelaAcesa.png";
+                ImageButtonEstrela5.ImageUrl = "/Imagens/estrelaAcesa.png";
+                ImageButtonEstrela6.ImageUrl = "/Imagens/estrelaAcesa.png";
+                ImageButtonEstrela7.ImageUrl = "/Imagens/estrelaApagada.png";
             }
             if (avaliacaoInt == 7)
             {
-                ImageButtonEstrela1.ImageUrl = "/Imagens/estrelaAcesa.jpg";
-                ImageButtonEstrela2.ImageUrl = "/Imagens/estrelaAcesa.jpg";
-                ImageButtonEstrela3.ImageUrl = "/Imagens/estrelaAcesa.jpg";
-                ImageButtonEstrela4.ImageUrl = "/Imagens/estrelaAcesa.jpg";
-                ImageButtonEstrela5.ImageUrl = "/Imagens/estrelaAcesa.jpg";
-                ImageButtonEstrela6.ImageUrl = "/Imagens/estrelaAcesa.jpg";
-                ImageButtonEstrela7.ImageUrl = "/Imagens/estrelaAcesa.jpg";
+                ImageButtonEstrela1.ImageUrl = "/Imagens/estrelaAcesa.png";
+                ImageButtonEstrela2.ImageUrl = "/Imagens/estrelaAcesa.png";
+                ImageButtonEstrela3.ImageUrl = "/Imagens/estrelaAcesa.png";
+                ImageButtonEstrela4.ImageUrl = "/Imagens/estrelaAcesa.png";
+                ImageButtonEstrela5.ImageUrl = "/Imagens/estrelaAcesa.png";
+                ImageButtonEstrela6.ImageUrl = "/Imagens/estrelaAcesa.png";
+                ImageButtonEstrela7.ImageUrl = "/Imagens/estrelaAcesa.png";
             }
         }
 

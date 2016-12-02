@@ -6,25 +6,26 @@
         <div class="row">
             <div class="col-md-3"></div>
             <div class="col-md-3"></div>
-            
-        <asp:Label ID="LabelFilme" runat="server" Text="Label"></asp:Label>
-            <asp:Label ID="LabelFilme_id" runat="server" Text="Label" Visible="False"></asp:Label>
-            <br />
-            <br />
-            <asp:Label ID="LabelAno" runat="server" Text="Label"></asp:Label>
-            <br />
-            <br />
-            <asp:Label ID="LabelSinopse" runat="server" Text="Label"></asp:Label>
-            <br />
-            <br />
-            <asp:Label ID="LabelDiretor" runat="server" Text="Label"></asp:Label>
-            <br />
-            <br />
-            <asp:Label ID="LabelProdutora" runat="server" Text="Label"></asp:Label>
-            <br />
-            <br />
-            <asp:Label ID="LabelDuracao" runat="server" Text="Label"></asp:Label>
-            <br />
+            <div id="sobreFilme" style="position: relative; left: 500px; width:350px; top: 0px;">
+                    <b><asp:Label ID="LabelFilme" runat="server" Text="Label"></asp:Label></b>
+                    <asp:Label ID="LabelFilme_id" runat="server" Text="Label" Visible="False"></asp:Label>
+                    <br />
+                    <br />
+                    Ano:&nbsp<asp:Label ID="LabelAno" runat="server" Text="Label"></asp:Label>
+                    <br />
+                    <br />
+                    Sinopse:&nbsp<asp:Label ID="LabelSinopse" runat="server" Text="Label"></asp:Label>
+                    <br />
+                    <br />
+                    Diretor:&nbsp<asp:Label ID="LabelDiretor" runat="server" Text="Label"></asp:Label>
+                    <br />
+                    <br />
+                    Produtora:&nbsp<asp:Label ID="LabelProdutora" runat="server" Text="Label"></asp:Label>
+                    <br />
+                    <br />
+                    Duração:&nbsp<asp:Label ID="LabelDuracao" runat="server" Text="Label"></asp:Label>
+                    <br />
+                </div>
         </div>
                     <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" RepeatColumns="1">
                         <ItemTemplate>

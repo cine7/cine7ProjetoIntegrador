@@ -64,8 +64,8 @@
     <Content Include="Imagens\cancelarInteresseButton.png" />
     <Content Include="Imagens\cancelarVisto.png" />
     <Content Include="Imagens\desfavoritarButton.png" />
-    <Content Include="Imagens\estrelaAcesa.jpg" />
-    <Content Include="Imagens\estrelaApagada.jpg" />
+    <Content Include="Imagens\estrelaAcesa.png" />
+    <Content Include="Imagens\estrelaApagada.png" />
     <Content Include="Imagens\favoritarButton.png" />
     <Content Include="Imagens\logoBranco.png" />
     <Content Include="Imagens\lupaPesquisar.png" />
