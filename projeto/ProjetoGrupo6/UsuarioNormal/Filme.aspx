@@ -36,13 +36,13 @@
                 <br />
                 Duração:&nbsp<asp:Label ID="LabelDuracao" runat="server" Text="Label"></asp:Label>
                 <div id="estrela" style="position: relative; top: 34px; left: 357px; width: 325px;">
-            <asp:ImageButton ID="ImageButtonEstrela1" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" onmouseover="acenderImagem()" Width="45px" OnClick="ImageButtonEstrela1_Click" />
-                <asp:ImageButton ID="ImageButtonEstrela2" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela2_Click" />
-                <asp:ImageButton ID="ImageButtonEstrela3" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela3_Click" />
-                <asp:ImageButton ID="ImageButtonEstrela4" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela4_Click" />
-                <asp:ImageButton ID="ImageButtonEstrela5" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela5_Click" />
-                <asp:ImageButton ID="ImageButtonEstrela6" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela6_Click" />
-                <asp:ImageButton ID="ImageButtonEstrela7" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela7_Click" />
+            <asp:ImageButton ID="ImageButtonEstrela1" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela_Click" CommandName="1" />
+                <asp:ImageButton ID="ImageButtonEstrela2" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela_Click" CommandName="2" />
+                <asp:ImageButton ID="ImageButtonEstrela3" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela_Click" CommandName="3" />
+                <asp:ImageButton ID="ImageButtonEstrela4" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela_Click" CommandName="4" />
+                <asp:ImageButton ID="ImageButtonEstrela5" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela_Click" CommandName="5" />
+                <asp:ImageButton ID="ImageButtonEstrela6" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela_Click" CommandName="6" />
+                <asp:ImageButton ID="ImageButtonEstrela7" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela_Click" CommandName="7" />
                 </div>
                 <br />
                 <br />
@@ -62,9 +62,10 @@
                 <br />
                 <asp:Label ID="dataLabel" runat="server" Text='<%# Eval("data") %>' />
                 <br />
-                <asp:ImageButton ID="ImageButtonPositivar" runat="server" CommandName="comentario_id" ImageUrl="~/Imagens/positivar.jpg" OnClick="ImageButtonPositivar_Click" OnPreRender="ImageButtonPositivar_PreRender" Width="20px" />
-                &nbsp;
-                <asp:ImageButton ID="ImageButtonNegativar" runat="server" CommandName="comentario_id" ImageUrl="~/Imagens/negativar.png" OnClick="ImageButtonNegativar_Click" OnPreRender="ImageButtonNegativar_PreRender" Width="20px" />
+                <asp:LinkButton ID="LinkButtonPositivos" runat="server" ForeColor="Black" OnPreRender="LinkButtonPositivos_PreRender">LinkButton</asp:LinkButton>
+                &nbsp;<asp:ImageButton ID="ImageButtonPositivar" runat="server" CommandName="comentario_id" ImageUrl="~/Imagens/positivar.jpg" OnClick="ImageButtonPositivar_Click" OnPreRender="ImageButtonPositivar_PreRender" Width="20px" />
+                &nbsp;<asp:LinkButton ID="LinkButtonNegativos" runat="server" ForeColor="Black" OnPreRender="LinkButtonNegativos_PreRender">LinkButton</asp:LinkButton>
+                &nbsp;<asp:ImageButton ID="ImageButtonNegativar" runat="server" CommandName="comentario_id" ImageUrl="~/Imagens/negativar.png" OnClick="ImageButtonNegativar_Click" OnPreRender="ImageButtonNegativar_PreRender" Width="20px" />
                 <br />
             </ItemTemplate>   
         </asp:DataList>

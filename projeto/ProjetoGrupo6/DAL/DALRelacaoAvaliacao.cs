@@ -103,9 +103,9 @@ namespace ProjetoGrupo6.DAL
                     }
                 }
             }
-            return validar;
             dr.Close();
             conn.Close();
+            return validar;
         }
     }
 }

@@ -61,7 +61,7 @@ namespace ProjetoGrupo6.DAL
 
         //SELECT NOS POST DE UM USUÁRIO
         [DataObjectMethod(DataObjectMethodType.Select)]
-        public List<Modelo.Post> SelectAll()
+        public List<Modelo.Post> SelectAll(string perfil)
         {
             // Variavel para armazenar um livro
             Modelo.Post aPost;
@@ -74,7 +74,8 @@ namespace ProjetoGrupo6.DAL
             // Cria comando SQL
             SqlCommand cmd = conn.CreateCommand();
             // define SQL do comando
-            cmd.CommandText = "Select * from Post";
+            cmd.CommandText = "exec sp_SelectPost @perfil";
+            cmd.Parameters.AddWithValue("@perfil", perfil);
             // Executa comando, gerando objeto DbDataReader
             SqlDataReader dr = cmd.ExecuteReader();
             // Le titulo do livro do resultado e apresenta no segundo rótulo
@@ -116,7 +117,7 @@ namespace ProjetoGrupo6.DAL
             // Cria comando SQL
             SqlCommand cmd = conn.CreateCommand();
             // define SQL do comando
-            cmd.CommandText = "Select tipo, Filme.filme_name, Usuario.nome from Post INNER JOIN Usuario on Usuario.usuario = Post.usuario INNER JOIN Segue on Segue.usuarioSeguido = Usuario.usuario INNER JOIN Filme on Filme.filme_id = Post.filme_id WHERE Segue.usuarioSeguidor = @perfil";
+            cmd.CommandText = "exec sp_SelectFeed @perfil";
             cmd.Parameters.AddWithValue("@perfil", perfil);
             // Executa comando, gerando objeto DbDataReader
             SqlDataReader dr = cmd.ExecuteReader();

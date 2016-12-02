@@ -17,14 +17,13 @@ namespace ProjetoGrupo6.DAL
             connectionString = ConfigurationManager.ConnectionStrings["2016TiiGrupo6ConnectionString"].ConnectionString;
         }
 
-        /*// SELECT NOS COMENTÁRIOS DE UM FILME
+        // SELECT NOS COMENTÁRIOS DE UM FILME
         [DataObjectMethod(DataObjectMethodType.Select)]
-        public List<Modelo.Comentario> SelectComentario(int filme_id)
+        public int SelectQuantidadeAvaliacao(int avaliacao, int comentario_id)
         {
-            // Variavel para armazenar um comentário
-            Modelo.Comentario aComentario;
+            int quantidade = 0, aAvaliacao = 0;
             // Cria Lista Vazia
-            List<Modelo.Comentario> aListComentario = new List<Modelo.Comentario>();
+            List<int> aListQuantidadeAvaliacao = new List<int>();
             // Cria Conexão com banco de dados
             SqlConnection conn = new SqlConnection(connectionString);
             // Abre conexão com o banco de dados
@@ -32,8 +31,9 @@ namespace ProjetoGrupo6.DAL
             // Cria comando SQL
             SqlCommand cmd = conn.CreateCommand();
             // define SQL do comando
-            cmd.CommandText = "SELECT comentario_id, data, descricao, filme_id, usuario FROM Comentario where filme_id = @filme_id";
-            cmd.Parameters.AddWithValue("@filme_id", filme_id);
+            cmd.CommandText = "SELECT avaliacao FROM AvaliacaoComentario where avaliacao = @avaliacao and comentario_id = @comentario_id";
+            cmd.Parameters.AddWithValue("@avaliacao", avaliacao);
+            cmd.Parameters.AddWithValue("@comentario_id", comentario_id);
             // Executa comando, gerando objeto DbDataReader
             SqlDataReader dr = cmd.ExecuteReader();
             // Le titulo do livro do resultado e apresenta no segundo rótulo
@@ -42,23 +42,18 @@ namespace ProjetoGrupo6.DAL
                 while (dr.Read()) // Le o proximo registro
                 {
                     // Cria objeto com dados lidos do banco de dados
-                    aComentario = new Modelo.Comentario(
-                        Convert.ToInt32(dr["comentario_id"]),
-                        Convert.ToDateTime(dr["data"]),
-                        dr["descricao"].ToString(),
-                        Convert.ToInt32(dr["filme_id"].ToString()),
-                        dr["usuario"].ToString()
-                        );
+                    aAvaliacao = Convert.ToInt32(dr["avaliacao"].ToString());
                     // Adiciona o livro lido à lista
-                    aListComentario.Add(aComentario);
+                    aListQuantidadeAvaliacao.Add(aAvaliacao);
+                    quantidade++;
                 }
             }
             // Fecha DataReader
             dr.Close();
             // Fecha Conexão
             conn.Close();
-            return aListComentario;
-        }*/
+            return quantidade;
+        }
 
         [DataObjectMethod(DataObjectMethodType.Select)]
         public bool SelectValidarAvaliacaoComentario(int comentario_id, string usuarioAvaliador)
@@ -175,7 +170,7 @@ namespace ProjetoGrupo6.DAL
             SqlCommand com = conn.CreateCommand();
             // Define comando de exclusão
             SqlCommand cmd = new SqlCommand("UPDATE AvaliacaoComentario set avaliacao = @avaliacao where comentario_id = @comentario_id and usuarioAvaliador = @usuarioAvaliador", conn);
-            cmd.Parameters.AddWithValue("@avaliacao", comentario_id);
+            cmd.Parameters.AddWithValue("@avaliacao", avaliacao);
             cmd.Parameters.AddWithValue("@comentario_id", comentario_id);
             cmd.Parameters.AddWithValue("@usuarioAvaliador", usuarioAvaliador);
 

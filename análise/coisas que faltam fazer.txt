@@ -1,0 +1,21 @@
+função de contador
+
+página de adm
+
+editar perfil
+
+gênero de filme
+
+parte de estrelas
+
+notificação
+
+linha do tempo
+
+cadastro de usuário administrador
+
+corrigir erros na modelagem
+
+função para select que não retorna nada
+
+coluna na tabela de post

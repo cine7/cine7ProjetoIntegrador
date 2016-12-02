@@ -21,11 +21,7 @@
                 <br />
             </ItemTemplate>
         </asp:DataList>
-        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="SelectFeed" TypeName="ProjetoGrupo6.DAL.DALPost">
-            <SelectParameters>
-                <asp:SessionParameter Name="perfil" SessionField="perfil" Type="String" />
-            </SelectParameters>
-        </asp:ObjectDataSource>
+        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server"></asp:ObjectDataSource>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:2016TiiGrupo6ConnectionString %>" SelectCommand="SELECT tipo,
 	   Filme.filme_name,
 	   Usuario.nome

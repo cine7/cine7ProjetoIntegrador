@@ -23,9 +23,9 @@ namespace ProjetoGrupo6.CriarLogin
             Membership.CreateUser(usuario, senha, email);
             Roles.AddUserToRole(usuario, "Normal");
 
-            DAL.DALUsuario DALUsuario = new DAL.DALUsuario();
+            /*DAL.DALUsuario DALUsuario = new DAL.DALUsuario();
             Modelo.Usuario usuariodal = new Modelo.Usuario(usuario, senha, TextBoxNome.Text, email, Convert.ToDateTime(TextBoxDataNascimento.Text), TextBoxPais.Text, TextBoxSexo.Text, "~/Imagens/Perfil/" + FileUploadImagem.FileName);
-            DALUsuario.Insert(usuariodal);
+            DALUsuario.Insert(usuariodal);*/
             string aSQLConecStr;
 
             // Lendo a conexão de dados do Web.Config

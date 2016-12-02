@@ -12,7 +12,7 @@ namespace ProjetoGrupo6.UsuarioNormal
     public partial class Filme : System.Web.UI.Page
     {
         bool visibilidade, avaliacao;
-        int avaliacaoInt;
+        int avaliacaoInt, quantidadeAvaliacaoPositivo = 0, quantidadeAvaliacaoNegativo = 0;
         string comentario_id;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -172,6 +172,10 @@ namespace ProjetoGrupo6.UsuarioNormal
                 ImageButtonEstrela6.ImageUrl = "/Imagens/estrelaAcesa.png";
                 ImageButtonEstrela7.ImageUrl = "/Imagens/estrelaAcesa.png";
             }
+
+            //LinkButtonNegativos.Text = quantidadeAvaliacaoNegativo.ToString();
+
+            //LinkButtonPositivos.Text = quantidadeAvaliacaoPositivo.ToString();
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -356,135 +360,21 @@ namespace ProjetoGrupo6.UsuarioNormal
 
         }
 
-        protected void ImageButtonEstrela1_Click(object sender, ImageClickEventArgs e)
+        protected void ImageButtonEstrela_Click(object sender, ImageClickEventArgs e)
         {
+            int estrelas = int.Parse((sender as ImageButton).CommandName);
             DAL.DALRelacaoAvaliacao DALRelacaoAvaliacao = new DAL.DALRelacaoAvaliacao();
             Modelo.RelacaoAvaliacao relacaoavaliacao = new Modelo.RelacaoAvaliacao(int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
             avaliacao = DALRelacaoAvaliacao.SelectValidar(relacaoavaliacao);
 
             if (avaliacao == false)
             {
-                Modelo.RelacaoAvaliacao relacaoavaliacao2 = new Modelo.RelacaoAvaliacao(1, int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
+                Modelo.RelacaoAvaliacao relacaoavaliacao2 = new Modelo.RelacaoAvaliacao(estrelas, int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
                 DALRelacaoAvaliacao.Insert(relacaoavaliacao2);
             }
             else
             {
-                Modelo.RelacaoAvaliacao relacaoavaliacao2 = new Modelo.RelacaoAvaliacao(1, int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
-                DALRelacaoAvaliacao.Update(relacaoavaliacao2);
-            }
-
-        }
-
-        protected void ImageButtonEstrela2_Click(object sender, ImageClickEventArgs e)
-        {
-            DAL.DALRelacaoAvaliacao DALRelacaoAvaliacao = new DAL.DALRelacaoAvaliacao();
-            Modelo.RelacaoAvaliacao relacaoavaliacao = new Modelo.RelacaoAvaliacao(int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
-            avaliacao = DALRelacaoAvaliacao.SelectValidar(relacaoavaliacao);
-
-            if (avaliacao == false)
-            {
-                Modelo.RelacaoAvaliacao relacaoavaliacao2 = new Modelo.RelacaoAvaliacao(2, int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
-                DALRelacaoAvaliacao.Insert(relacaoavaliacao2);
-            }
-            else
-            {
-                Modelo.RelacaoAvaliacao relacaoavaliacao2 = new Modelo.RelacaoAvaliacao(2, int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
-                DALRelacaoAvaliacao.Update(relacaoavaliacao2);
-            }
-
-        }
-
-        protected void ImageButtonEstrela3_Click(object sender, ImageClickEventArgs e)
-        {
-            DAL.DALRelacaoAvaliacao DALRelacaoAvaliacao = new DAL.DALRelacaoAvaliacao();
-            Modelo.RelacaoAvaliacao relacaoavaliacao = new Modelo.RelacaoAvaliacao(int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
-            avaliacao = DALRelacaoAvaliacao.SelectValidar(relacaoavaliacao);
-
-            /*DAL.DALPost DALPost = new DAL.DALPost();
-            Modelo.Post post = new Modelo.Post(4, int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());*/
-
-            if (avaliacao == false)
-            {
-                Modelo.RelacaoAvaliacao relacaoavaliacao2 = new Modelo.RelacaoAvaliacao(3, int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
-                DALRelacaoAvaliacao.Insert(relacaoavaliacao2);
-            }
-            else
-            {
-                Modelo.RelacaoAvaliacao relacaoavaliacao2 = new Modelo.RelacaoAvaliacao(3, int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
-                DALRelacaoAvaliacao.Update(relacaoavaliacao2);
-            }
-
-
-        }
-
-        protected void ImageButtonEstrela4_Click(object sender, ImageClickEventArgs e)
-        {
-            DAL.DALRelacaoAvaliacao DALRelacaoAvaliacao = new DAL.DALRelacaoAvaliacao();
-            Modelo.RelacaoAvaliacao relacaoavaliacao = new Modelo.RelacaoAvaliacao(int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
-            avaliacao = DALRelacaoAvaliacao.SelectValidar(relacaoavaliacao);
-
-            if (avaliacao == false)
-            {
-                Modelo.RelacaoAvaliacao relacaoavaliacao2 = new Modelo.RelacaoAvaliacao(4, int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
-                DALRelacaoAvaliacao.Insert(relacaoavaliacao2);
-            }
-            else
-            {
-                Modelo.RelacaoAvaliacao relacaoavaliacao2 = new Modelo.RelacaoAvaliacao(4, int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
-                DALRelacaoAvaliacao.Update(relacaoavaliacao2);
-            }
-        }
-
-        protected void ImageButtonEstrela5_Click(object sender, ImageClickEventArgs e)
-        {
-            DAL.DALRelacaoAvaliacao DALRelacaoAvaliacao = new DAL.DALRelacaoAvaliacao();
-            Modelo.RelacaoAvaliacao relacaoavaliacao = new Modelo.RelacaoAvaliacao(int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
-            avaliacao = DALRelacaoAvaliacao.SelectValidar(relacaoavaliacao);
-
-            if (avaliacao == false)
-            {
-                Modelo.RelacaoAvaliacao relacaoavaliacao2 = new Modelo.RelacaoAvaliacao(5, int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
-                DALRelacaoAvaliacao.Insert(relacaoavaliacao2);
-            }
-            else
-            {
-                Modelo.RelacaoAvaliacao relacaoavaliacao2 = new Modelo.RelacaoAvaliacao(5, int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
-                DALRelacaoAvaliacao.Update(relacaoavaliacao2);
-            }
-        }
-
-        protected void ImageButtonEstrela6_Click(object sender, ImageClickEventArgs e)
-        {
-            DAL.DALRelacaoAvaliacao DALRelacaoAvaliacao = new DAL.DALRelacaoAvaliacao();
-            Modelo.RelacaoAvaliacao relacaoavaliacao = new Modelo.RelacaoAvaliacao(int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
-            avaliacao = DALRelacaoAvaliacao.SelectValidar(relacaoavaliacao);
-
-            if (avaliacao == false)
-            {
-                Modelo.RelacaoAvaliacao relacaoavaliacao2 = new Modelo.RelacaoAvaliacao(6, int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
-                DALRelacaoAvaliacao.Insert(relacaoavaliacao2);
-            }
-            else
-            {
-                Modelo.RelacaoAvaliacao relacaoavaliacao2 = new Modelo.RelacaoAvaliacao(6, int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
-                DALRelacaoAvaliacao.Update(relacaoavaliacao2);
-            }
-        }
-
-        protected void ImageButtonEstrela7_Click(object sender, ImageClickEventArgs e)
-        {
-            DAL.DALRelacaoAvaliacao DALRelacaoAvaliacao = new DAL.DALRelacaoAvaliacao();
-            Modelo.RelacaoAvaliacao relacaoavaliacao = new Modelo.RelacaoAvaliacao(int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
-            avaliacao = DALRelacaoAvaliacao.SelectValidar(relacaoavaliacao);
-
-            if (avaliacao == false)
-            {
-                Modelo.RelacaoAvaliacao relacaoavaliacao2 = new Modelo.RelacaoAvaliacao(7, int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
-                DALRelacaoAvaliacao.Insert(relacaoavaliacao2);
-            }
-            else
-            {
-                Modelo.RelacaoAvaliacao relacaoavaliacao2 = new Modelo.RelacaoAvaliacao(7, int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
+                Modelo.RelacaoAvaliacao relacaoavaliacao2 = new Modelo.RelacaoAvaliacao(estrelas, int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
                 DALRelacaoAvaliacao.Update(relacaoavaliacao2);
             }
         }
@@ -552,6 +442,24 @@ namespace ProjetoGrupo6.UsuarioNormal
         protected void ImageButtonNegativar_PreRender(object sender, EventArgs e)
         {
             (sender as ImageButton).CommandName = comentario_id;
+        }
+
+        protected void LabelPositivos_PreRender(object sender, EventArgs e)
+        {
+        }
+
+        protected void LinkButtonNegativos_PreRender(object sender, EventArgs e)
+        {
+            (sender as LinkButton).CommandName = comentario_id;
+            DAL.DALAvaliacaoComentario DALAvaliacaoComentario = new DAL.DALAvaliacaoComentario();
+            quantidadeAvaliacaoNegativo = DALAvaliacaoComentario.SelectQuantidadeAvaliacao(0, int.Parse((sender as LinkButton).CommandName));
+        }
+
+        protected void LinkButtonPositivos_PreRender(object sender, EventArgs e)
+        {
+            (sender as LinkButton).CommandName = comentario_id;
+            DAL.DALAvaliacaoComentario DALAvaliacaoComentario = new DAL.DALAvaliacaoComentario();
+            quantidadeAvaliacaoPositivo = DALAvaliacaoComentario.SelectQuantidadeAvaliacao(0, int.Parse((sender as LinkButton).CommandName));
         }
 
     }
