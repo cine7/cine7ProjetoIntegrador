@@ -50,7 +50,7 @@ namespace ProjetoGrupo6.DAL
             // Cria comando SQL
             SqlCommand com = conn.CreateCommand();
             // Define comando de exclusão
-            SqlCommand cmd = new SqlCommand("UPDATE FROM RelacaoAvaliacao set avaliacao = @avaliacao WHERE filme_id = @filme_id and usuario = @usuario", conn);
+            SqlCommand cmd = new SqlCommand("UPDATE RelacaoAvaliacao set avaliacao = @avaliacao WHERE filme_id = @filme_id and usuario = @usuario", conn);
             cmd.Parameters.AddWithValue("@avaliacao", obj.avaliacao);
             cmd.Parameters.AddWithValue("@filme_id", obj.filme_id);
             cmd.Parameters.AddWithValue("@usuario", obj.usuario);
@@ -104,6 +104,8 @@ namespace ProjetoGrupo6.DAL
                 }
             }
             return validar;
+            dr.Close();
+            conn.Close();
         }
     }
 }

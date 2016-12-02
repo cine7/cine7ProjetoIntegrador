@@ -504,5 +504,55 @@ namespace ProjetoGrupo6.UsuarioNormal
             }
         }
 
+        protected void ImageButtonPositivar_Click(object sender, ImageClickEventArgs e)
+        {
+            DAL.DALAvaliacaoComentario DALAvaliacaoComentario = new DAL.DALAvaliacaoComentario();
+            bool validar = DALAvaliacaoComentario.SelectValidarAvaliacaoComentario(int.Parse((sender as ImageButton).CommandName), Session["usuario"].ToString());
+            int avaliacao = DALAvaliacaoComentario.SelectAvaliacaoComentario(int.Parse((sender as ImageButton).CommandName), Session["usuario"].ToString());
+
+            if(validar == true)
+            {
+                if(avaliacao == 1)
+                {
+                    DALAvaliacaoComentario.Delete(int.Parse((sender as ImageButton).CommandName), Session["usuario"].ToString());
+                }
+                else
+                {
+                    DALAvaliacaoComentario.Update(1, int.Parse((sender as ImageButton).CommandName), Session["usuario"].ToString());
+                }
+            }
+            else DALAvaliacaoComentario.Insert(1, int.Parse((sender as ImageButton).CommandName), Session["usuario"].ToString());
+        }
+
+        protected void ImageButtonNegativar_Click(object sender, ImageClickEventArgs e)
+        {
+            DAL.DALAvaliacaoComentario DALAvaliacaoComentario = new DAL.DALAvaliacaoComentario();
+            bool validar = DALAvaliacaoComentario.SelectValidarAvaliacaoComentario(int.Parse((sender as ImageButton).CommandName), Session["usuario"].ToString());
+            int avaliacao = DALAvaliacaoComentario.SelectAvaliacaoComentario(int.Parse((sender as ImageButton).CommandName), Session["usuario"].ToString());
+
+            if(validar == true)
+            {
+                if(avaliacao == 0)
+                {
+                    DALAvaliacaoComentario.Delete(int.Parse((sender as ImageButton).CommandName), Session["usuario"].ToString());
+                }
+                else
+                {
+                    DALAvaliacaoComentario.Update(0, int.Parse((sender as ImageButton).CommandName), Session["usuario"].ToString());
+                }
+            }
+            else DALAvaliacaoComentario.Insert(0, int.Parse((sender as ImageButton).CommandName), Session["usuario"].ToString());
+        }
+
+        protected void ImageButtonPositivar_PreRender(object sender, EventArgs e)
+        {
+            (sender as ImageButton).CommandName = comentario_id;
+        }
+
+        protected void ImageButtonNegativar_PreRender(object sender, EventArgs e)
+        {
+            (sender as ImageButton).CommandName = comentario_id;
+        }
+
     }
 }

@@ -69,6 +69,8 @@
     <Content Include="Imagens\favoritarButton.png" />
     <Content Include="Imagens\logoBranco.png" />
     <Content Include="Imagens\lupaPesquisar.png" />
+    <Content Include="Imagens\negativar.png" />
+    <Content Include="Imagens\positivar.jpg" />
     <Content Include="Imagens\sairButton.png" />
     <Content Include="Imagens\tvInteresseButton.png" />
     <Content Include="Imagens\vistoButton.png" />
@@ -95,7 +97,10 @@
     <Compile Include="Cine7Anonimo.Master.designer.cs">
       <DependentUpon>Cine7Anonimo.Master</DependentUpon>
     </Compile>
+    <Compile Include="DAL\DALAvaliacaoComentario.cs" />
+    <Compile Include="DAL\DALAvaliacaoPost.cs" />
     <Compile Include="DAL\DALComentario.cs" />
+    <Compile Include="DAL\DALComentarioPost.cs" />
     <Compile Include="DAL\DALFilme.cs" />
     <Compile Include="DAL\DALPost.cs" />
     <Compile Include="DAL\DALRelacaoAvaliacao.cs" />
@@ -111,7 +116,10 @@
     <Compile Include="Cine7Normal.Master.designer.cs">
       <DependentUpon>Cine7Normal.Master</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\AvaliacaoComentario.cs" />
+    <Compile Include="Modelo\AvaliacaoPost.cs" />
     <Compile Include="Modelo\Comentario.cs" />
+    <Compile Include="Modelo\ComentarioPost.cs" />
     <Compile Include="Modelo\Filme.cs" />
     <Compile Include="Modelo\Post.cs" />
     <Compile Include="Modelo\RelacaoAvaliacao.cs" />
