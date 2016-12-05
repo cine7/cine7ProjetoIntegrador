@@ -38,15 +38,15 @@ a {
 .pesquisa {
     position:relative;
     bottom:-52px;
-    left: 150px;
+    left: 151px;
     width: 144px;
 }
 .imagempesquisa {
     position:relative;
-    bottom:-56px;
+    bottom:-64px;
     left: 126px;
-    height: 7px;
-    width: 14px;
+    height: 1px;
+    width: 17px;
 }
 #faleconosco {
      position:relative;

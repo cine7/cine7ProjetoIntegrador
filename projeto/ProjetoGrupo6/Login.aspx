@@ -59,7 +59,7 @@
                                     </tr>
                                     <tr>
                                         <td align="right" colspan="2">
-                                            <asp:Button ID="LoginButton" runat="server" BackColor="#A30F1D" BorderStyle="None" CommandName="Login" ForeColor="White" Height="25px" Text="Login" ValidationGroup="Login1" Width="60px" CssClass="loginbutton" />
+                                            <asp:Button ID="LoginButton" runat="server" BackColor="#A30F1D" BorderStyle="None" CommandName="Login" ForeColor="White" Height="25px" Text="Login" ValidationGroup="Login1" Width="60px" CssClass="loginbutton" OnClick="LoginButton_Click" />
                                         </td>
                                     </tr>
                                 </caption>

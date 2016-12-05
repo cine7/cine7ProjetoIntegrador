@@ -21,9 +21,6 @@
         E-mail:
         <br /><asp:TextBox ID="TextBoxEmail" runat="server" TextMode="Email" Width="250px" Height="25px"></asp:TextBox>
         <br /><br />
-        Data Nascimento:
-        <br /><asp:TextBox ID="TextBoxDataNascimento" runat="server" TextMode="Date" Width="250px" Height="25px"></asp:TextBox>
-        <br /><br />
         País:
         <br /><asp:TextBox ID="TextBoxPais" runat="server" Width="250px" Height="25px"></asp:TextBox>
         <br /><br />

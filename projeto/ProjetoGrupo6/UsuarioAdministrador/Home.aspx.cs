@@ -1,19 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace ProjetoGrupo6.UsuarioNormal
+namespace ProjetoGrupo6.UsuarioAdministrador
 {
-    public partial class Home1 : System.Web.UI.Page
+    public partial class Home : System.Web.UI.Page
     {
-        string caminhoImagem;
         protected void Page_Load(object sender, EventArgs e)
         {
+            string caminhoImagem = "";
             Session["perfil"] = Session["usuario"];
 
             DAL.DALUsuario DALUsuario = new DAL.DALUsuario();
@@ -21,16 +19,6 @@ namespace ProjetoGrupo6.UsuarioNormal
             caminhoImagem = DALUsuario.SelectCaminhoImagem(usuario);
 
             ImagePerfil.ImageUrl = caminhoImagem;
-        }
-
-        protected void LinkButtonUsuarioPre(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void LinkButtonUsuario_PreRender(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -5,21 +5,21 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace ProjetoGrupo6
+namespace ProjetoGrupo6.UsuarioAdministrador
 {
-    public partial class Login : System.Web.UI.Page
+    public partial class CRUDFilme : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void Login1_LoggedIn(object sender, EventArgs e)
+        protected void TextBox1_TextChanged(object sender, EventArgs e)
         {
-            Session["usuario"] = Login1.UserName;
+
         }
 
-        protected void LoginButton_Click(object sender, EventArgs e)
+        protected void TextBox2_TextChanged(object sender, EventArgs e)
         {
 
         }

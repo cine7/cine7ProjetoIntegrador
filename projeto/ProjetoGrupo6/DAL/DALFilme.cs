@@ -65,26 +65,17 @@ namespace ProjetoGrupo6.DAL
         [DataObjectMethod(DataObjectMethodType.Select)]
         public Modelo.Filme SelectFilme(string filme)
         {
-            // Variável para armazenar um filme
             Modelo.Filme aFilme = new Modelo.Filme();
-            // Cria Lista Vazia
-            // Cria Conexão com banco de dados
             SqlConnection conn = new SqlConnection(connectionString);
-            // Abre conexão com o banco de dados
             conn.Open();
-            // Cria comando SQL
             SqlCommand cmd = conn.CreateCommand();
-            // define SQL do comando
             cmd.CommandText = "Select * from Filme where filme_name = @filme_name";
             cmd.Parameters.AddWithValue("@filme_name", filme);
-            // Executa comando, gerando objeto DbDataReader
             SqlDataReader dr = cmd.ExecuteReader();
-            // Le titulo do livro do resultado e apresenta no segundo rótulo
             if (dr.HasRows)
             {
-                while (dr.Read()) // Le o proximo registro
+                while (dr.Read())
                 {
-                    // Cria objeto com dados lidos do banco de dados
                     aFilme = new Modelo.Filme(
                         Convert.ToInt32(dr["filme_id"]),
                         dr["filme_name"].ToString(),
@@ -94,14 +85,44 @@ namespace ProjetoGrupo6.DAL
                         dr["produtora"].ToString(),
                         Convert.ToInt32(dr["duracao"])
                         );
-                    // Adiciona o livro lido à lista
                 }
             }
-            // Fecha DataReader
             dr.Close();
-            // Fecha Conexão
             conn.Close();
             return aFilme;
+        }
+
+        //INSERT EM UM FILME
+        [DataObjectMethod(DataObjectMethodType.Insert)]
+        public void Insert(Modelo.Filme obj)
+        {
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            SqlCommand com = conn.CreateCommand();
+            SqlCommand cmd = new SqlCommand("INSERT INTO Filme(filme_name, ano, sinopse, diretor, produtora, duracao, caminhoImagem) VALUES(@filme_name, @ano, @sinopse, @diretor, @produtora, @duracao, @caminhoImagem)", conn);
+            cmd.Parameters.AddWithValue("@filme_name", obj.filme_name);
+            cmd.Parameters.AddWithValue("@ano", obj.ano);
+            cmd.Parameters.AddWithValue("@sinopse", obj.sinopse);
+            cmd.Parameters.AddWithValue("@diretor", obj.diretor);
+            cmd.Parameters.AddWithValue("@produtora", obj.produtora);
+            cmd.Parameters.AddWithValue("@duracao", obj.duracao);
+            cmd.Parameters.AddWithValue("@caminhoImagem", "~/Imagens/Filmes/" + obj.caminhoImagem);
+
+            cmd.ExecuteNonQuery();
+
+        }
+
+        //DELETAR UM COMENTÁRIO
+        [DataObjectMethod(DataObjectMethodType.Delete)]
+        public void Delete(int comentario_id)
+        {
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            SqlCommand com = conn.CreateCommand();
+            SqlCommand cmd = new SqlCommand("DELETE FROM Comentario WHERE comentario_id = @comentario_id", conn);
+            cmd.Parameters.AddWithValue("@comentario_id", comentario_id);
+
+            cmd.ExecuteNonQuery();
         }
     }
 }

@@ -42,7 +42,7 @@ namespace ProjetoGrupo6.DAL
                 while (dr.Read()) // Le o proximo registro
                 {
                     // Cria objeto com dados lidos do banco de dados
-                    aAvaliacao = Convert.ToInt32(dr["avaliacao"].ToString());
+                    aAvaliacao = Convert.ToInt32(dr["avaliacao"]);
                     // Adiciona o livro lido à lista
                     aListQuantidadeAvaliacao.Add(aAvaliacao);
                     quantidade++;

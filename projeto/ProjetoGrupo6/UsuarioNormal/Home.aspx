@@ -8,7 +8,7 @@
                 <asp:Image ID="ImagePerfil" runat="server" BorderStyle="None" Width="100px" />
             </div>
             <div class="col-md-9">
-                <asp:DataList ID="DataList1" runat="server" DataSourceID="ObjectDataSource1">
+                <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1">
                     <ItemTemplate>
                         tipo:
                         <asp:Label ID="tipoLabel" runat="server" Text='<%# Eval("tipo") %>' />
@@ -19,7 +19,7 @@
                         nome:
                         <asp:Label ID="nomeLabel" runat="server" Text='<%# Eval("nome") %>' />
                         <br />
-                        <br />
+<br />
                     </ItemTemplate>
                 </asp:DataList>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:2016TiiGrupo6ConnectionString %>" SelectCommand="SELECT tipo,

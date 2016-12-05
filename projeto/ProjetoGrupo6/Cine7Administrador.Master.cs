@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace ProjetoGrupo6
 {
-    public partial class Site1 : System.Web.UI.MasterPage
+    public partial class Cine7Administrador : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -21,24 +21,28 @@ namespace ProjetoGrupo6
 
         protected void ImageButtonPesquisar_Click(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("~/UsuarioNormal/ResultadoPesquisa.aspx?Filme=" + TextBoxPesquisar.Text);
+            Response.Redirect("~/UsuarioAdministrador/ResultadoPesquisa.aspx?Filme=" + TextBoxPesquisar.Text);
         }
 
         protected void ImageButtonSair_Click(object sender, ImageClickEventArgs e)
         {
             Session["usuario"] = null;
-            Response.Redirect("~/UsuarioAnonimo/Home.aspx");
+            Response.Redirect("~/UsuarioAdministrador/Home.aspx");
         }
 
         protected void ImageButtonLogo_Click(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("~/UsuarioNormal/Home.aspx");
+            Response.Redirect("~/UsuarioAdministrador/Home.aspx");
         }
 
         protected void LinkButtonSessao_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/UsuarioNormal/Usuario.aspx?Usuario=" + LinkButtonSessao.Text);
+            Response.Redirect("~/UsuarioAdministrador/Usuario.aspx?Usuario=" + LinkButtonSessao.Text);
         }
 
+        protected void TextBoxPesquisar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
