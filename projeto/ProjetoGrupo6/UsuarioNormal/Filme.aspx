@@ -16,39 +16,35 @@
                 <asp:ImageButton ID="ImageButtonInteresse" runat="server" Height="45px" ImageUrl="~/Imagens/tvInteresseButton.png" OnClick="ImageButtonInteresse_Click" Width="45px" />
             </div>
             <div class="col-md-6">
-                <div id="sobreFilme">
-                <b><asp:Label ID="LabelFilme" runat="server" Text="Label"></asp:Label></b>
-                <asp:Label ID="LabelFilme_id" runat="server" Text="Label" Visible="False"></asp:Label>
+                 <div id="containerInfoFilme">
+                    <b><asp:Label ID="LabelFilme" runat="server" Text="Label"></asp:Label></b>
+                    <asp:Label ID="LabelFilme_id" runat="server" Text="Label" Visible="False"></asp:Label>
        
-                <br />
-                <br />
-                Ano:&nbsp<asp:Label ID="LabelAno" runat="server" Text="Label"></asp:Label>
-                <br />
-                <br />
-                Sinopse:&nbsp<asp:Label ID="LabelSinopse" runat="server" Text="Label"></asp:Label>
-                <br />
-                <br />
-                Diretor:&nbsp<asp:Label ID="LabelDiretor" runat="server" Text="Label"></asp:Label>
-                <br />
-                <br />
-                Produtora:&nbsp<asp:Label ID="LabelProdutora" runat="server" Text="Label"></asp:Label>
-                <br />
-                <br />
-                Duração:&nbsp<asp:Label ID="LabelDuracao" runat="server" Text="Label"></asp:Label>
-                <div id="estrela" style="position: relative; top: 34px; left: 357px; width: 325px;">
-            <asp:ImageButton ID="ImageButtonEstrela1" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela_Click" CommandName="1" />
+                    <br />
+                    <br />
+                    Ano:&nbsp<asp:Label ID="LabelAno" runat="server" Text="Label"></asp:Label>
+                    <br />
+                    <br />
+                    Sinopse:&nbsp<asp:Label ID="LabelSinopse" runat="server" Text="Label"></asp:Label>
+                    <br />
+                    <br />
+                    Diretor:&nbsp<asp:Label ID="LabelDiretor" runat="server" Text="Label"></asp:Label>
+                    <br />
+                    <br />
+                    Produtora:&nbsp<asp:Label ID="LabelProdutora" runat="server" Text="Label"></asp:Label>
+                    <br />
+                    <br />
+                    Duração:&nbsp<asp:Label ID="LabelDuracao" runat="server" Text="Label"></asp:Label>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <asp:ImageButton ID="ImageButtonEstrela1" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela_Click" CommandName="1" />
                 <asp:ImageButton ID="ImageButtonEstrela2" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela_Click" CommandName="2" />
                 <asp:ImageButton ID="ImageButtonEstrela3" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela_Click" CommandName="3" />
                 <asp:ImageButton ID="ImageButtonEstrela4" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela_Click" CommandName="4" />
                 <asp:ImageButton ID="ImageButtonEstrela5" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela_Click" CommandName="5" />
                 <asp:ImageButton ID="ImageButtonEstrela6" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela_Click" CommandName="6" />
                 <asp:ImageButton ID="ImageButtonEstrela7" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela_Click" CommandName="7" />
-                </div>
-                <br />
-                <br />
-                </div>
-            </div>
-            <div class="col-md-3">
             </div>
         </div>
     
