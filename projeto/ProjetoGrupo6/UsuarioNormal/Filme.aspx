@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-md-3">
                 <asp:Image ID="ImageFilme" runat="server" />
-                <asp:ImageButton ID="ImageButtonFavorito" runat="server" Height="45px" ImageUrl="~/Imagens/favoritarButton.png" OnClick="ImageButton1_Click" Width="45px" />
+                <asp:ImageButton ID="ImageButtonFavorito" runat="server" Height="45px" ImageUrl="~/Imagens/favoritarButton.png" OnClick="ImageButtonFavoritar_Click" Width="45px" />
                 <asp:ImageButton ID="ImageButtonVisto" runat="server" Height="45px" ImageUrl="~/Imagens/vistoButton.png" OnClick="ImageButtonVisto_Click" />
                 <asp:ImageButton ID="ImageButtonInteresse" runat="server" Height="45px" ImageUrl="~/Imagens/tvInteresseButton.png" OnClick="ImageButtonInteresse_Click" Width="45px" />
             </div>
@@ -58,10 +58,10 @@
                 <br />
                 <asp:Label ID="dataLabel" runat="server" Text='<%# Eval("data") %>' />
                 <br />
-                <asp:LinkButton ID="LinkButtonPositivos" runat="server" ForeColor="Black" OnPreRender="LinkButtonPositivos_PreRender">LinkButton</asp:LinkButton>
+                <asp:Label ID="LabelPostivos" runat="server" OnPreRender="LabelPostivos_PreRender" Text="Label"></asp:Label>
                 &nbsp;<asp:ImageButton ID="ImageButtonPositivar" runat="server" CommandName="comentario_id" ImageUrl="~/Imagens/positivar.jpg" OnClick="ImageButtonPositivar_Click" OnPreRender="ImageButtonPositivar_PreRender" Width="20px" />
-                &nbsp;<asp:LinkButton ID="LinkButtonNegativos" runat="server" ForeColor="Black" OnPreRender="LinkButtonNegativos_PreRender">LinkButton</asp:LinkButton>
-                &nbsp;<asp:ImageButton ID="ImageButtonNegativar" runat="server" CommandName="comentario_id" ImageUrl="~/Imagens/negativar.png" OnClick="ImageButtonNegativar_Click" OnPreRender="ImageButtonNegativar_PreRender" Width="20px" />
+                <asp:Label ID="LabelNegativos" runat="server" OnPreRender="LabelNegativos_PreRender" Text="Label"></asp:Label>
+                &nbsp;&nbsp;<asp:ImageButton ID="ImageButtonNegativar" runat="server" CommandName="comentario_id" ImageUrl="~/Imagens/negativar.png" OnClick="ImageButtonNegativar_Click" OnPreRender="ImageButtonNegativar_PreRender" Width="20px" />
                 <br />
             </ItemTemplate>   
         </asp:DataList>

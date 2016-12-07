@@ -1,14 +1,10 @@
-função de contador
-
 página de adm
 
 editar perfil
 
 gênero de filme
 
-parte de estrelas
-
-notificação
+notificação - NÃO VAI DAR MAIS
 
 linha do tempo
 

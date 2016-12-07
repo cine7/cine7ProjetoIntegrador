@@ -63,6 +63,10 @@ a {
     position:relative;
     width:50%;
 }
+/*MENU*/
+#LinkButtonSessao:hover {
+    text-decoration: none;
+}
 /*USUARIO*/
 [id*="ContentPlaceHolder1_DataList1_tipoLabel"]
 {

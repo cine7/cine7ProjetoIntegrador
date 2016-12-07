@@ -331,7 +331,7 @@ namespace ProjetoGrupo6.UsuarioNormal
                     ImageButtonEstrela6.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela4.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela5.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela6.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela7.src = '/Imagens/estrelaAcesa.png';");
 
                     ImageButtonEstrela7.Attributes.Add("onmouseover", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela4.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela5.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela6.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela7.src = '/Imagens/estrelaAcesa.png';");
-                    ImageButtonEstrela7.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela4.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela5.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela6.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela7.src = '/Imagens/estrelaAcesa.png';");
+                    ImageButtonEstrela7.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela4.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela5.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela6.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela7.src = '/Imagens/estrelaAcesa.png';");
 
                 }
             }
@@ -359,7 +359,7 @@ namespace ProjetoGrupo6.UsuarioNormal
             Response.Redirect("~/UsuarioNormal/ResultadoPesquisa.aspx?Filme=" + LabelFilme.Text);
         }
 
-        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        protected void ImageButtonFavoritar_Click(object sender, ImageClickEventArgs e)
         {
             if (ImageButtonFavorito.ImageUrl == "~/Imagens/favoritarButton.png")
             {
@@ -382,8 +382,8 @@ namespace ProjetoGrupo6.UsuarioNormal
                 DAL.DALPost DALPost = new DAL.DALPost();
                 Modelo.Post post = new Modelo.Post(1, int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
                 DALPost.Insert(post);
-
             }
+            Response.Redirect("~/UsuarioNormal/Filme.aspx?Filme=" + Session["filme_name"]);
         }
 
         protected void LinkButtonApagar_Click(object sender, EventArgs e)
@@ -413,8 +413,8 @@ namespace ProjetoGrupo6.UsuarioNormal
                 DAL.DALPost DALPost = new DAL.DALPost();
                 Modelo.Post post = new Modelo.Post(3, int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
                 DALPost.Insert(post);
-
             }
+            Response.Redirect("~/UsuarioNormal/Filme.aspx?Filme=" + Session["filme_name"]);
         }
 
         protected void ImageButtonInteresse_Click(object sender, ImageClickEventArgs e)
@@ -440,8 +440,8 @@ namespace ProjetoGrupo6.UsuarioNormal
                 DAL.DALPost DALPost = new DAL.DALPost();
                 Modelo.Post post = new Modelo.Post(2, int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
                 DALPost.Insert(post);
-
             }
+            Response.Redirect("~/UsuarioNormal/Filme.aspx?Filme=" + Session["filme_name"]);
         }
 
         protected void LinkButtonApagar_DataBinding(object sender, EventArgs e)
@@ -451,7 +451,9 @@ namespace ProjetoGrupo6.UsuarioNormal
 
         protected void comentario_idLabel_PreRender(object sender, EventArgs e)
         {
+            (sender as Label).Visible = true;
             comentario_id = (sender as Label).Text;
+            (sender as Label).Visible = false;
         }
 
 
@@ -763,8 +765,9 @@ namespace ProjetoGrupo6.UsuarioNormal
                     ImageButtonEstrela6.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela4.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela5.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela6.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela7.src = '/Imagens/estrelaAcesa.png';");
 
                     ImageButtonEstrela7.Attributes.Add("onmouseover", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela4.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela5.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela6.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela7.src = '/Imagens/estrelaAcesa.png';");
-                    ImageButtonEstrela7.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela4.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela5.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela6.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela7.src = '/Imagens/estrelaAcesa.png';");
+                    ImageButtonEstrela7.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela4.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela5.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela6.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela7.src = '/Imagens/estrelaAcesa.png';");
                 }
+                Response.Redirect("~/UsuarioNormal/Filme.aspx?Filme=" + Session["filme_name"]);
         }
 
         protected void LinkButtonUsuario_PreRender1(object sender, EventArgs e)
@@ -800,6 +803,7 @@ namespace ProjetoGrupo6.UsuarioNormal
                 }
             }
             else DALAvaliacaoComentario.Insert(1, int.Parse((sender as ImageButton).CommandName), Session["usuario"].ToString());
+            Response.Redirect("~/UsuarioNormal/Filme.aspx?Filme=" + Session["filme_name"]);
         }
 
         protected void ImageButtonNegativar_Click(object sender, ImageClickEventArgs e)
@@ -820,6 +824,7 @@ namespace ProjetoGrupo6.UsuarioNormal
                 }
             }
             else DALAvaliacaoComentario.Insert(0, int.Parse((sender as ImageButton).CommandName), Session["usuario"].ToString());
+            Response.Redirect("~/UsuarioNormal/Filme.aspx?Filme=" + Session["filme_name"]);
         }
 
         protected void ImageButtonPositivar_PreRender(object sender, EventArgs e)
@@ -836,18 +841,20 @@ namespace ProjetoGrupo6.UsuarioNormal
         {
         }
 
-        protected void LinkButtonNegativos_PreRender(object sender, EventArgs e)
+        protected void LabelPostivos_PreRender(object sender, EventArgs e)
         {
-            (sender as LinkButton).CommandName = comentario_id;
+
             DAL.DALAvaliacaoComentario DALAvaliacaoComentario = new DAL.DALAvaliacaoComentario();
-            quantidadeAvaliacaoNegativo = DALAvaliacaoComentario.SelectQuantidadeAvaliacao(0, int.Parse((sender as LinkButton).CommandName));
+            int x = DALAvaliacaoComentario.SelectQuantidadeAvaliacao(1, int.Parse(comentario_id));
+            (sender as Label).Text = x.ToString();
         }
 
-        protected void LinkButtonPositivos_PreRender(object sender, EventArgs e)
+        protected void LabelNegativos_PreRender(object sender, EventArgs e)
         {
-            (sender as LinkButton).CommandName = comentario_id;
             DAL.DALAvaliacaoComentario DALAvaliacaoComentario = new DAL.DALAvaliacaoComentario();
-            quantidadeAvaliacaoPositivo = DALAvaliacaoComentario.SelectQuantidadeAvaliacao(0, int.Parse((sender as LinkButton).CommandName));
+            int x = DALAvaliacaoComentario.SelectQuantidadeAvaliacao(0, int.Parse(comentario_id));
+            (sender as Label).Text = x.ToString();
+
         }
 
     }

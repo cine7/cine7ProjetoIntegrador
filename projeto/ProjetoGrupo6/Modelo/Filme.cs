@@ -27,8 +27,9 @@ namespace ProjetoGrupo6.Modelo
             this.duracao = 0;
             this.caminhoImagem = "";
         }
-        public Filme(string afilme_name, int aano, string asinopse, string adiretor, string aprodutora, int aduracao, string acaminhoImagem) 
+        public Filme(int afilme_id, string afilme_name, int aano, string asinopse, string adiretor, string aprodutora, int aduracao, string acaminhoImagem)
         {
+            this.filme_id = afilme_id;
             this.filme_name = afilme_name;
             this.ano = aano;
             this.sinopse = asinopse;
@@ -46,6 +47,16 @@ namespace ProjetoGrupo6.Modelo
             this.diretor = adiretor;
             this.produtora = aprodutora;
             this.duracao = aduracao;
+        }
+        public Filme(string afilme_name, int aano, string asinopse, string adiretor, string aprodutora, int aduracao, string acaminhoImagem)
+        {
+            this.filme_name = afilme_name;
+            this.ano = aano;
+            this.sinopse = asinopse;
+            this.diretor = adiretor;
+            this.produtora = aprodutora;
+            this.duracao = aduracao;
+            this.caminhoImagem = acaminhoImagem;
         }
     }
 }

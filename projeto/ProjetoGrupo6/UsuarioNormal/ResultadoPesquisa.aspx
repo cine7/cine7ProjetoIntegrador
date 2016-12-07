@@ -4,9 +4,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:DataList ID="DataList1" runat="server" DataSourceID="ObjectDataSource2">
         <ItemTemplate>
-            <asp:Image ID="Image5" runat="server" ImageUrl='<%# Eval("caminhoImagem") %>' Width="16px" />
+            <asp:Image ID="Image5" runat="server" ImageUrl='<%# Eval("caminhoImagem") %>' Width="16px" Height="17px" />
             <br />
-            <asp:LinkButton ID="LinkButtonFilme_name" runat="server" ForeColor="Black" OnClick="LinkButtonfilme_name_Click1">LinkButton</asp:LinkButton>
+            <asp:LinkButton ID="LinkButtonFilme_name" runat="server" ForeColor="Black" OnClick="LinkButtonfilme_name_Click1" Text='<%# Eval("filme_name") %>'></asp:LinkButton>
             &nbsp;(<asp:Label ID="anoLabel" runat="server" Text='<%# Eval("ano") %>' />
             )<br />
             <asp:Label ID="sinopseLabel" runat="server" Text='<%# Eval("sinopse") %>' />

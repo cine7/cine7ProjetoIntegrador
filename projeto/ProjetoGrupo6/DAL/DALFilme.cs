@@ -32,7 +32,7 @@ namespace ProjetoGrupo6.DAL
             // Cria comando SQL
             SqlCommand cmd = conn.CreateCommand();
             // define SQL do comando
-            cmd.CommandText = "Select filme_name, ano, sinopse, diretor, produtora, duracao from Filme where filme_name like '%' + @filme_name + '%'";
+            cmd.CommandText = "Select filme_name, ano, sinopse, diretor, produtora, duracao, caminhoImagem from Filme where filme_name like '%' + @filme_name + '%'";
             cmd.Parameters.AddWithValue("@filme_name", filme);
             // Executa comando, gerando objeto DbDataReader
             SqlDataReader dr = cmd.ExecuteReader();
@@ -78,6 +78,7 @@ namespace ProjetoGrupo6.DAL
                 while (dr.Read())
                 {
                     aFilme = new Modelo.Filme(
+                        Convert.ToInt32(dr["filme_id"]),
                         dr["filme_name"].ToString(),
                         Convert.ToInt32(dr["ano"]),
                         dr["sinopse"].ToString(),
