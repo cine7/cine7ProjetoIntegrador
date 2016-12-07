@@ -61,41 +61,30 @@ namespace ProjetoGrupo6.DAL
 
         //SELECT NOS POST DE UM USUÁRIO
         [DataObjectMethod(DataObjectMethodType.Select)]
-        public List<Modelo.Post> SelectAll(string perfil)
+        public List<string> SelectAll(string perfil)
         {
-            // Variavel para armazenar um livro
-            Modelo.Post aPost;
-            // Cria Lista Vazia
-            List<Modelo.Post> aListPost = new List<Modelo.Post>();
-            // Cria Conexão com banco de dados
+            string aPost, usuario, filme_name;
+            List<string> aListPost = new List<string>();
             SqlConnection conn = new SqlConnection(connectionString);
-            // Abre conexão com o banco de dados
             conn.Open();
-            // Cria comando SQL
             SqlCommand cmd = conn.CreateCommand();
-            // define SQL do comando
             cmd.CommandText = "exec sp_SelectPost @perfil";
             cmd.Parameters.AddWithValue("@perfil", perfil);
-            // Executa comando, gerando objeto DbDataReader
             SqlDataReader dr = cmd.ExecuteReader();
-            // Le titulo do livro do resultado e apresenta no segundo rótulo
             if (dr.HasRows)
             {
-                while (dr.Read()) // Le o proximo registro
+                while (dr.Read())
                 {
-                    // Cria objeto com dados lidos do banco de dados
-                    aPost = new Modelo.Post(
-                        Convert.ToInt32(dr["tipo"]),
-                        Convert.ToInt32(dr["filme_id"]),
-                        dr["usuario"].ToString()
-                        );
-                    // Adiciona o livro lido à lista
-                    aListPost.Add(aPost);
+                        if (Convert.ToInt32(dr["tipo"]) == 1)
+                        {
+                            usuario = dr["usuario"].ToString();
+                            filme_name = dr["filme_name"].ToString();
+                            aPost = usuario + "favoritou" + filme_name;
+                            aListPost.Add(aPost);
+                        }
                 }
             }
-            // Fecha DataReader
             dr.Close();
-            // Fecha Conexão
             conn.Close();
 
             return aListPost;
@@ -104,42 +93,44 @@ namespace ProjetoGrupo6.DAL
 
         //SELECT NOS POSTS DO FEED DE UM USUÁRIO
         [DataObjectMethod(DataObjectMethodType.Select)]
-        public List<Modelo.Post> SelectFeed(string perfil)
+        public List<string> SelectFeed(string perfil)
         {
-            // Variavel para armazenar um livro
-            Modelo.Post aPost;
-            // Cria Lista Vazia
-            List<Modelo.Post> aListPost = new List<Modelo.Post>();
-            // Cria Conexão com banco de dados
+            string aPost, usuario, filme_name;
+            List<string> aListPost = new List<string>();
             SqlConnection conn = new SqlConnection(connectionString);
-            // Abre conexão com o banco de dados
             conn.Open();
-            // Cria comando SQL
             SqlCommand cmd = conn.CreateCommand();
-            // define SQL do comando
             cmd.CommandText = "exec sp_SelectFeed @perfil";
             cmd.Parameters.AddWithValue("@perfil", perfil);
-            // Executa comando, gerando objeto DbDataReader
             SqlDataReader dr = cmd.ExecuteReader();
-            // Le titulo do livro do resultado e apresenta no segundo rótulo
             if (dr.HasRows)
             {
-
-                while (dr.Read()) // Le o proximo registro
+                while (dr.Read())
                 {
-                    // Cria objeto com dados lidos do banco de dados
-                    aPost = new Modelo.Post(
-                        Convert.ToInt32(dr["tipo"]),
-                        Convert.ToInt32(dr["Filme.filme_name"]),
-                        dr["Usuario.nome"].ToString()
-                        );
-                    // Adiciona o livro lido à lista
-                    aListPost.Add(aPost);
+                    if (Convert.ToInt32(dr["tipo"]) == 1)
+                    {
+                        usuario = dr["usuario"].ToString();
+                        filme_name = dr["filme_name"].ToString();
+                        aPost = usuario + " favoritou " + filme_name;
+                        aListPost.Add(aPost);
+                    }
+                    if (Convert.ToInt32(dr["tipo"]) == 2)
+                    {
+                        usuario = dr["usuario"].ToString();
+                        filme_name = dr["filme_name"].ToString();
+                        aPost = usuario + " adicionou " + filme_name + " à lista de interesses";
+                        aListPost.Add(aPost);
+                    }
+                    if (Convert.ToInt32(dr["tipo"]) == 3)
+                    {
+                        usuario = dr["usuario"].ToString();
+                        filme_name = dr["filme_name"].ToString();
+                        aPost = usuario + " marcou " + filme_name + " como visto";
+                        aListPost.Add(aPost);
+                    }
                 }
             }
-            // Fecha DataReader
             dr.Close();
-            // Fecha Conexão
             conn.Close();
 
             return aListPost;

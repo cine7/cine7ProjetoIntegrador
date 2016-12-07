@@ -11,6 +11,7 @@ namespace ProjetoGrupo6.Modelo
         public DateTime dataHora { get; set; }
         public int filme_id { get; set; }
         public string usuario { get; set; }
+        public string caminhoImagem { get; set; }
 
         // Construtor
         public RelacaoFavorito()
@@ -19,6 +20,7 @@ namespace ProjetoGrupo6.Modelo
             this.dataHora = DateTime.Now;
             this.filme_id = 0;
             this.usuario = "";
+            this.caminhoImagem = "";
         }
         public RelacaoFavorito(int afilme_id, string ausuario)
         {
@@ -29,5 +31,9 @@ namespace ProjetoGrupo6.Modelo
         {
             this.filme_id = afilme_id;
         }
+        public RelacaoFavorito(string acaminhoImagem)
+        {
+            this.caminhoImagem = acaminhoImagem;
+        }
     }
-    }
+}

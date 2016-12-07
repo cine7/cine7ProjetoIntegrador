@@ -22,13 +22,13 @@ namespace ProjetoGrupo6.UsuarioNormal {
         protected global::System.Web.UI.WebControls.TextBox TextBoxNome;
         
         /// <summary>
-        /// Button2 control.
+        /// ButtonEditarNome control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Button ButtonEditarNome;
         
         /// <summary>
         /// TextBoxEmail control.
@@ -40,13 +40,13 @@ namespace ProjetoGrupo6.UsuarioNormal {
         protected global::System.Web.UI.WebControls.TextBox TextBoxEmail;
         
         /// <summary>
-        /// Button3 control.
+        /// ButtonEditarEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button3;
+        protected global::System.Web.UI.WebControls.Button ButtonEditarEmail;
         
         /// <summary>
         /// TextBoxPais control.
@@ -58,13 +58,13 @@ namespace ProjetoGrupo6.UsuarioNormal {
         protected global::System.Web.UI.WebControls.TextBox TextBoxPais;
         
         /// <summary>
-        /// Button4 control.
+        /// ButtonEditarPais control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button4;
+        protected global::System.Web.UI.WebControls.Button ButtonEditarPais;
         
         /// <summary>
         /// TextBoxSexo control.
@@ -76,13 +76,13 @@ namespace ProjetoGrupo6.UsuarioNormal {
         protected global::System.Web.UI.WebControls.TextBox TextBoxSexo;
         
         /// <summary>
-        /// Button5 control.
+        /// ButtonEditarSexo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button5;
+        protected global::System.Web.UI.WebControls.Button ButtonEditarSexo;
         
         /// <summary>
         /// ImagePerfil control.
@@ -94,12 +94,21 @@ namespace ProjetoGrupo6.UsuarioNormal {
         protected global::System.Web.UI.WebControls.Image ImagePerfil;
         
         /// <summary>
-        /// FileUpload1 control.
+        /// FileUploadEditarImagemPerfil control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
+        protected global::System.Web.UI.WebControls.FileUpload FileUploadEditarImagemPerfil;
+        
+        /// <summary>
+        /// ButtonEditarCaminhoImagem control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonEditarCaminhoImagem;
     }
 }

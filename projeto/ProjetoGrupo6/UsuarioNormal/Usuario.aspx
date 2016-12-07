@@ -13,7 +13,7 @@
          </div>
         <div class="row">
             <div class="col-md-6">
-                Filmes Favoritos<asp:DataList ID="DataListFavoritos" runat="server" DataSourceID="SqlDataSource1" RepeatDirection="Horizontal">
+                Filmes Favoritos<asp:DataList ID="DataListFavoritos" runat="server" DataSourceID="ObjectDataSource1" RepeatDirection="Horizontal">
                     <ItemTemplate>
                         filme_name: <asp:Label ID="filme_nameLabel" runat="server" Text='<%# Eval("filme_name") %>' />
                         <br />

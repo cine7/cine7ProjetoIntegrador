@@ -123,5 +123,31 @@ namespace ProjetoGrupo6.DAL
             conn.Close();
             return quantidade;
         }
+
+        // SELECT NOS VISTO DE UM USUÁRIO
+        [DataObjectMethod(DataObjectMethodType.Select)]
+        public List<Modelo.RelacaoVisto> SelectListaVisto(string perfil)
+        {
+            Modelo.RelacaoVisto aFavorito;
+            // Cria Lista Vazia
+            List<Modelo.RelacaoVisto> aListFavorito = new List<Modelo.RelacaoVisto>();
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "exec sp_SelectVistosUsuario @perfil";
+            cmd.Parameters.AddWithValue("@perfil", perfil);
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    aFavorito = new Modelo.RelacaoVisto(dr["caminhoImagem"].ToString());
+                    aListFavorito.Add(aFavorito);
+                }
+            }
+            dr.Close();
+            conn.Close();
+            return aListFavorito;
+        }
     }
 }

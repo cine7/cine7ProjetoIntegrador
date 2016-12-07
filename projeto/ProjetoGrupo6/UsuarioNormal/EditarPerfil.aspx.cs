@@ -18,18 +18,47 @@ namespace ProjetoGrupo6.UsuarioNormal
             DAL.DALUsuario DALUsuario = new DAL.DALUsuario();
             Modelo.Usuario usuario = DALUsuario.SelectUsuario(Session["usuario"].ToString());
 
-            TextBoxNome.Text = usuario.nome;
+            /*TextBoxNome.Text = usuario.nome;
             TextBoxEmail.Text = usuario.email;
             TextBoxPais.Text = usuario.pais;
             TextBoxSexo.Text = usuario.sexo;
-            ImagePerfil.ImageUrl = usuario.caminhoImagem;
-
+            ImagePerfil.ImageUrl = usuario.caminhoImagem;*/
 
         }
 
-        protected void TextBox1_TextChanged(object sender, EventArgs e)
+        protected void ButtonEditarNome_Click(object sender, EventArgs e)
         {
+            DAL.DALUsuario DALUsuario = new DAL.DALUsuario();
+            DALUsuario.UpdateNome(TextBoxNome.Text, Session["usuario"].ToString());
+            Response.Redirect("~/UsuarioNormal/EditarPerfil.aspx");
+        }
 
+        protected void ButtonEditarEmail_Click(object sender, EventArgs e)
+        {
+            DAL.DALUsuario DALUsuario = new DAL.DALUsuario();
+            DALUsuario.UpdateEmail(TextBoxEmail.Text, Session["usuario"].ToString());
+            Response.Redirect("~/UsuarioNormal/EditarPerfil.aspx");
+        }
+
+        protected void ButtonEditarPais_Click(object sender, EventArgs e)
+        {
+            DAL.DALUsuario DALUsuario = new DAL.DALUsuario();
+            DALUsuario.UpdatePais(TextBoxPais.Text, Session["usuario"].ToString());
+            Response.Redirect("~/UsuarioNormal/EditarPerfil.aspx");
+        }
+
+        protected void ButtonEditarSexo_Click(object sender, EventArgs e)
+        {
+            DAL.DALUsuario DALUsuario = new DAL.DALUsuario();
+            DALUsuario.UpdateSexo(TextBoxSexo.Text, Session["usuario"].ToString());
+            Response.Redirect("~/UsuarioNormal/EditarPerfil.aspx");
+        }
+
+        protected void ButtonEditarCaminhoImagem_Click(object sender, EventArgs e)
+        {
+            DAL.DALUsuario DALUsuario = new DAL.DALUsuario();
+            DALUsuario.UpdateCaminhoImagem(FileUploadEditarImagemPerfil.FileName, Session["usuario"].ToString());
+            Response.Redirect("~/UsuarioNormal/EditarPerfil.aspx");
         }
     }
 }

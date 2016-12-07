@@ -124,5 +124,31 @@ namespace ProjetoGrupo6.DAL
             conn.Close();
             return quantidade;
         }
+
+        // SELECT NOS INTERESSES DE UM USUÁRIO
+        [DataObjectMethod(DataObjectMethodType.Select)]
+        public List<Modelo.RelacaoInteresse> SelectListaInteresse(string perfil)
+        {
+            Modelo.RelacaoInteresse aFavorito;
+            // Cria Lista Vazia
+            List<Modelo.RelacaoInteresse> aListFavorito = new List<Modelo.RelacaoInteresse>();
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "exec sp_SelectInteressesUsuario @perfil";
+            cmd.Parameters.AddWithValue("@perfil", perfil);
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    aFavorito = new Modelo.RelacaoInteresse(dr["caminhoImagem"].ToString());
+                    aListFavorito.Add(aFavorito);
+                }
+            }
+            dr.Close();
+            conn.Close();
+            return aListFavorito;
+        }
     }
 }

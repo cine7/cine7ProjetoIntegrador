@@ -18,7 +18,24 @@ namespace ProjetoGrupo6.DAL
         }
 
 
-        //INSERT EM UM COMENTÁRIO
+        //CRIAR UM USUÁRIO
+        [DataObjectMethod(DataObjectMethodType.Insert)]
+        public void Insert(Modelo.Usuario obj)
+        {
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("INSERT INTO Usuario(usuario, senha, nome, email, pais, caminhoImagem) VALUES (@usuario, @nome, @email, @pais, @senha, @caminhoImagem)", conn);
+            cmd.Parameters.AddWithValue("@usuario", obj.usuario);
+            cmd.Parameters.AddWithValue("@senha", obj.senha);
+            cmd.Parameters.AddWithValue("@nome", obj.nome);
+            cmd.Parameters.AddWithValue("@email", obj.email);
+            cmd.Parameters.AddWithValue("@pais", obj.pais);
+            cmd.Parameters.AddWithValue("@sexo", obj.sexo);
+            cmd.Parameters.AddWithValue("@caminhoImagem", "~/Imagens/Perfil/" + obj.caminhoImagem);
+            cmd.ExecuteNonQuery();
+        }
+
+        //SELECT NO CAMINHO DA IMAGEM
         [DataObjectMethod(DataObjectMethodType.Select)]
         public string SelectCaminhoImagem(Modelo.Usuario obj)
         {
@@ -39,25 +56,6 @@ namespace ProjetoGrupo6.DAL
             dr.Close();
             conn.Close();
             return caminhoImagem;
-
-        }
-
-        //INSERT EM UM COMENTÁRIO
-        [DataObjectMethod(DataObjectMethodType.Insert)]
-        public void Insert(Modelo.Usuario obj)
-        {
-            SqlConnection conn = new SqlConnection(connectionString);
-            conn.Open();
-            SqlCommand cmd = new SqlCommand("INSERT INTO Usuario(usuario, senha, nome, email, pais, caminhoImagem) VALUES (@usuario, @nome, @email, @pais, @senha, @caminhoImagem)", conn);
-            cmd.Parameters.AddWithValue("@usuario", obj.usuario);
-            cmd.Parameters.AddWithValue("@senha", obj.senha);
-            cmd.Parameters.AddWithValue("@nome", obj.nome);
-            cmd.Parameters.AddWithValue("@email", obj.email);
-            cmd.Parameters.AddWithValue("@pais", obj.pais);
-            cmd.Parameters.AddWithValue("@sexo", obj.sexo);
-            cmd.Parameters.AddWithValue("@caminhoImagem", "~/Imagens/Perfil/" + obj.caminhoImagem);
-            cmd.ExecuteNonQuery();
-
         }
 
 
@@ -99,6 +97,78 @@ namespace ProjetoGrupo6.DAL
             dr.Close();
             conn.Close();
             return aUsuario;
+        }
+
+        //UPDATE NOME DO USUÁRIO
+        [DataObjectMethod(DataObjectMethodType.Update)]
+        public void UpdateNome(string nome, string usuario)
+        {
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("UPDATE Usuario set nome = @nome where usuario = @usuario", conn);
+            cmd.Parameters.AddWithValue("@nome", nome);
+            cmd.Parameters.AddWithValue("@usuario", usuario);
+            cmd.ExecuteNonQuery();
+        }
+
+        //UPDATE EMAIL DO USUÁRIO
+        [DataObjectMethod(DataObjectMethodType.Update)]
+        public void UpdateEmail(string email, string usuario)
+        {
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("UPDATE Usuario set email = @email where usuario = @usuario", conn);
+            cmd.Parameters.AddWithValue("@email", email);
+            cmd.Parameters.AddWithValue("@usuario", usuario);
+            cmd.ExecuteNonQuery();
+        }
+
+        //UPDATE PAIS DO USUÁRIO
+        [DataObjectMethod(DataObjectMethodType.Update)]
+        public void UpdatePais(string pais, string usuario)
+        {
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("UPDATE Usuario set pais = @pais where usuario = @usuario", conn);
+            cmd.Parameters.AddWithValue("@pais", pais);
+            cmd.Parameters.AddWithValue("@usuario", usuario);
+            cmd.ExecuteNonQuery();
+        }
+
+        //UPDATE SEXO DO USUÁRIO
+        [DataObjectMethod(DataObjectMethodType.Update)]
+        public void UpdateSexo(string sexo, string usuario)
+        {
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("UPDATE Usuario set sexo = @sexo where usuario = @usuario", conn);
+            cmd.Parameters.AddWithValue("@sexo", sexo);
+            cmd.Parameters.AddWithValue("@usuario", usuario);
+            cmd.ExecuteNonQuery();
+        }
+
+        //UPDATE CAMINHO IMAGEM DO USUÁRIO
+        [DataObjectMethod(DataObjectMethodType.Update)]
+        public void UpdateCaminhoImagem(string caminhoImagem, string usuario)
+        {
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("UPDATE Usuario set caminhoImagem = @caminhoImagem where usuario = @usuario", conn);
+            cmd.Parameters.AddWithValue("@caminhoImagem", "~/Imagens/Perfil/" + caminhoImagem);
+            cmd.Parameters.AddWithValue("@usuario", usuario);
+            cmd.ExecuteNonQuery();
+        }
+
+        //UPDATE SENHA DO USUÁRIO
+        [DataObjectMethod(DataObjectMethodType.Update)]
+        public void UpdateSenha(string senha, string usuario)
+        {
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("UPDATE Usuario set senha = @senha where usuario = @usuario", conn);
+            cmd.Parameters.AddWithValue("@senha", senha);
+            cmd.Parameters.AddWithValue("@usuario", usuario);
+            cmd.ExecuteNonQuery();
         }
     }
 }

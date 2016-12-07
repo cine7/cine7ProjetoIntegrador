@@ -1,12 +1,12 @@
-página de adm
+página de adm - quase
 
-editar perfil
+editar perfil - quase
 
 gênero de filme
 
-notificação - NÃO VAI DAR MAIs
+notificação - NÃO VAI DAR MAIS
 
-linha do tempo
+linha do tempo - Está retornando a quantidade de caracteres da string
 
 cadastro de usuário administrador
 
