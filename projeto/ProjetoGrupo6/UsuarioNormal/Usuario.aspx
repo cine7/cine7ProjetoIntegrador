@@ -3,7 +3,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container-fluid">
-        <div class="row"> 
+        <div class="row">
+            <div id ="filmes">
+            <br /> 
             <asp:Label ID="LabelUsuario" runat="server" Text="Label"></asp:Label>
             <br />
             <asp:LinkButton ID="LinkButtonSeguirEditar" runat="server" ForeColor="Black" OnClick="LinkButtonSeguirEditar_Click">Seguir</asp:LinkButton>
@@ -56,11 +58,16 @@
                     </SelectParameters>
                 </asp:SqlDataSource>
                 <br />
-                <br>
-                <br>
+                <br/>
+                <br/>
+                </div>
+                </div>
+                </div>
             </div>
+            <div class="row">
             <div class="col-md-6">
-                <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource4">
+                <div id="feedUsuario">
+                <asp:DataList ID="DataList1_Feed" runat="server" DataSourceID="SqlDataSource4">
                     <ItemTemplate>
                         tipo:
                         <asp:Label ID="tipoLabel" runat="server" Text='<%# Eval("tipo") %>' />
@@ -74,6 +81,8 @@
                         <br />
                     </ItemTemplate>
                 </asp:DataList>
+                    </div>
+                </div>
                 <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:2016TiiGrupo6ConnectionString %>" SelectCommand="SELECT tipo,
 	                Filme.filme_name,
 	                Usuario.nome

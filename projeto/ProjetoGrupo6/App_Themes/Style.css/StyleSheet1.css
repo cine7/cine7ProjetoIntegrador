@@ -59,7 +59,23 @@ a {
     left:80px;
     font-size:20px;
 }
-
+#feedUsuario {
+    position:relative;
+    width:50%;
+}
+/*USUARIO*/
+[id*="ContentPlaceHolder1_DataList1_tipoLabel"]
+{
+    width:100%;
+    border:1px solid;
+    border-color:#f00;
+    border-radius:5px;
+    padding:5px;
+}
+#filmes {
+    position:relative;
+    width:300px;
+}
 
 /*FILME*/
 [id*="ContentPlaceHolder1_DataList1_usuarioLabel"]
