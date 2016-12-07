@@ -33,5 +33,9 @@ namespace ProjetoGrupo6.Modelo
             this.filme_id = afilme_id;
             this.usuario = ausuario;
         }
+        public RelacaoAvaliacao(int afilme_id)
+        {
+            this.filme_id = afilme_id;
+        }
     }
 }

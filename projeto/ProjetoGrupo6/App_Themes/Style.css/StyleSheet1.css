@@ -52,7 +52,6 @@ a {
      position:relative;
     bottom:25px;
     left: -10px;
-
 }
 #cadastro {
     position:relative;
@@ -64,8 +63,8 @@ a {
     width:50%;
 }
 /*MENU*/
-#LinkButtonSessao:hover {
-    text-decoration: none;
+a:hover {
+    color:#fff;
 }
 /*USUARIO*/
 [id*="ContentPlaceHolder1_DataList1_tipoLabel"]
@@ -82,6 +81,9 @@ a {
 }
 
 /*FILME*/
+#infoFilme {
+    margin:0px;
+}
 [id*="ContentPlaceHolder1_DataList1_usuarioLabel"]
 {  
     font-weight:bold;

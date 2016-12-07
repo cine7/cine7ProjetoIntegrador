@@ -50,6 +50,9 @@ namespace ProjetoGrupo6.UsuarioNormal
                 ImageButtonFavorito.ImageUrl = "~/Imagens/favoritarButton.png";
             }
 
+            Modelo.RelacaoFavorito relacaofavorito2 = new Modelo.RelacaoFavorito(int.Parse(LabelFilme_id.Text));
+            LabelQuantidadeFavorito.Text = DALRelacaoFavorito.SelectQuantidadeFavorito(relacaofavorito2).ToString();
+
             //BotãoInteresse
             DAL.DALRelacaoInteresse DALRelacaoInteresse = new DAL.DALRelacaoInteresse();
             Modelo.RelacaoInteresse relacaointeresse = new Modelo.RelacaoInteresse(int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
@@ -63,6 +66,9 @@ namespace ProjetoGrupo6.UsuarioNormal
                 ImageButtonInteresse.ImageUrl = "~/Imagens/tvInteresseButton.png";
             }
 
+            Modelo.RelacaoInteresse relacaointeresse2 = new Modelo.RelacaoInteresse(int.Parse(LabelFilme_id.Text));
+            LabelQuantidadeInteresse.Text = DALRelacaoInteresse.SelectQuantidadeInteresse(relacaointeresse2).ToString();
+
             //BotãoVisto
             DAL.DALRelacaoVisto DALRelacaoVisto = new DAL.DALRelacaoVisto();
             Modelo.RelacaoVisto relacaovisto = new Modelo.RelacaoVisto(int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
@@ -75,6 +81,9 @@ namespace ProjetoGrupo6.UsuarioNormal
             {
                 ImageButtonVisto.ImageUrl = "~/Imagens/vistoButton.png";
             }
+
+            Modelo.RelacaoVisto relacaovisto2 = new Modelo.RelacaoVisto(int.Parse(LabelFilme_id.Text));
+            LabelQuantidadeVisto.Text = DALRelacaoVisto.SelectQuantidadeVisto(relacaovisto2).ToString();
 
             /*ESTRELA ACESA CASO O FILME ESTEJA AVALIADO*/
             DAL.DALRelacaoAvaliacao DALRelacaoAvaliacao = new DAL.DALRelacaoAvaliacao();
@@ -335,10 +344,9 @@ namespace ProjetoGrupo6.UsuarioNormal
 
                 }
             }
-
-            //LinkButtonNegativos.Text = quantidadeAvaliacaoNegativo.ToString();
-
-            //LinkButtonPositivos.Text = quantidadeAvaliacaoPositivo.ToString();
+            Modelo.RelacaoAvaliacao relacaoavaliacao3 = new Modelo.RelacaoAvaliacao(int.Parse(LabelFilme_id.Text));
+            LabelQuantidadeAvaliacao.Text = DALRelacaoAvaliacao.SelectQuantidadeAvaliacao(relacaoavaliacao3).ToString();
+            LabelMediaAvaliacao.Text = DALFilme.SelectMediaFilme(relacaoavaliacao3).ToString();
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -527,8 +535,7 @@ namespace ProjetoGrupo6.UsuarioNormal
 
         protected void ImageButtonEstrela_Click(object sender, ImageClickEventArgs e)
         {
-            
-  int estrelas = int.Parse((sender as ImageButton).CommandName);
+            int estrelas = int.Parse((sender as ImageButton).CommandName);
             DAL.DALRelacaoAvaliacao DALRelacaoAvaliacao = new DAL.DALRelacaoAvaliacao();
             Modelo.RelacaoAvaliacao relacaoavaliacao = new Modelo.RelacaoAvaliacao(int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
             avaliacao = DALRelacaoAvaliacao.SelectValidar(relacaoavaliacao);
@@ -767,7 +774,10 @@ namespace ProjetoGrupo6.UsuarioNormal
                     ImageButtonEstrela7.Attributes.Add("onmouseover", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela4.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela5.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela6.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela7.src = '/Imagens/estrelaAcesa.png';");
                     ImageButtonEstrela7.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela4.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela5.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela6.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela7.src = '/Imagens/estrelaAcesa.png';");
                 }
+                DAL.DALFilme DALFilme = new DAL.DALFilme();
+                DALFilme.UpdateMedia(int.Parse(LabelFilme_id.Text)); 
                 Response.Redirect("~/UsuarioNormal/Filme.aspx?Filme=" + Session["filme_name"]);
+
         }
 
         protected void LinkButtonUsuario_PreRender1(object sender, EventArgs e)

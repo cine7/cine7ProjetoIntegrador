@@ -48,5 +48,13 @@ namespace ProjetoGrupo6.Modelo
         {
             this.usuario = ausuario;
         }
+        public Usuario(string anome, string aemail, string apais, string asexo, string acaminhoImagem)
+        {
+            this.nome = anome;
+            this.email = aemail;
+            this.pais = apais;
+            this.sexo = asexo;
+            this.caminhoImagem = acaminhoImagem;
+        }
     }
 }

@@ -9,43 +9,53 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-3">
-                <asp:Image ID="ImageFilme" runat="server" />
-                <asp:ImageButton ID="ImageButtonFavorito" runat="server" Height="45px" ImageUrl="~/Imagens/favoritarButton.png" OnClick="ImageButtonFavoritar_Click" Width="45px" />
-                <asp:ImageButton ID="ImageButtonVisto" runat="server" Height="45px" ImageUrl="~/Imagens/vistoButton.png" OnClick="ImageButtonVisto_Click" />
-                <asp:ImageButton ID="ImageButtonInteresse" runat="server" Height="45px" ImageUrl="~/Imagens/tvInteresseButton.png" OnClick="ImageButtonInteresse_Click" Width="45px" />
-            </div>
-            <div class="col-md-6">
-                 <div id="containerInfoFilme">
-                    <b><asp:Label ID="LabelFilme" runat="server" Text="Label"></asp:Label></b>
-                    <asp:Label ID="LabelFilme_id" runat="server" Text="Label" Visible="False"></asp:Label>
-       
-                    <br />
-                    <br />
-                    Ano:&nbsp<asp:Label ID="LabelAno" runat="server" Text="Label"></asp:Label>
-                    <br />
-                    <br />
-                    Sinopse:&nbsp<asp:Label ID="LabelSinopse" runat="server" Text="Label"></asp:Label>
-                    <br />
-                    <br />
-                    Diretor:&nbsp<asp:Label ID="LabelDiretor" runat="server" Text="Label"></asp:Label>
-                    <br />
-                    <br />
-                    Produtora:&nbsp<asp:Label ID="LabelProdutora" runat="server" Text="Label"></asp:Label>
-                    <br />
-                    <br />
-                    Duração:&nbsp<asp:Label ID="LabelDuracao" runat="server" Text="Label"></asp:Label>
+            <div id="infoFilme">
+                <div class="col-md-3">
+                    <asp:Image ID="ImageFilme" runat="server" />
+                    <asp:ImageButton ID="ImageButtonFavorito" runat="server" Height="45px" ImageUrl="~/Imagens/favoritarButton.png" OnClick="ImageButtonFavoritar_Click" Width="45px" />
+                    <asp:ImageButton ID="ImageButtonVisto" runat="server" Height="45px" ImageUrl="~/Imagens/vistoButton.png" OnClick="ImageButtonVisto_Click" />
+                    <asp:ImageButton ID="ImageButtonInteresse" runat="server" Height="45px" ImageUrl="~/Imagens/tvInteresseButton.png" OnClick="ImageButtonInteresse_Click" Width="45px" />
                 </div>
-            </div>
-            <div class="col-md-3">
-                <asp:ImageButton ID="ImageButtonEstrela1" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela_Click" CommandName="1" />
-                <asp:ImageButton ID="ImageButtonEstrela2" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela_Click" CommandName="2" />
-                <asp:ImageButton ID="ImageButtonEstrela3" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela_Click" CommandName="3" />
-                <asp:ImageButton ID="ImageButtonEstrela4" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela_Click" CommandName="4" />
-                <asp:ImageButton ID="ImageButtonEstrela5" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela_Click" CommandName="5" />
-                <asp:ImageButton ID="ImageButtonEstrela6" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela_Click" CommandName="6" />
-                <asp:ImageButton ID="ImageButtonEstrela7" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela_Click" CommandName="7" />
-            </div>
+                <div class="col-md-6">
+                     <div id="containerInfoFilme">
+                        <b><asp:Label ID="LabelFilme" runat="server" Text="Label"></asp:Label></b>
+                        <asp:Label ID="LabelFilme_id" runat="server" Text="Label" Visible="False"></asp:Label>
+       
+                        <br />
+                        <br />
+                        Ano:&nbsp<asp:Label ID="LabelAno" runat="server" Text="Label"></asp:Label>
+                        <br />
+                        <br />
+                        Sinopse:&nbsp<asp:Label ID="LabelSinopse" runat="server" Text="Label"></asp:Label>
+                        <br />
+                        <br />
+                        Diretor:&nbsp<asp:Label ID="LabelDiretor" runat="server" Text="Label"></asp:Label>
+                        <br />
+                        <br />
+                        Produtora:&nbsp<asp:Label ID="LabelProdutora" runat="server" Text="Label"></asp:Label>
+                        <br />
+                        <br />
+                        Duração:&nbsp<asp:Label ID="LabelDuracao" runat="server" Text="Label"></asp:Label> minutos
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <asp:Label ID="LabelQuantidadeFavorito" runat="server" Text="Label"></asp:Label>&nbsp;<asp:Image ID="Image5" runat="server" Height="30px" ImageUrl="~/Imagens/favoritarButton.png" Width="30px" />
+&nbsp;Favoritaram<br />
+                    <asp:Label ID="LabelQuantidadeVisto" runat="server" Text="Label"></asp:Label>&nbsp;<asp:Image ID="Image6" runat="server" Height="30px" ImageUrl="~/Imagens/vistoButton.png" Width="30px" />
+                    Viram<br />
+                    <asp:Label ID="LabelQuantidadeInteresse" runat="server" Text="Label"></asp:Label>&nbsp;<asp:Image ID="Image7" runat="server" Height="30px" ImageUrl="~/Imagens/tvInteresseButton.png" Width="30px" />
+                    Querem assistir<br />
+                    <asp:Label ID="LabelQuantidadeAvaliacao" runat="server" Text="Label"></asp:Label><br />
+                    <asp:Label ID="LabelMediaAvaliacao" runat="server" Text="Label"></asp:Label><br />
+                    <asp:ImageButton ID="ImageButtonEstrela1" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela_Click" CommandName="1" />
+                    <asp:ImageButton ID="ImageButtonEstrela2" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela_Click" CommandName="2" />
+                    <asp:ImageButton ID="ImageButtonEstrela3" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela_Click" CommandName="3" />
+                    <asp:ImageButton ID="ImageButtonEstrela4" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela_Click" CommandName="4" />
+                    <asp:ImageButton ID="ImageButtonEstrela5" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela_Click" CommandName="5" />
+                    <asp:ImageButton ID="ImageButtonEstrela6" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela_Click" CommandName="6" />
+                    <asp:ImageButton ID="ImageButtonEstrela7" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela_Click" CommandName="7" />
+                </div> 
+            </div>  
         </div>
     
         <asp:DataList ID="DataList1" runat="server" DataSourceID="ObjectDataSource1" RepeatColumns="1" RepeatLayout="Flow" OnSelectedIndexChanged="DataList1_SelectedIndexChanged">
@@ -79,8 +89,7 @@
         <br />
         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Enviar" />
         <br />
-    <br />
-        
+    <br /> 
     </div>
         <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Voltar</asp:LinkButton>
 </asp:Content>

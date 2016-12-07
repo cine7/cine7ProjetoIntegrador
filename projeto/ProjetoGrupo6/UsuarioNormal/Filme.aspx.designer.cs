@@ -112,6 +112,78 @@ namespace ProjetoGrupo6.UsuarioNormal {
         protected global::System.Web.UI.WebControls.Label LabelDuracao;
         
         /// <summary>
+        /// LabelQuantidadeFavorito control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelQuantidadeFavorito;
+        
+        /// <summary>
+        /// Image5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Image5;
+        
+        /// <summary>
+        /// LabelQuantidadeVisto control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelQuantidadeVisto;
+        
+        /// <summary>
+        /// Image6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Image6;
+        
+        /// <summary>
+        /// LabelQuantidadeInteresse control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelQuantidadeInteresse;
+        
+        /// <summary>
+        /// Image7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Image7;
+        
+        /// <summary>
+        /// LabelQuantidadeAvaliacao control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelQuantidadeAvaliacao;
+        
+        /// <summary>
+        /// LabelMediaAvaliacao control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelMediaAvaliacao;
+        
+        /// <summary>
         /// ImageButtonEstrela1 control.
         /// </summary>
         /// <remarks>

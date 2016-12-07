@@ -72,5 +72,33 @@ namespace ProjetoGrupo6.DAL
             cmd.Parameters.AddWithValue("@comentario_id", obj.comentario_id);
             cmd.ExecuteNonQuery();
         }
+
+        [DataObjectMethod(DataObjectMethodType.Select)]
+        public Modelo.Usuario SelectUsuario(string usuario)
+        {
+            Modelo.Usuario aUsuario = new Modelo.Usuario();
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "Select * from Usuario where usuario = @usuario";
+            cmd.Parameters.AddWithValue("@usuario", usuario);
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    aUsuario = new Modelo.Usuario(
+                        dr["nome"].ToString(),
+                        dr["email"].ToString(),
+                        dr["pais"].ToString(),
+                        dr["sexo"].ToString(),
+                        dr["caminhoImagem"].ToString()
+                        );
+                }
+            }
+            dr.Close();
+            conn.Close();
+            return aUsuario;
+        }
     }
 }

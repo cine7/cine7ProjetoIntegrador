@@ -93,5 +93,36 @@ namespace ProjetoGrupo6.DAL
             conn.Close();
             return validar;
         }
+        // SELECT NA QUANTIDADE DE FAVORITOS DE UM FILME
+        [DataObjectMethod(DataObjectMethodType.Select)]
+        public int SelectQuantidadeFavorito(Modelo.RelacaoFavorito obj)
+        {
+            int quantidade = 0;
+            // Cria Lista Vazia
+            // Cria Conexão com banco de dados
+            SqlConnection conn = new SqlConnection(connectionString);
+            // Abre conexão com o banco de dados
+            conn.Open();
+            // Cria comando SQL
+            SqlCommand cmd = conn.CreateCommand();
+            // define SQL do comando
+            cmd.CommandText = "SELECT * FROM RelacaoFavorito where filme_id = @filme_id";
+            cmd.Parameters.AddWithValue("@filme_id", obj.filme_id);
+            // Executa comando, gerando objeto DbDataReader
+            SqlDataReader dr = cmd.ExecuteReader();
+            // Le titulo do livro do resultado e apresenta no segundo rótulo
+            if (dr.HasRows)
+            {
+                while (dr.Read()) // Le o proximo registro
+                {
+                    quantidade++;
+                }
+            }
+            // Fecha DataReader
+            dr.Close();
+            // Fecha Conexão
+            conn.Close();
+            return quantidade;
+        }
     }
 }

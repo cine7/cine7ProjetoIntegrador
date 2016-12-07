@@ -14,11 +14,16 @@ namespace ProjetoGrupo6.UsuarioNormal
         string caminhoImagem;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["usuario"] == null)
+            {
+                Response.Redirect("~/Login.aspx");
+            }
             Session["perfil"] = Session["usuario"];
 
             DAL.DALUsuario DALUsuario = new DAL.DALUsuario();
             Modelo.Usuario usuario = new Modelo.Usuario(Session["usuario"].ToString());
             caminhoImagem = DALUsuario.SelectCaminhoImagem(usuario);
+
 
             ImagePerfil.ImageUrl = caminhoImagem;
         }

@@ -126,5 +126,45 @@ namespace ProjetoGrupo6.DAL
 
             cmd.ExecuteNonQuery();
         }
+
+        //UPDATE NA MÉDIA
+        [DataObjectMethod(DataObjectMethodType.Update)]
+        public void UpdateMedia(int filme_id)
+        {
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            SqlCommand com = conn.CreateCommand();
+            SqlCommand cmd = new SqlCommand("UPDATE Filme set media = (Select avg(avaliacao) from RelacaoAvaliacao where filme_id = @filme_id) where filme_id = @filme_id", conn);
+            cmd.Parameters.AddWithValue("@filme_id", filme_id);
+
+            cmd.ExecuteNonQuery();
+        }
+
+        // SELECT NA QUANTIDADE DE AVALIAÇÕES DE UM FILME
+        [DataObjectMethod(DataObjectMethodType.Update)]
+        public double SelectMediaFilme(Modelo.RelacaoAvaliacao obj)
+        {
+            double media = 0;
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "SELECT media FROM Filme where filme_id = @filme_id";
+            cmd.Parameters.AddWithValue("@filme_id", obj.filme_id);
+            // Executa comando, gerando objeto DbDataReader
+            SqlDataReader dr = cmd.ExecuteReader();
+            // Le titulo do livro do resultado e apresenta no segundo rótulo
+            if (dr.HasRows)
+            {
+                while (dr.Read()) // Le o proximo registro
+                {
+                    media = Convert.ToDouble(dr["media"]);
+                }
+            }
+            // Fecha DataReader
+            dr.Close();
+            // Fecha Conexão
+            conn.Close();
+            return media;
+        }
     }
 }

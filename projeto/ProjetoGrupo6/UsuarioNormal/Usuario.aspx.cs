@@ -15,6 +15,10 @@ namespace ProjetoGrupo6.UsuarioNormal
         bool validarSegue;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["usuario"] == null)
+            {
+                Response.Redirect("~/Login.aspx");
+            }
             LabelUsuario.Text = Request.QueryString["Usuario"];
 
             Session["perfil"] = Request.QueryString["Usuario"];
@@ -37,7 +41,7 @@ namespace ProjetoGrupo6.UsuarioNormal
         {
             if (LinkButtonSeguirEditar.Text == "Editar Perfil")
             {
-
+                Response.Redirect("~/UsuarioNormal/EditarPerfil.aspx");
             }
             else if (LinkButtonSeguirEditar.Text == "Seguir")
             {

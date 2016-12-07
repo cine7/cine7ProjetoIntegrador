@@ -89,6 +89,7 @@
     <Content Include="UsuarioNormal\Home.aspx" />
     <Content Include="UsuarioNormal\ResultadoPesquisa.aspx" />
     <Content Include="UsuarioNormal\Usuario.aspx" />
+    <Content Include="UsuarioNormal\EditarPerfil.aspx" />
     <Content Include="Web.config" />
     <Content Include="FaleConosco.aspx" />
   </ItemGroup>
@@ -236,6 +237,13 @@
     </Compile>
     <Compile Include="FaleConosco.aspx.designer.cs">
       <DependentUpon>FaleConosco.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioNormal\EditarPerfil.aspx.cs">
+      <DependentUpon>EditarPerfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioNormal\EditarPerfil.aspx.designer.cs">
+      <DependentUpon>EditarPerfil.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
