@@ -21,27 +21,18 @@ namespace ProjetoGrupo6.DAL
         [DataObjectMethod(DataObjectMethodType.Select)]
         public List<Modelo.Filme> SelectAllFilme(string filme) 
         {
-            // Variável para armazenar um filme
             Modelo.Filme aFilme;
-            // Cria Lista Vazia
             List<Modelo.Filme> aListFilme = new List<Modelo.Filme>();
-            // Cria Conexão com banco de dados
             SqlConnection conn = new SqlConnection(connectionString);
-            // Abre conexão com o banco de dados
             conn.Open();
-            // Cria comando SQL
             SqlCommand cmd = conn.CreateCommand();
-            // define SQL do comando
             cmd.CommandText = "Select filme_name, ano, sinopse, diretor, produtora, duracao, caminhoImagem from Filme where filme_name like '%' + @filme_name + '%'";
             cmd.Parameters.AddWithValue("@filme_name", filme);
-            // Executa comando, gerando objeto DbDataReader
             SqlDataReader dr = cmd.ExecuteReader();
-            // Le titulo do livro do resultado e apresenta no segundo rótulo
             if (dr.HasRows)
             {
-                while (dr.Read()) // Le o proximo registro
+                while (dr.Read())
                 {
-                    // Cria objeto com dados lidos do banco de dados
                     aFilme = new Modelo.Filme(
                         dr["filme_name"].ToString(),
                         Convert.ToInt32(dr["ano"]),
@@ -51,13 +42,10 @@ namespace ProjetoGrupo6.DAL
                         Convert.ToInt32(dr["duracao"]),
                         dr["caminhoImagem"].ToString()
                         );
-                    // Adiciona o livro lido à lista
                     aListFilme.Add(aFilme);
                 }
             }
-            // Fecha DataReader
             dr.Close();
-            // Fecha Conexão
             conn.Close();
             return aListFilme;
         }
@@ -150,19 +138,15 @@ namespace ProjetoGrupo6.DAL
             SqlCommand cmd = conn.CreateCommand();
             cmd.CommandText = "SELECT media FROM Filme where filme_id = @filme_id";
             cmd.Parameters.AddWithValue("@filme_id", obj.filme_id);
-            // Executa comando, gerando objeto DbDataReader
             SqlDataReader dr = cmd.ExecuteReader();
-            // Le titulo do livro do resultado e apresenta no segundo rótulo
             if (dr.HasRows)
             {
-                while (dr.Read()) // Le o proximo registro
+                while (dr.Read())
                 {
-                    media = Convert.ToDouble(dr["media"]);
+                    if (dr["media"] == null)  media = Convert.ToDouble(dr["media"]); //ISSO NÃO FAZ SENTIDO
                 }
             }
-            // Fecha DataReader
             dr.Close();
-            // Fecha Conexão
             conn.Close();
             return media;
         }

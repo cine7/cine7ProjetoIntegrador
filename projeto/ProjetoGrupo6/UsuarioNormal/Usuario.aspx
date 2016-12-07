@@ -15,48 +15,36 @@
             <div class="col-md-6">
                 Filmes Favoritos<asp:DataList ID="DataListFavoritos" runat="server" DataSourceID="ObjectDataSource1" RepeatDirection="Horizontal">
                     <ItemTemplate>
-                        filme_name: <asp:Label ID="filme_nameLabel" runat="server" Text='<%# Eval("filme_name") %>' />
-                        <br />
-                        <br />
+                        <asp:ImageButton ID="ImageButtonFavorito" runat="server" ImageUrl='<%# Eval("caminhoImagem") %>'  />
                     </ItemTemplate>
                 </asp:DataList>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:2016TiiGrupo6ConnectionString %>" SelectCommand="Select Filme.filme_name from RelacaoFavorito 
-                INNER JOIN Filme on Filme.filme_id = RelacaoFavorito.filme_id
-                where usuario = @perfil">
+                <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="SelectListaFavorito" TypeName="ProjetoGrupo6.DAL.DALRelacaoFavorito">
                     <SelectParameters>
-                        <asp:SessionParameter Name="perfil" SessionField="perfil" />
+                        <asp:SessionParameter Name="perfil" SessionField="perfil" Type="String" />
                     </SelectParameters>
-                </asp:SqlDataSource>
+                </asp:ObjectDataSource>
                 <br />
-                Filmes Vistos<asp:DataList ID="DataListVistos" runat="server" DataSourceID="SqlDataSource2" RepeatDirection="Horizontal">
+                Filmes Vistos<asp:DataList ID="DataListVistos" runat="server" DataSourceID="ObjectDataSource2" RepeatDirection="Horizontal">
                     <ItemTemplate>
-                        filme_name: <asp:Label ID="filme_nameLabel" runat="server" Text='<%# Eval("filme_name") %>' />
-                        <br />
-                    <br />
+                        &nbsp;<asp:ImageButton ID="ImageButton1" runat="server" ImageUrl='<%# Eval("caminhoImagem") %>' />
                     </ItemTemplate>
                 </asp:DataList>
-                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:2016TiiGrupo6ConnectionString %>" SelectCommand="Select Filme.filme_name from RelacaoVisto
-                INNER JOIN Filme on Filme.filme_id = RelacaoVisto.filme_id
-                where usuario = @perfil">
+                <asp:ObjectDataSource ID="ObjectDataSource2" runat="server" SelectMethod="SelectListaVisto" TypeName="ProjetoGrupo6.DAL.DALRelacaoVisto">
                     <SelectParameters>
-                        <asp:SessionParameter Name="perfil" SessionField="perfil" />
+                        <asp:SessionParameter Name="perfil" SessionField="perfil" Type="String" />
                     </SelectParameters>
-                </asp:SqlDataSource>
+                </asp:ObjectDataSource>
                 <br />
-                Filmes que quero assistir<asp:DataList ID="DataListInteresses" runat="server" DataSourceID="SqlDataSource3" RepeatDirection="Horizontal">
+                Filmes que quero assistir<asp:DataList ID="DataListInteresses" runat="server" DataSourceID="ObjectDataSource3" RepeatDirection="Horizontal">
                     <ItemTemplate>
-                        filme_name: <asp:Label ID="filme_nameLabel" runat="server" Text='<%# Eval("filme_name") %>' />
-                        <br />
-                        <br />
+                        <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl='<%# Eval("caminhoImagem") %>' />
                     </ItemTemplate>
                 </asp:DataList>
-                <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:2016TiiGrupo6ConnectionString %>" SelectCommand="  Select Filme.filme_name from RelacaoInteresse
-                INNER JOIN Filme on Filme.filme_id = RelacaoInteresse.filme_id
-                where usuario = @perfil">
+                <asp:ObjectDataSource ID="ObjectDataSource3" runat="server" SelectMethod="SelectListaInteresse" TypeName="ProjetoGrupo6.DAL.DALRelacaoInteresse">
                     <SelectParameters>
-                        <asp:SessionParameter Name="perfil" SessionField="perfil" />
+                        <asp:SessionParameter Name="perfil" SessionField="perfil" Type="String" />
                     </SelectParameters>
-                </asp:SqlDataSource>
+                </asp:ObjectDataSource>
                 <br />
                 <br/>
                 <br/>

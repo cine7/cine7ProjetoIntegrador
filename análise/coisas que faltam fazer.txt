@@ -2,7 +2,7 @@ página de adm - quase
 
 editar perfil - quase
 
-gênero de filme
+gênero de filme - usar mais de um!
 
 notificação - NÃO VAI DAR MAIS
 
@@ -10,6 +10,10 @@ linha do tempo - Está retornando a quantidade de caracteres da string
 
 cadastro de usuário administrador
 
-corrigir erros na modelagem
-
 coluna na tabela de post
+
+DALMedia não faz sentido!
+
+FAZER QUANDO CHEGAR EM CASA 07/12
+- corrigir erros na modelagem
+- pasta de adm

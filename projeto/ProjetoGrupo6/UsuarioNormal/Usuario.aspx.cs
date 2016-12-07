@@ -60,5 +60,10 @@ namespace ProjetoGrupo6.UsuarioNormal
                 LinkButtonSeguirEditar.Text = "Seguir";
             }
         }
+
+        protected void ImageButtonFavorito_Click(object sender, ImageClickEventArgs e)
+        {
+
+        }
     }
 }
