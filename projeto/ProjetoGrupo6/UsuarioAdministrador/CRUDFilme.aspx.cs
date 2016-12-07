@@ -23,5 +23,19 @@ namespace ProjetoGrupo6.UsuarioAdministrador
         {
 
         }
+
+        protected void ButtonInserir_Click(object sender, EventArgs e)
+        {
+            DAL.DALFilme DALFilme = new DAL.DALFilme();
+            Modelo.Filme filme = new Modelo.Filme(TextBoxFilme_name.Text, int.Parse(TextBoxAno.Text), TextBoxSinopse.Text, TextBoxDiretor.Text, TextBoxProdutora.Text, int.Parse(TextBoxDuracao.Text), FileUploadImagem.FileName);
+            DALFilme.Insert(filme);
+            UploadImagem();
+        }
+
+        public void UploadImagem()
+        {
+            string directory = Request.PhysicalApplicationPath;
+            FileUploadImagem.SaveAs(directory + "/Imagens/Filmes/" + FileUploadImagem.FileName);
+        }
     }
 }

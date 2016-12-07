@@ -31,6 +31,7 @@ namespace ProjetoGrupo6.UsuarioNormal
             LabelDiretor.Text = filme.diretor.ToString();
             LabelProdutora.Text = filme.produtora.ToString();
             LabelDuracao.Text = filme.duracao.ToString();
+            ImageFilme.ImageUrl = filme.caminhoImagem.ToString();
             
 
             Session["filme_id"] = int.Parse(LabelFilme_id.Text);

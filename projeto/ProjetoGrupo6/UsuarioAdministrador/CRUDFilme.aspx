@@ -20,6 +20,6 @@
     <br />
     Image<asp:FileUpload ID="FileUploadImagem" runat="server" />
     <br>
-    <asp:Button ID="Button1" runat="server" Text="Inserir" />
+    <asp:Button ID="ButtonInserir" runat="server" Text="Inserir" OnClick="ButtonInserir_Click" />
     <br>
 </asp:Content>

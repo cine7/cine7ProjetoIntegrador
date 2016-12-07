@@ -14,6 +14,7 @@ namespace ProjetoGrupo6.Modelo
         public string diretor { get; set; }
         public string produtora { get; set; }
         public int duracao { get; set; }
+        public string caminhoImagem { get; set; }
 
         public Filme() 
         {
@@ -24,8 +25,9 @@ namespace ProjetoGrupo6.Modelo
             this.diretor = "";
             this.produtora = "";
             this.duracao = 0;
+            this.caminhoImagem = "";
         }
-        public Filme(string afilme_name, int aano, string asinopse, string adiretor, string aprodutora, int aduracao) 
+        public Filme(string afilme_name, int aano, string asinopse, string adiretor, string aprodutora, int aduracao, string acaminhoImagem) 
         {
             this.filme_name = afilme_name;
             this.ano = aano;
@@ -33,6 +35,7 @@ namespace ProjetoGrupo6.Modelo
             this.diretor = adiretor;
             this.produtora = aprodutora;
             this.duracao = aduracao;
+            this.caminhoImagem = acaminhoImagem;
         }
         public Filme(int afilme_id, string afilme_name, int aano, string asinopse, string adiretor, string aprodutora, int aduracao)
         {

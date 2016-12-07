@@ -85,12 +85,12 @@ namespace ProjetoGrupo6.UsuarioAdministrador {
         protected global::System.Web.UI.WebControls.FileUpload FileUploadImagem;
         
         /// <summary>
-        /// Button1 control.
+        /// ButtonInserir control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button ButtonInserir;
     }
 }

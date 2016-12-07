@@ -10,7 +10,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-3">
-                <asp:Image ID="Image1" runat="server" />
+                <asp:Image ID="ImageFilme" runat="server" />
                 <asp:ImageButton ID="ImageButtonFavorito" runat="server" Height="45px" ImageUrl="~/Imagens/favoritarButton.png" OnClick="ImageButton1_Click" Width="45px" />
                 <asp:ImageButton ID="ImageButtonVisto" runat="server" Height="45px" ImageUrl="~/Imagens/vistoButton.png" OnClick="ImageButtonVisto_Click" />
                 <asp:ImageButton ID="ImageButtonInteresse" runat="server" Height="45px" ImageUrl="~/Imagens/tvInteresseButton.png" OnClick="ImageButtonInteresse_Click" Width="45px" />

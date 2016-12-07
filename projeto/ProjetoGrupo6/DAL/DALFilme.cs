@@ -48,7 +48,8 @@ namespace ProjetoGrupo6.DAL
                         dr["sinopse"].ToString(),
                         dr["diretor"].ToString(),
                         dr["produtora"].ToString(),
-                        Convert.ToInt32(dr["duracao"])
+                        Convert.ToInt32(dr["duracao"]),
+                        dr["caminhoImagem"].ToString()
                         );
                     // Adiciona o livro lido à lista
                     aListFilme.Add(aFilme);
@@ -77,13 +78,13 @@ namespace ProjetoGrupo6.DAL
                 while (dr.Read())
                 {
                     aFilme = new Modelo.Filme(
-                        Convert.ToInt32(dr["filme_id"]),
                         dr["filme_name"].ToString(),
                         Convert.ToInt32(dr["ano"]),
                         dr["sinopse"].ToString(),
                         dr["diretor"].ToString(),
                         dr["produtora"].ToString(),
-                        Convert.ToInt32(dr["duracao"])
+                        Convert.ToInt32(dr["duracao"]),
+                        dr["caminhoImagem"].ToString()
                         );
                 }
             }
