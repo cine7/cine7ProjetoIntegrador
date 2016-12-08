@@ -7,100 +7,100 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProjetoGrupo6.CriarLogin {
+namespace ProjetoGrupo6.UsuarioNormal {
     
     
-    public partial class CriarLogin {
+    public partial class CRUDFilme {
         
         /// <summary>
-        /// Label2 control.
+        /// LinkButtonCreate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonCreate;
         
         /// <summary>
-        /// TextBoxUsuario control.
+        /// LinkButtonUpdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxUsuario;
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonUpdate;
         
         /// <summary>
-        /// TextBoxSenha control.
+        /// LinkButtonDelete control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxSenha;
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonDelete;
         
         /// <summary>
-        /// Label4 control.
+        /// formInserir control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl formInserir;
         
         /// <summary>
-        /// TextBoxConfirmarSenha control.
+        /// TextBoxFilme_name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxConfirmarSenha;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxFilme_name;
         
         /// <summary>
-        /// CompareValidator2 control.
+        /// TextBoxAno control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator2;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxAno;
         
         /// <summary>
-        /// TextBoxNome control.
+        /// TextBoxSinopse control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxNome;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxSinopse;
         
         /// <summary>
-        /// TextBoxEmail control.
+        /// TextBoxDiretor control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxEmail;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxDiretor;
         
         /// <summary>
-        /// TextBoxPais control.
+        /// TextBoxProdutora control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxPais;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxProdutora;
         
         /// <summary>
-        /// TextBoxSexo control.
+        /// TextBoxDuracao control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxSexo;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxDuracao;
         
         /// <summary>
         /// FileUploadImagem control.
@@ -112,21 +112,66 @@ namespace ProjetoGrupo6.CriarLogin {
         protected global::System.Web.UI.WebControls.FileUpload FileUploadImagem;
         
         /// <summary>
-        /// TextBoxCodigoAdministrador control.
+        /// ButtonInserir control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxCodigoAdministrador;
+        protected global::System.Web.UI.WebControls.Button ButtonInserir;
         
         /// <summary>
-        /// Button2 control.
+        /// formAtualizar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl formAtualizar;
+        
+        /// <summary>
+        /// TextBoxFilme_nameDelete control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxFilme_nameDelete;
+        
+        /// <summary>
+        /// ImageButtonLupaCRUDDelete control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ImageButtonLupaCRUDDelete;
+        
+        /// <summary>
+        /// TextBoxFilme_idDelete control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxFilme_idDelete;
+        
+        /// <summary>
+        /// ButtonDelete control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonDelete;
+        
+        /// <summary>
+        /// formDeletar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl formDeletar;
     }
 }

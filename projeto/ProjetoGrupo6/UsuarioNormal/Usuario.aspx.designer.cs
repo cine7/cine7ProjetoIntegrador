@@ -31,6 +31,15 @@ namespace ProjetoGrupo6.UsuarioNormal {
         protected global::System.Web.UI.WebControls.LinkButton LinkButtonSeguirEditar;
         
         /// <summary>
+        /// LinkButtonCRUDFilme control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonCRUDFilme;
+        
+        /// <summary>
         /// DataListFavoritos control.
         /// </summary>
         /// <remarks>

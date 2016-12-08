@@ -27,6 +27,8 @@
         Sexo:
         <br /><asp:TextBox ID="TextBoxSexo" runat="server" Width="250px" Height="25px"></asp:TextBox>
         <asp:FileUpload ID="FileUploadImagem" runat="server" />
+        <br />
+        <asp:TextBox ID="TextBoxCodigoAdministrador" runat="server"></asp:TextBox>
         <br /><br />
 &nbsp;<asp:Button ID="Button2" runat="server" OnClick="Button1_Click" Text="Cadastrar" BackColor="#A30F1D" BorderStyle="None" ForeColor="White" Height="30px" Width="110px" />
    </div>

@@ -50,6 +50,35 @@ namespace ProjetoGrupo6.DAL
             return aListFilme;
         }
 
+        //SELECT NOS FILMES PARA O CRUD
+        /*[DataObjectMethod(DataObjectMethodType.Select)]
+        public List<Modelo.Filme> SelectCRUDFilme(string filme_name)
+        {
+            Modelo.Filme aFilme;
+            List<Modelo.Filme> aListFilme = new List<Modelo.Filme>();
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "Select filme_id, filme_name, caminhoImagem from Filme where filme_name like '%' + @filme_name + '%'";
+            cmd.Parameters.AddWithValue("@filme_name", filme_name);
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    aFilme = new Modelo.Filme(
+                        Convert.ToInt32(dr["filme_id"]),
+                        dr["filme_name"].ToString(),
+                        dr["caminhoImagem"].ToString()
+                        );
+                    aListFilme.Add(aFilme);
+                }
+            }
+            dr.Close();
+            conn.Close();
+            return aListFilme;
+        }*/
+
         //SELECT EM INFORMAÇÕES DE UM FILME
         [DataObjectMethod(DataObjectMethodType.Select)]
         public Modelo.Filme SelectFilme(string filme)
@@ -102,19 +131,6 @@ namespace ProjetoGrupo6.DAL
 
         }
 
-        //DELETAR UM COMENTÁRIO
-        [DataObjectMethod(DataObjectMethodType.Delete)]
-        public void Delete(int comentario_id)
-        {
-            SqlConnection conn = new SqlConnection(connectionString);
-            conn.Open();
-            SqlCommand com = conn.CreateCommand();
-            SqlCommand cmd = new SqlCommand("DELETE FROM Comentario WHERE comentario_id = @comentario_id", conn);
-            cmd.Parameters.AddWithValue("@comentario_id", comentario_id);
-
-            cmd.ExecuteNonQuery();
-        }
-
         //UPDATE NA MÉDIA
         [DataObjectMethod(DataObjectMethodType.Update)]
         public void UpdateMedia(int filme_id)
@@ -143,12 +159,26 @@ namespace ProjetoGrupo6.DAL
             {
                 while (dr.Read())
                 {
-                    if (dr["media"] == null)  media = Convert.ToDouble(dr["media"]); //ISSO NÃO FAZ SENTIDO
+                    if (dr["media"] != null) media = Convert.ToDouble(dr["media"]); //ISSO NÃO FAZ SENTIDO
                 }
             }
             dr.Close();
             conn.Close();
             return media;
+        }
+
+
+        // SELECT NA QUANTIDADE DE AVALIAÇÕES DE UM FILME
+        [DataObjectMethod(DataObjectMethodType.Update)]
+        public void DeleteCRUDFilme(int filme_id)
+        {
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "DELETE FROM Filme where filme_id = @filme_id";
+            cmd.Parameters.AddWithValue("@filme_id", filme_id);
+
+            cmd.ExecuteNonQuery();
         }
     }
 }

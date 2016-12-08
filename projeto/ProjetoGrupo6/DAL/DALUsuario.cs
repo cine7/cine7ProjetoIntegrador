@@ -24,7 +24,7 @@ namespace ProjetoGrupo6.DAL
         {
             SqlConnection conn = new SqlConnection(connectionString);
             conn.Open();
-            SqlCommand cmd = new SqlCommand("INSERT INTO Usuario(usuario, senha, nome, email, pais, caminhoImagem) VALUES (@usuario, @nome, @email, @pais, @senha, @caminhoImagem)", conn);
+            SqlCommand cmd = new SqlCommand("INSERT INTO Usuario(usuario, senha, nome, email, pais, caminhoImagem) VALUES (@usuario, @senha, @nome, @email, @pais, @caminhoImagem)", conn);
             cmd.Parameters.AddWithValue("@usuario", obj.usuario);
             cmd.Parameters.AddWithValue("@senha", obj.senha);
             cmd.Parameters.AddWithValue("@nome", obj.nome);

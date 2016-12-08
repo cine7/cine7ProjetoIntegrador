@@ -26,7 +26,16 @@ namespace ProjetoGrupo6.CriarLogin
             DALUsuario.Insert(usuariodal);
             UploadImagem();
             Membership.CreateUser(usuario, senha, email);
-            Roles.AddUserToRole(usuario, "Normal");
+            DAL.DALaspnet_UsersInRoles DALaspnet_UsersInRoles = new DAL.DALaspnet_UsersInRoles();
+            if (TextBoxCodigoAdministrador.Text == "adm123")
+            {
+                DALaspnet_UsersInRoles.InsertAdministrador(usuario);
+            }
+            else 
+            {
+                DALaspnet_UsersInRoles.InsertNormal(usuario);
+            }
+            //Roles.AddUserToRole(usuario, "Normal");
             Response.Redirect("~/Login.aspx");
         }
 

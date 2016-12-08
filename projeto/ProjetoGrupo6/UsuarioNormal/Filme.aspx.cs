@@ -12,7 +12,7 @@ namespace ProjetoGrupo6.UsuarioNormal
     public partial class Filme : System.Web.UI.Page
     {
         bool visibilidade, avaliacao;
-        int avaliacaoInt, quantidadeAvaliacaoPositivo = 0, quantidadeAvaliacaoNegativo = 0;
+        int avaliacaoInt;
         string comentario_id;
         protected void Page_Load(object sender, EventArgs e)
         {

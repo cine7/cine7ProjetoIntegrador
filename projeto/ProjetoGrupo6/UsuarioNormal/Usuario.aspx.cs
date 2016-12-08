@@ -19,6 +19,13 @@ namespace ProjetoGrupo6.UsuarioNormal
             {
                 Response.Redirect("~/Login.aspx");
             }
+            DAL.DALaspnet_UsersInRoles DALaspnet_UsersInRoles = new DAL.DALaspnet_UsersInRoles();
+            string roleUsuario = DALaspnet_UsersInRoles.SelectUserRole(Session["usuario"].ToString());
+            if (roleUsuario == "e941bc42-522f-4cb3-9ce6-92b349af7b3a")
+            {
+                LinkButtonCRUDFilme.Visible = true;
+            }
+            else LinkButtonCRUDFilme.Visible = false;
             LabelUsuario.Text = Request.QueryString["Usuario"];
 
             Session["perfil"] = Request.QueryString["Usuario"];
@@ -64,6 +71,11 @@ namespace ProjetoGrupo6.UsuarioNormal
         protected void ImageButtonFavorito_Click(object sender, ImageClickEventArgs e)
         {
 
+        }
+
+        protected void LinkButtonCRUDFilme_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/UsuarioNormal/CRUDFilme.aspx");
         }
     }
 }

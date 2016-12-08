@@ -9,6 +9,7 @@
             <b><asp:Label ID="LabelUsuario" runat="server" Text="Label" CssClass="labelUsuario"></asp:Label></b>
             &nbsp;&nbsp;
             <asp:LinkButton ID="LinkButtonSeguirEditar" runat="server" ForeColor="Black" OnClick="LinkButtonSeguirEditar_Click">Seguir</asp:LinkButton>
+            &nbsp;<asp:LinkButton ID="LinkButtonCRUDFilme" runat="server" ForeColor="Black" OnClick="LinkButtonCRUDFilme_Click">CRUDFilme</asp:LinkButton>
             <br />
                 </div>
          </div>
