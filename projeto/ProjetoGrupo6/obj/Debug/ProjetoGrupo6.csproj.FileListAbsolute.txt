@@ -8,3 +8,8 @@ C:\Users\JoãoMendes\Documents\GitHub\cine7ProjetoIntegrador\projeto\ProjetoGrup
 C:\Users\JoãoMendes\Documents\GitHub\cine7ProjetoIntegrador\projeto\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
 C:\Users\JoãoMendes\Documents\GitHub\cine7ProjetoIntegrador\projeto\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
 C:\Users\JoãoMendes\Documents\GitHub\cine7ProjetoIntegrador\projeto\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
+C:\Users\20141011110123.IFRN\Documents\GitHub\cine7ProjetoIntegrador\projeto\ProjetoGrupo6\bin\ProjetoGrupo6.dll
+C:\Users\20141011110123.IFRN\Documents\GitHub\cine7ProjetoIntegrador\projeto\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
+C:\Users\20141011110123.IFRN\Documents\GitHub\cine7ProjetoIntegrador\projeto\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
+C:\Users\20141011110123.IFRN\Documents\GitHub\cine7ProjetoIntegrador\projeto\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
+C:\Users\20141011110123.IFRN\Documents\GitHub\cine7ProjetoIntegrador\projeto\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb

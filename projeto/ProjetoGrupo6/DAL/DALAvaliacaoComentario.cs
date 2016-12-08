@@ -22,35 +22,24 @@ namespace ProjetoGrupo6.DAL
         public int SelectQuantidadeAvaliacao(int avaliacao, int comentario_id)
         {
             int quantidade = 0, aAvaliacao = 0;
-            // Cria Lista Vazia
             List<int> aListQuantidadeAvaliacao = new List<int>();
-            // Cria Conexão com banco de dados
             SqlConnection conn = new SqlConnection(connectionString);
-            // Abre conexão com o banco de dados
             conn.Open();
-            // Cria comando SQL
             SqlCommand cmd = conn.CreateCommand();
-            // define SQL do comando
             cmd.CommandText = "SELECT avaliacao FROM AvaliacaoComentario where avaliacao = @avaliacao and comentario_id = @comentario_id";
             cmd.Parameters.AddWithValue("@avaliacao", avaliacao);
             cmd.Parameters.AddWithValue("@comentario_id", comentario_id);
-            // Executa comando, gerando objeto DbDataReader
             SqlDataReader dr = cmd.ExecuteReader();
-            // Le titulo do livro do resultado e apresenta no segundo rótulo
             if (dr.HasRows)
             {
-                while (dr.Read()) // Le o proximo registro
+                while (dr.Read())
                 {
-                    // Cria objeto com dados lidos do banco de dados
                     aAvaliacao = Convert.ToInt32(dr["avaliacao"]);
-                    // Adiciona o livro lido à lista
                     aListQuantidadeAvaliacao.Add(aAvaliacao);
                     quantidade++;
                 }
             }
-            // Fecha DataReader
             dr.Close();
-            // Fecha Conexão
             conn.Close();
             return quantidade;
         }
