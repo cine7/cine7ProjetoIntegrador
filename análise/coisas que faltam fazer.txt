@@ -1,19 +1,14 @@
-página de adm - quase
-
 editar perfil - quase
 
-gênero de filme - usar mais de um!
+gênero de filme -NÃO VAI DAR MAIS
 
-notificação - NÃO VAI DAR MAIS
+notificação - NÃO VAI DAR MAIS. Apenas criar tabela e dar insert
 
 linha do tempo - Está retornando a quantidade de caracteres da string
-
-cadastro de usuário administrador
 
 coluna na tabela de post
 
 DALMedia não faz sentido!
 
-FAZER QUANDO CHEGAR EM CASA 07/12
+FAZER QUANDO CHEGAR EM CASA 08/12
 - corrigir erros na modelagem
-- pasta de adm
