@@ -2,33 +2,43 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="container-fluid">
+        <div class="row">
+             <div class="col-md-6">
+                 <br />
+                 <div id="editarPerfil">
     <p>
-        Editar Perfil</p>
+        <b>Editar Perfil</b></p>
     <p>
         Nome:
-        <asp:TextBox ID="TextBoxNome" runat="server"></asp:TextBox>
+        <br /><asp:TextBox ID="TextBoxNome" runat="server" Width="200px" Height="25px"></asp:TextBox>
 &nbsp;
-        <asp:Button ID="ButtonEditarNome" runat="server" Text="Editar" OnClick="ButtonEditarNome_Click" />
+        <asp:Button ID="ButtonEditarNome" runat="server" Text="Editar" OnClick="ButtonEditarNome_Click" BackColor="#A30F1D" BorderStyle="None" ForeColor="White" Width="60px" Height="25px" />
     </p>
     <p>
         E-mail:
-        <asp:TextBox ID="TextBoxEmail" runat="server"></asp:TextBox>
-&nbsp;<asp:Button ID="ButtonEditarEmail" runat="server" Text="Editar" OnClick="ButtonEditarEmail_Click" />
+        <br /><asp:TextBox ID="TextBoxEmail" runat="server" Width="200px" Height="25px"></asp:TextBox>
+&nbsp;<asp:Button ID="ButtonEditarEmail" runat="server" Text="Editar" OnClick="ButtonEditarEmail_Click" BackColor="#A30F1D" BorderStyle="None" ForeColor="White" Width="60px" Height="25px" />
     </p>
     <p>
         País:
-        <asp:TextBox ID="TextBoxPais" runat="server"></asp:TextBox>
-&nbsp;<asp:Button ID="ButtonEditarPais" runat="server" Text="Editar" OnClick="ButtonEditarPais_Click" />
+        <br /><asp:TextBox ID="TextBoxPais" runat="server" Width="200px" Height="25px"></asp:TextBox>
+&nbsp;<asp:Button ID="ButtonEditarPais" runat="server" Text="Editar" OnClick="ButtonEditarPais_Click" BackColor="#A30F1D" BorderStyle="None" ForeColor="White" Width="60px" Height="25px" />
     </p>
     <p>
         Sexo:
-        <asp:TextBox ID="TextBoxSexo" runat="server"></asp:TextBox>
-&nbsp;<asp:Button ID="ButtonEditarSexo" runat="server" Text="Editar" OnClick="ButtonEditarSexo_Click" />
+        <br /><asp:TextBox ID="TextBoxSexo" runat="server" Width="200px" Height="25px"></asp:TextBox>
+&nbsp;<asp:Button ID="ButtonEditarSexo" runat="server" Text="Editar" OnClick="ButtonEditarSexo_Click" BackColor="#A30F1D" BorderStyle="None" ForeColor="White" Width="60px" Height="25px" />
     </p>
     <p>
         Foto de Perfil
-        <asp:Image ID="ImagePerfil" runat="server" />
-        <asp:FileUpload ID="FileUploadEditarImagemPerfil" runat="server" />
-        <asp:Button ID="ButtonEditarCaminhoImagem" runat="server" Text="Editar" OnClick="ButtonEditarCaminhoImagem_Click" />
+        <br /><asp:Image ID="ImagePerfil" runat="server" />
+        <asp:FileUpload ID="FileUploadEditarImagemPerfil" runat="server" Width="200px" Height="25px" /> 
+        <asp:Button ID="ButtonEditarCaminhoImagem" runat="server" Text="Editar" OnClick="ButtonEditarCaminhoImagem_Click" BackColor="#A30F1D" BorderStyle="None" ForeColor="White" Width="60px" Height="25px" />
     </p>
+                     </div>
+                 </div>
+            </div>
+        </div>
 </asp:Content>
+

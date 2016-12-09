@@ -14,7 +14,9 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="clearfix" style="position: relative; left: 500px; width:261px; top: 0px;">
+    <div class="container-fluid">
+        <div class="row">
+    <div id="login">
     
         <asp:Login ID="Login1" runat="server" DestinationPageUrl="~//UsuarioNormal/Home.aspx" OnLoggedIn="Login1_LoggedIn">
              <LayoutTemplate>
@@ -73,4 +75,6 @@
         <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/CriarLogin.aspx">Criar novo usuário</asp:HyperLink>
     
     </div>
+            </div>
+        </div>
 </asp:Content>

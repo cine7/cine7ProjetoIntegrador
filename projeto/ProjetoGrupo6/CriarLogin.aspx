@@ -2,7 +2,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="clearfix" style="position: relative; left: 540px; width:403px; top: 0px;"><br /><p id="cadastro"><b>Cadastro</b></p><br />
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+    <div id="criarLogin"><br /><p id="cadastro"><b>Cadastro</b></p><br />
       <asp:Label ID="Label2" runat="server" Text="Usuário"></asp:Label>
         :
         <br /><asp:TextBox ID="TextBoxUsuario" runat="server" Width="250px" Height="25px"></asp:TextBox><br />
@@ -32,4 +35,7 @@
         <br /><br />
 &nbsp;<asp:Button ID="Button2" runat="server" OnClick="Button1_Click" Text="Cadastrar" BackColor="#A30F1D" BorderStyle="None" ForeColor="White" Height="30px" Width="110px" />
    </div>
+                </div>
+            </div>
+        </div>
     </asp:Content>
