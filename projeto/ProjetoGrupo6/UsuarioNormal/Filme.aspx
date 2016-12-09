@@ -24,24 +24,22 @@
                 
                 <div class="col-md-6">
                      <div id="containerInfoFilme">
-                        <b><asp:Label ID="LabelFilme" runat="server" Text="Label"></asp:Label></b>
+                        <b><asp:Label ID="LabelFilme" Font-Size="30px" runat="server" Text="Label"></asp:Label></b>
                         <asp:Label ID="LabelFilme_id" runat="server" Text="Label" Visible="False"></asp:Label>
        
+                         (<asp:Label ID="LabelAno" runat="server" Text="Label"></asp:Label>
+                         )<br />
+                        <br />
+                        <b>Sinopse:</b>&nbsp<asp:Label ID="LabelSinopse" runat="server" Text="Label"></asp:Label>
                         <br />
                         <br />
-                        Ano:&nbsp<asp:Label ID="LabelAno" runat="server" Text="Label"></asp:Label>
+                        <b>Diretor:</b>&nbsp<asp:Label ID="LabelDiretor" runat="server" Text="Label"></asp:Label>
                         <br />
                         <br />
-                        Sinopse:&nbsp<asp:Label ID="LabelSinopse" runat="server" Text="Label"></asp:Label>
+                        <b>Produtora:</b>&nbsp<asp:Label ID="LabelProdutora" runat="server" Text="Label"></asp:Label>
                         <br />
                         <br />
-                        Diretor:&nbsp<asp:Label ID="LabelDiretor" runat="server" Text="Label"></asp:Label>
-                        <br />
-                        <br />
-                        Produtora:&nbsp<asp:Label ID="LabelProdutora" runat="server" Text="Label"></asp:Label>
-                        <br />
-                        <br />
-                        Duração:&nbsp<asp:Label ID="LabelDuracao" runat="server" Text="Label"></asp:Label> minutos
+                        <b>Duração:</b>&nbsp<asp:Label ID="LabelDuracao" runat="server" Text="Label"></asp:Label> minutos
                     </div>
                 </div>
                 <div class="col-md-4">

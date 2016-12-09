@@ -6,7 +6,9 @@
         <div class="row">
             <div class="col-md-3">
             <br /> 
-            <b><asp:Label ID="LabelUsuario" runat="server" Text="Label" CssClass="labelUsuario"></asp:Label></b>
+            <b>
+                <asp:Image ID="ImagePerfil" runat="server" Height="40px" Width="40px" />
+                <asp:Label ID="LabelUsuario" runat="server" Text="Label" CssClass="labelUsuario"></asp:Label></b>
             &nbsp;&nbsp;
             <asp:LinkButton ID="LinkButtonSeguirEditar" runat="server" ForeColor="Black" OnClick="LinkButtonSeguirEditar_Click">Seguir</asp:LinkButton>
             &nbsp;<asp:LinkButton ID="LinkButtonCRUDFilme" runat="server" ForeColor="Black" OnClick="LinkButtonCRUDFilme_Click">CRUDFilme</asp:LinkButton>
@@ -19,7 +21,9 @@
                 <div id="filmes">
                 Filmes Favoritos<asp:DataList ID="DataListFavoritos" runat="server" DataSourceID="ObjectDataSource1" RepeatDirection="Horizontal">
                     <ItemTemplate>
-                        <asp:ImageButton ID="ImageButtonFavorito" runat="server" ImageUrl='<%# Eval("caminhoImagem") %>' width="100px" height="150px"/>
+                        <asp:ImageButton ID="ImageButtonFilmeFavoritoTop" runat="server" Height="150px" ImageUrl='<%# Eval("caminhoImagem") %>' OnClick="ImageButtonFilmeFavoritoTop_Click" Width="100px" />
+                        <br />
+                        <br />
                     </ItemTemplate>
                 </asp:DataList>
                 <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="SelectListaFavorito" TypeName="ProjetoGrupo6.DAL.DALRelacaoFavorito">
@@ -59,7 +63,7 @@
             <div class="row">
             <div class="col-md-6">
                 <div id="feedUsuario">
-                <asp:DataList ID="DataList1_Feed" runat="server" DataSourceID="SqlDataSource4">
+                <asp:DataList ID="DataList1_Feed" runat="server" DataSourceID="ObjectDataSource4">
                     <ItemTemplate>
                         tipo:
                         <asp:Label ID="tipoLabel" runat="server" Text='<%# Eval("tipo") %>' />
@@ -73,6 +77,7 @@
                         <br />
                     </ItemTemplate>
                 </asp:DataList>
+                    <asp:ObjectDataSource ID="ObjectDataSource4" runat="server"></asp:ObjectDataSource>
                     </div>
                 </div>
                 </div>

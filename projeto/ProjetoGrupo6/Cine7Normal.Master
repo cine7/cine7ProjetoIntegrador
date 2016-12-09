@@ -17,7 +17,7 @@
     <form id="form1" runat="server">
           <div style=" height:100px; background-color:#3D0207">
        <p id="logo" style="float: left; line-height: 100px">
-           <asp:ImageButton ID="ImageButtonLogo" runat="server" Height="83px" ImageUrl="~/Imagens/logoBranco.png" OnClick="ImageButtonLogo_Click" Width="59px" />
+           <asp:ImageButton ID="ImageButtonLogo" runat="server" Height="78px" ImageUrl="~/Imagens/logoBranco.png" OnClick="ImageButtonLogo_Click" Width="55px" />
               </p> 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<asp:TextBox ID="TextBoxPesquisar" runat="server" CssClass="pesquisa" Width="200px"></asp:TextBox>
        <ul class="list-unstyled list-inline lista-menu-principal" style="color: #fff;">

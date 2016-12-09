@@ -8,13 +8,7 @@
                 <asp:Image ID="ImagePerfil" runat="server" BorderStyle="None" Width="100px" />
             </div>
             <div class="col-md-9">
-                <asp:DataList ID="DataList1" runat="server" DataSourceID="ObjectDataSource1">
-                    <ItemTemplate>
-                        Length:
-                        <asp:Label ID="LengthLabel" runat="server" Text='<%# Eval("Length") %>' />
-                        <br />
-                        <br />
-                    </ItemTemplate>
+                <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1">
                 </asp:DataList>
                 <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="SelectFeed" TypeName="ProjetoGrupo6.DAL.DALPost">
                     <SelectParameters>

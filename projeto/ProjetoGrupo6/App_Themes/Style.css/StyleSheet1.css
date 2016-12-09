@@ -9,7 +9,9 @@ body {
 }
 #logo {
     font-size:22px;
-    color:#fff
+    color:#fff;
+    margin-top:10px;
+    margin-left: 15px;
 }
 a {
     color: #fff;

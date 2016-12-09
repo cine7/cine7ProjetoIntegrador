@@ -111,6 +111,29 @@ namespace ProjetoGrupo6.DAL
             return aFilme;
         }
 
+        // SELECT NO NOME PELO CAMINHO DA IMAGEM
+        [DataObjectMethod(DataObjectMethodType.Select)]
+        public string SelectFilmeNamePorImagem(string caminhoImagem)
+        {
+            string filme_name = "";
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "Select filme_name from Filme where caminhoImagem = @caminhoImagem";
+            cmd.Parameters.AddWithValue("@caminhoImagem", caminhoImagem);
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    filme_name = dr["filme_name"].ToString();
+                }
+            }
+            dr.Close();
+            conn.Close();
+            return filme_name;
+        }
+
         //INSERT EM UM FILME
         [DataObjectMethod(DataObjectMethodType.Insert)]
         public void Insert(Modelo.Filme obj)

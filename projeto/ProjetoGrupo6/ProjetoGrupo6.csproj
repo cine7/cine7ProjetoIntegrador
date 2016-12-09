@@ -76,13 +76,9 @@
     <Content Include="Imagens\vistoButton.png" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\jquery.js" />
-    <Content Include="UsuarioAdministrador\CRUDFilme.aspx" />
-    <Content Include="UsuarioAdministrador\Home.aspx" />
-    <Content Include="UsuarioAdministrador\Usuario.aspx" />
     <Content Include="UsuarioAnonimo\Filme.aspx" />
     <Content Include="UsuarioAnonimo\Home.aspx" />
     <Content Include="UsuarioAnonimo\ResultadoPesquisa.aspx" />
-    <Content Include="UsuarioAdministrador\UsuárioAdministrador.aspx" />
     <Content Include="CriarLogin.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="UsuarioNormal\CRUDFilme.aspx" />
@@ -95,13 +91,6 @@
     <Content Include="FaleConosco.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cine7Administrador.Master.cs">
-      <DependentUpon>Cine7Administrador.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Cine7Administrador.Master.designer.cs">
-      <DependentUpon>Cine7Administrador.Master</DependentUpon>
-    </Compile>
     <Compile Include="Cine7Anonimo.Master.cs">
       <DependentUpon>Cine7Anonimo.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -144,27 +133,6 @@
     <Compile Include="Modelo\RelacaoVisto.cs" />
     <Compile Include="Modelo\Segue.cs" />
     <Compile Include="Modelo\Usuario.cs" />
-    <Compile Include="UsuarioAdministrador\CRUDFilme.aspx.cs">
-      <DependentUpon>CRUDFilme.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UsuarioAdministrador\CRUDFilme.aspx.designer.cs">
-      <DependentUpon>CRUDFilme.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="UsuarioAdministrador\Home.aspx.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UsuarioAdministrador\Home.aspx.designer.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="UsuarioAdministrador\Usuario.aspx.cs">
-      <DependentUpon>Usuario.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UsuarioAdministrador\Usuario.aspx.designer.cs">
-      <DependentUpon>Usuario.aspx</DependentUpon>
-    </Compile>
     <Compile Include="UsuarioAnonimo\Filme.aspx.cs">
       <DependentUpon>Filme.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -185,13 +153,6 @@
     </Compile>
     <Compile Include="UsuarioAnonimo\ResultadoPesquisa.aspx.designer.cs">
       <DependentUpon>ResultadoPesquisa.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="UsuarioAdministrador\UsuárioAdministrador.aspx.cs">
-      <DependentUpon>UsuárioAdministrador.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UsuarioAdministrador\UsuárioAdministrador.aspx.designer.cs">
-      <DependentUpon>UsuárioAdministrador.aspx</DependentUpon>
     </Compile>
     <Compile Include="CriarLogin.aspx.cs">
       <DependentUpon>CriarLogin.aspx</DependentUpon>
@@ -263,9 +224,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Cine7Normal.Master" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Cine7Administrador.Master" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

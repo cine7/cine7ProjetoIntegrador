@@ -28,14 +28,35 @@ namespace ProjetoGrupo6.DAL
             // Cria comando SQL
             SqlCommand com = conn.CreateCommand();
             // Define comando de exclusão
-            SqlCommand cmd = new SqlCommand("INSERT INTO Post(tipo, filme_id, usuario) VALUES (@tipo, @filme_id, @usuario)", conn);
+            SqlCommand cmd = new SqlCommand("INSERT INTO Post(tipo, descricao, filme_id, usuario) VALUES (@tipo, @descricao, @filme_id, @usuario)", conn);
+            cmd.Parameters.AddWithValue("@tipo", obj.tipo);
+            cmd.Parameters.AddWithValue("@descricao", obj.descricao);
+            cmd.Parameters.AddWithValue("@filme_id", obj.filme_id);
+            cmd.Parameters.AddWithValue("@usuario", obj.usuario);
+
+            // Executa Comando
+            cmd.ExecuteNonQuery();
+        }
+
+        //INSERT UM FILME NA LISTA DE FAVORITOS DE UM USUÁRIO
+        [DataObjectMethod(DataObjectMethodType.Update)]
+        public void Update(Modelo.Post obj)
+        {
+            // Cria Conexão com banco de dados
+            SqlConnection conn = new SqlConnection(connectionString);
+            // Abre conexão com o banco de dados
+            conn.Open();
+            // Cria comando SQL
+            SqlCommand com = conn.CreateCommand();
+            // Define comando de exclusão
+            SqlCommand cmd = new SqlCommand("UPDATE Post set descricao = @descricao  WHERE filme_id = @filme_id and usuario = @usuario and tipo = @tipo", conn);
+            cmd.Parameters.AddWithValue("@descricao", obj.descricao);
             cmd.Parameters.AddWithValue("@tipo", obj.tipo);
             cmd.Parameters.AddWithValue("@filme_id", obj.filme_id);
             cmd.Parameters.AddWithValue("@usuario", obj.usuario);
 
             // Executa Comando
             cmd.ExecuteNonQuery();
-
         }
 
 
@@ -61,10 +82,10 @@ namespace ProjetoGrupo6.DAL
 
         //SELECT NOS POST DE UM USUÁRIO
         [DataObjectMethod(DataObjectMethodType.Select)]
-        public List<string> SelectAll(string perfil)
+        public List<Modelo.Post> SelectAll(string perfil)
         {
-            string aPost, usuario, filme_name;
-            List<string> aListPost = new List<string>();
+            Modelo.Post aPost = new Modelo.Post();
+            List<Modelo.Post> aListPost = new List<Modelo.Post>();
             SqlConnection conn = new SqlConnection(connectionString);
             conn.Open();
             SqlCommand cmd = conn.CreateCommand();
@@ -75,13 +96,10 @@ namespace ProjetoGrupo6.DAL
             {
                 while (dr.Read())
                 {
-                        if (Convert.ToInt32(dr["tipo"]) == 1)
-                        {
-                            usuario = dr["usuario"].ToString();
-                            filme_name = dr["filme_name"].ToString();
-                            aPost = usuario + "favoritou" + filme_name;
-                            aListPost.Add(aPost);
-                        }
+                     aPost = new Modelo.Post(dr["usuario"].ToString(),
+                               dr["descricao"].ToString(),
+                               dr["filme_name"].ToString());
+                        aListPost.Add(aPost);
                 }
             }
             dr.Close();
@@ -93,8 +111,30 @@ namespace ProjetoGrupo6.DAL
 
         //SELECT NOS POSTS DO FEED DE UM USUÁRIO
         [DataObjectMethod(DataObjectMethodType.Select)]
-        public List<string> SelectFeed(string perfil)
+        public List<Modelo.Post> SelectFeed(string perfil)
         {
+            Modelo.Post aPost = new Modelo.Post();
+            List<Modelo.Post> aListPost = new List<Modelo.Post>();
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "exec sp_SelectFeed @perfil";
+            cmd.Parameters.AddWithValue("@perfil", perfil);
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    aPost = new Modelo.Post(dr["usuario"].ToString(),
+                              dr["descricao"].ToString(),
+                              dr["filme_name"].ToString());
+                    aListPost.Add(aPost);
+                }
+            }
+            dr.Close();
+            conn.Close();
+
+            /*return aListPost;
             string aPost, usuario, filme_name;
             List<string> aListPost = new List<string>();
             SqlConnection conn = new SqlConnection(connectionString);
@@ -131,7 +171,7 @@ namespace ProjetoGrupo6.DAL
                 }
             }
             dr.Close();
-            conn.Close();
+            conn.Close();*/
 
             return aListPost;
         }

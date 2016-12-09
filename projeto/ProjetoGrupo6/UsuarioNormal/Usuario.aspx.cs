@@ -41,6 +41,13 @@ namespace ProjetoGrupo6.UsuarioNormal
                 validarSegue = DALSegue.SelectValidar(segue);
                 if (validarSegue == true)
                     LinkButtonSeguirEditar.Text = "Seguindo";
+
+                DAL.DALUsuario DALUsuario = new DAL.DALUsuario();
+                Modelo.Usuario usuario1 = new Modelo.Usuario(Session["usuario"].ToString());
+                string caminhoImagem = DALUsuario.SelectCaminhoImagem(usuario1);
+
+
+                ImagePerfil.ImageUrl = caminhoImagem;
         }
             
 
@@ -76,6 +83,13 @@ namespace ProjetoGrupo6.UsuarioNormal
         protected void LinkButtonCRUDFilme_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/UsuarioNormal/CRUDFilme.aspx");
+        }
+
+        protected void ImageButtonFilmeFavoritoTop_Click(object sender, ImageClickEventArgs e)
+        {
+            DAL.DALFilme DALFilme = new DAL.DALFilme();
+            string filme_name = DALFilme.SelectFilmeNamePorImagem((sender as ImageButton).ImageUrl);
+            Response.Redirect("~/UsuarioNormal/ResultadoPesquisa.aspx?Filme=" + filme_name);
         }
     }
 }

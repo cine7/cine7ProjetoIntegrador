@@ -44,10 +44,14 @@ namespace ProjetoGrupo6.UsuarioNormal
             if (validarFavorito == true) 
             {
                 ImageButtonFavorito.ImageUrl = "~/Imagens/desfavoritarButton.png";
+                ImageButtonFavorito.Attributes.Add("onmouseover", "ContentPlaceHolder1_ImageButtonFavorito.src = '/Imagens/favoritarButton.png';");
+                ImageButtonFavorito.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonFavorito.src = '/Imagens/desfavoritarButton.png';");
             }
             else
             {
                 ImageButtonFavorito.ImageUrl = "~/Imagens/favoritarButton.png";
+                ImageButtonFavorito.Attributes.Add("onmouseover", "ContentPlaceHolder1_ImageButtonFavorito.src = '/Imagens/desfavoritarButton.png';");
+                ImageButtonFavorito.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonFavorito.src = '/Imagens/favoritarButton.png';");
             }
 
             Modelo.RelacaoFavorito relacaofavorito2 = new Modelo.RelacaoFavorito(int.Parse(LabelFilme_id.Text));
@@ -60,10 +64,14 @@ namespace ProjetoGrupo6.UsuarioNormal
             if (validarInteresse == true)
             {
                 ImageButtonInteresse.ImageUrl = "~/Imagens/cancelarInteresseButton.png";
+                ImageButtonInteresse.Attributes.Add("onmouseover", "ContentPlaceHolder1_ImageButtonInteresse.src = '/Imagens/tvInteresseButton.png';");
+                ImageButtonInteresse.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonInteresse.src = '/Imagens/cancelarInteresseButton.png';");
             }
             else
             {
                 ImageButtonInteresse.ImageUrl = "~/Imagens/tvInteresseButton.png";
+                ImageButtonInteresse.Attributes.Add("onmouseover", "ContentPlaceHolder1_ImageButtonInteresse.src = '/Imagens/cancelarInteresseButton.png';");
+                ImageButtonInteresse.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonInteresse.src = '/Imagens/tvInteresseButton.png';");
             }
 
             Modelo.RelacaoInteresse relacaointeresse2 = new Modelo.RelacaoInteresse(int.Parse(LabelFilme_id.Text));
@@ -76,10 +84,16 @@ namespace ProjetoGrupo6.UsuarioNormal
             if (validarVisto == true)
             {
                 ImageButtonVisto.ImageUrl = "~/Imagens/cancelarVisto.png";
+                ImageButtonVisto.Attributes.Add("onmouseover", "ContentPlaceHolder1_ImageButtonVisto.src = '/Imagens/vistoButton.png';");
+                ImageButtonVisto.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonVisto.src = '/Imagens/cancelarVisto.png';");
+
             }
             else
             {
                 ImageButtonVisto.ImageUrl = "~/Imagens/vistoButton.png";
+                ImageButtonVisto.Attributes.Add("onmouseover", "ContentPlaceHolder1_ImageButtonVisto.src = '/Imagens/cancelarVisto.png';");
+                ImageButtonVisto.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonVisto.src = '/Imagens/vistoButton.png';");
+
             }
 
             Modelo.RelacaoVisto relacaovisto2 = new Modelo.RelacaoVisto(int.Parse(LabelFilme_id.Text));
@@ -377,7 +391,7 @@ namespace ProjetoGrupo6.UsuarioNormal
                 ImageButtonFavorito.ImageUrl = "~/Imagens/desfavoritarButton.png";
 
                 DAL.DALPost DALPost = new DAL.DALPost();
-                Modelo.Post post = new Modelo.Post(1, int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
+                Modelo.Post post = new Modelo.Post(1, "favoritou", int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
                 DALPost.Delete(post);
             }
             else
@@ -388,7 +402,7 @@ namespace ProjetoGrupo6.UsuarioNormal
                 ImageButtonFavorito.ImageUrl = "~/Imagens/favoritarButton.png";
 
                 DAL.DALPost DALPost = new DAL.DALPost();
-                Modelo.Post post = new Modelo.Post(1, int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
+                Modelo.Post post = new Modelo.Post(1, "favoritou", int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
                 DALPost.Insert(post);
             }
             Response.Redirect("~/UsuarioNormal/Filme.aspx?Filme=" + Session["filme_name"]);
@@ -408,7 +422,7 @@ namespace ProjetoGrupo6.UsuarioNormal
                 ImageButtonVisto.ImageUrl = "~/Imagens/cancelarVisto.png";
 
                 DAL.DALPost DALPost = new DAL.DALPost();
-                Modelo.Post post = new Modelo.Post(3, int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
+                Modelo.Post post = new Modelo.Post(3, "marcou como visto", int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
                 DALPost.Delete(post);
             }
             else
@@ -419,7 +433,7 @@ namespace ProjetoGrupo6.UsuarioNormal
                 ImageButtonVisto.ImageUrl = "~/Imagens/vistoButton.png";
 
                 DAL.DALPost DALPost = new DAL.DALPost();
-                Modelo.Post post = new Modelo.Post(3, int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
+                Modelo.Post post = new Modelo.Post(3, "marcou como visto", int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
                 DALPost.Insert(post);
             }
             Response.Redirect("~/UsuarioNormal/Filme.aspx?Filme=" + Session["filme_name"]);
@@ -435,7 +449,7 @@ namespace ProjetoGrupo6.UsuarioNormal
                 ImageButtonInteresse.ImageUrl = "~/Imagens/cancelarInteresseButton.png";
 
                 DAL.DALPost DALPost = new DAL.DALPost();
-                Modelo.Post post = new Modelo.Post(2, int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
+                Modelo.Post post = new Modelo.Post(2, "tem interesse em assistir", int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
                 DALPost.Delete(post);
             }
             else
@@ -446,7 +460,7 @@ namespace ProjetoGrupo6.UsuarioNormal
                 ImageButtonInteresse.ImageUrl = "~/Imagens/tvInteresseButton.png";
 
                 DAL.DALPost DALPost = new DAL.DALPost();
-                Modelo.Post post = new Modelo.Post(2, int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
+                Modelo.Post post = new Modelo.Post(2, "tem interesse em assistir", int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
                 DALPost.Insert(post);
             }
             Response.Redirect("~/UsuarioNormal/Filme.aspx?Filme=" + Session["filme_name"]);
@@ -544,11 +558,19 @@ namespace ProjetoGrupo6.UsuarioNormal
             {
                 Modelo.RelacaoAvaliacao relacaoavaliacao2 = new Modelo.RelacaoAvaliacao(estrelas, int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
                 DALRelacaoAvaliacao.Insert(relacaoavaliacao2);
+
+                DAL.DALPost DALPost = new DAL.DALPost();
+                Modelo.Post post = new Modelo.Post(4, "avaliou com " + estrelas + "estrelas", int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
+                DALPost.Insert(post);
             }
             else
             {
                 Modelo.RelacaoAvaliacao relacaoavaliacao2 = new Modelo.RelacaoAvaliacao(estrelas, int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
                 DALRelacaoAvaliacao.Update(relacaoavaliacao2);
+
+                DAL.DALPost DALPost = new DAL.DALPost();
+                Modelo.Post post = new Modelo.Post(4, "avaliou com " + estrelas + "estrelas", int.Parse(LabelFilme_id.Text), Session["usuario"].ToString());
+                DALPost.Update(post);
             }
 
             if (estrelas == 1)

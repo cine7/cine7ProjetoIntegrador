@@ -13,6 +13,15 @@ namespace ProjetoGrupo6.UsuarioNormal {
     public partial class Usuario {
         
         /// <summary>
+        /// ImagePerfil control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ImagePerfil;
+        
+        /// <summary>
         /// LabelUsuario control.
         /// </summary>
         /// <remarks>
@@ -58,15 +67,6 @@ namespace ProjetoGrupo6.UsuarioNormal {
         protected global::System.Web.UI.WebControls.ObjectDataSource ObjectDataSource1;
         
         /// <summary>
-        /// DataListVistos control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList DataListVistos;
-        
-        /// <summary>
         /// ObjectDataSource2 control.
         /// </summary>
         /// <remarks>
@@ -101,6 +101,15 @@ namespace ProjetoGrupo6.UsuarioNormal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DataList DataList1_Feed;
+        
+        /// <summary>
+        /// ObjectDataSource4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource ObjectDataSource4;
         
         /// <summary>
         /// SqlDataSource4 control.
