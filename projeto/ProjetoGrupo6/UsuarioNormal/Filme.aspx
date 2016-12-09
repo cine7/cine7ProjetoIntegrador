@@ -11,11 +11,17 @@
         <div class="row">
             <div id="infoFilme">
                 <div class="col-md-3">
-                    <asp:Image ID="ImageFilme" runat="server" />
-                    <asp:ImageButton ID="ImageButtonFavorito" runat="server" Height="45px" ImageUrl="~/Imagens/favoritarButton.png" OnClick="ImageButtonFavoritar_Click" Width="45px" />
-                    <asp:ImageButton ID="ImageButtonVisto" runat="server" Height="45px" ImageUrl="~/Imagens/vistoButton.png" OnClick="ImageButtonVisto_Click" />
-                    <asp:ImageButton ID="ImageButtonInteresse" runat="server" Height="45px" ImageUrl="~/Imagens/tvInteresseButton.png" OnClick="ImageButtonInteresse_Click" Width="45px" />
-                </div>
+                    <asp:Image ID="ImageFilme" runat="server" Height ="300px" Width="200px" />
+                    <br />                      
+                           <asp:ImageButton ID="ImageButtonFavorito" runat="server" Height="45px" ImageUrl="~/Imagens/favoritarButton.png" OnClick="ImageButtonFavoritar_Click" Width="45px" />                          
+                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:ImageButton ID="ImageButtonVisto" runat="server" Height="45px" ImageUrl="~/Imagens/vistoButton.png" OnClick="ImageButtonVisto_Click" />                          
+                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:ImageButton ID="ImageButtonInteresse" runat="server" Height="45px" ImageUrl="~/Imagens/tvInteresseButton.png" OnClick="ImageButtonInteresse_Click" Width="45px" />
+                            
+                        </div>
+                    
+                
                 <div class="col-md-6">
                      <div id="containerInfoFilme">
                         <b><asp:Label ID="LabelFilme" runat="server" Text="Label"></asp:Label></b>
@@ -38,15 +44,15 @@
                         Duração:&nbsp<asp:Label ID="LabelDuracao" runat="server" Text="Label"></asp:Label> minutos
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <asp:Label ID="LabelQuantidadeFavorito" runat="server" Text="Label"></asp:Label>&nbsp;<asp:Image ID="Image5" runat="server" Height="30px" ImageUrl="~/Imagens/favoritarButton.png" Width="30px" />
 &nbsp;Favoritaram<br />
                     <asp:Label ID="LabelQuantidadeVisto" runat="server" Text="Label"></asp:Label>&nbsp;<asp:Image ID="Image6" runat="server" Height="30px" ImageUrl="~/Imagens/vistoButton.png" Width="30px" />
                     Viram<br />
                     <asp:Label ID="LabelQuantidadeInteresse" runat="server" Text="Label"></asp:Label>&nbsp;<asp:Image ID="Image7" runat="server" Height="30px" ImageUrl="~/Imagens/tvInteresseButton.png" Width="30px" />
                     Querem assistir<br />
-                    <asp:Label ID="LabelQuantidadeAvaliacao" runat="server" Text="Label"></asp:Label><br />
-                    <asp:Label ID="LabelMediaAvaliacao" runat="server" Text="Label"></asp:Label><br />
+                    Quantas pessoas avaliaram: &nbsp<asp:Label ID="LabelQuantidadeAvaliacao" runat="server" Text="Label"></asp:Label><br />
+                    Média: &nbsp <asp:Label ID="LabelMediaAvaliacao" runat="server" Text="Label"></asp:Label><br />
                     <asp:ImageButton ID="ImageButtonEstrela1" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela_Click" CommandName="1" />
                     <asp:ImageButton ID="ImageButtonEstrela2" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela_Click" CommandName="2" />
                     <asp:ImageButton ID="ImageButtonEstrela3" runat="server" ImageUrl="~/Imagens/estrelaApagada.png" Width="45px" OnClick="ImageButtonEstrela_Click" CommandName="3" />
@@ -57,7 +63,11 @@
                 </div> 
             </div>  
         </div>
-    
+        <div class ="row">
+            <div class ="col-md-4">
+
+            </div>
+            <div class ="col-md-4">
         <asp:DataList ID="DataList1" runat="server" DataSourceID="ObjectDataSource1" RepeatColumns="1" RepeatLayout="Flow" OnSelectedIndexChanged="DataList1_SelectedIndexChanged">
             <ItemTemplate>
                 <asp:Label ID="comentario_idLabel" runat="server" OnPreRender="comentario_idLabel_PreRender" Text='<%# Eval("comentario_id") %>' />
@@ -85,10 +95,13 @@
                 <asp:SessionParameter Name="filme_id" SessionField="filme_id" />
             </SelectParameters>
     </asp:SqlDataSource>
-         <asp:TextBox ID="TextBoxComentario" runat="server" Height="88px" TextMode="MultiLine" Width="201px"></asp:TextBox>
+         <asp:TextBox ID="TextBoxComentario" runat="server" Height="88px" TextMode="MultiLine" Width="264px"></asp:TextBox>
         <br />
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Enviar" />
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Enviar" BackColor="#A30F1D" BorderStyle="None" ForeColor="White" Height="25px" Width="60px" />
         <br />
+             </div>
+            <div class ="col-md-4"></div>
+            </div>
     <br /> 
     </div>
         <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Voltar</asp:LinkButton>

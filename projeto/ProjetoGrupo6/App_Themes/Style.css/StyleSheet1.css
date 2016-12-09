@@ -101,7 +101,7 @@ a:hover {
 
 /*FILME*/
 #infoFilme {
-    margin:0px;
+    margin-top: 10px;
 }
 [id*="ContentPlaceHolder1_DataList1_usuarioLabel"]
 {  
@@ -114,6 +114,9 @@ a:hover {
     border-color:#f00;
     border-radius:5px;
     padding:5px;
+}
+#acoesFilme {
+    width:100px;
 }
 /*EDITAR PERFIL*/
 #editarPerfil {
