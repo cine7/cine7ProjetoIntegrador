@@ -89,7 +89,41 @@ namespace ProjetoGrupo6.UsuarioNormal
         {
             DAL.DALFilme DALFilme = new DAL.DALFilme();
             string filme_name = DALFilme.SelectFilmeNamePorImagem((sender as ImageButton).ImageUrl);
-            Response.Redirect("~/UsuarioNormal/ResultadoPesquisa.aspx?Filme=" + filme_name);
+            Session["filme_name"] = filme_name;
+            Response.Redirect("~/UsuarioNormal/Filme.aspx?Filme=" + filme_name);
+        }
+
+        protected void ImageButtonFilmeVistoTop_Click(object sender, ImageClickEventArgs e)
+        {
+            DAL.DALFilme DALFilme = new DAL.DALFilme();
+            string filme_name = DALFilme.SelectFilmeNamePorImagem((sender as ImageButton).ImageUrl);
+            Session["filme_name"] = filme_name;
+            Response.Redirect("~/UsuarioNormal/Filme.aspx?Filme=" + filme_name);
+        }
+
+        protected void ImageButtonFilmeInteresseTop_Click(object sender, ImageClickEventArgs e)
+        {
+            DAL.DALFilme DALFilme = new DAL.DALFilme();
+            string filme_name = DALFilme.SelectFilmeNamePorImagem((sender as ImageButton).ImageUrl);
+            Session["filme_name"] = filme_name;
+            Response.Redirect("~/UsuarioNormal/Filme.aspx?Filme=" + filme_name);
+        }
+
+        protected void LinkButtonUsuarioPost_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/UsuarioNormal/Usuario.aspx?Usuario=" + Session["usuario"].ToString());
+        }
+
+        protected void LinkButtonUsuarioPost_PreRender(object sender, EventArgs e)
+        {
+            string usuarioSession = Session["usuario"].ToString();
+            string usuario = (sender as LinkButton).Text;
+            if (usuario == usuarioSession) (sender as LinkButton).Text = "Você";
+        }
+
+        protected void LinkButtonFilme_namePost_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/UsuarioNormal/Filme.aspx?Filme=" + (sender as LinkButton).Text);
         }
     }
 }

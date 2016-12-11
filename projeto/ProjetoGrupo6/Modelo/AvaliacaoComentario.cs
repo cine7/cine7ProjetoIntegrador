@@ -7,7 +7,7 @@ namespace ProjetoGrupo6.Modelo
 {
     public class AvaliacaoComentario
     {
-        public int avaliacaocomentario_id { get; set; }
+        public int avaliacaopost_id { get; set; }
 	    public int avaliacao { get; set; }
 	    public DateTime dataHora { get; set; }
 	    public int comentario_id { get; set; }
@@ -15,17 +15,17 @@ namespace ProjetoGrupo6.Modelo
 
         public AvaliacaoComentario() 
         {
-            this.avaliacaocomentario_id = 0;
+            this.avaliacaopost_id = 0;
             this.avaliacao = 0;
             this.dataHora = DateTime.Now;
             this.comentario_id = 0;
             this.usuarioAvaliador = "";
         }
 
-        public AvaliacaoComentario(int aavaliacao, int acomentario_id, string ausuarioAvaliador) 
+        public AvaliacaoComentario(int aavaliacao, int aavaliacaopost_id, string ausuarioAvaliador) 
         {
             this.avaliacao = aavaliacao;
-            this.comentario_id = acomentario_id;
+            this.avaliacaopost_id = aavaliacaopost_id;
             this.usuarioAvaliador = ausuarioAvaliador;
         }
     }

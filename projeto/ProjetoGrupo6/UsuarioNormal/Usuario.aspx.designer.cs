@@ -67,6 +67,15 @@ namespace ProjetoGrupo6.UsuarioNormal {
         protected global::System.Web.UI.WebControls.ObjectDataSource ObjectDataSource1;
         
         /// <summary>
+        /// DataListVistos control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DataList DataListVistos;
+        
+        /// <summary>
         /// ObjectDataSource2 control.
         /// </summary>
         /// <remarks>

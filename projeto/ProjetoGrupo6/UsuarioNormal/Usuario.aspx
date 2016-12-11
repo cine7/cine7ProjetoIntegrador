@@ -34,7 +34,7 @@
                 <br />
                 Filmes Vistos<asp:DataList ID="DataListVistos" runat="server" DataSourceID="ObjectDataSource2" RepeatDirection="Horizontal">
                     <ItemTemplate>
-                        &nbsp;<asp:ImageButton ID="ImageButton1" runat="server" ImageUrl='<%# Eval("caminhoImagem") %>' width="100px" height="150px" />
+                        &nbsp;<asp:ImageButton ID="ImageButtonFilmeVistoTop" runat="server" ImageUrl='<%# Eval("caminhoImagem") %>' width="100px" height="150px" OnClick="ImageButtonFilmeVistoTop_Click" />
                     </ItemTemplate>
                 </asp:DataList>
                 <asp:ObjectDataSource ID="ObjectDataSource2" runat="server" SelectMethod="SelectListaVisto" TypeName="ProjetoGrupo6.DAL.DALRelacaoVisto">
@@ -45,7 +45,7 @@
                 <br />
                 Filmes que quero assistir<asp:DataList ID="DataListInteresses" runat="server" DataSourceID="ObjectDataSource3" RepeatDirection="Horizontal">
                     <ItemTemplate>
-                        <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl='<%# Eval("caminhoImagem") %>' width="100px" height="150px" />
+                        <asp:ImageButton ID="ImageButtonFilmeInteresseTop" runat="server" ImageUrl='<%# Eval("caminhoImagem") %>' width="100px" height="150px" OnClick="ImageButtonFilmeInteresseTop_Click" />
                     </ItemTemplate>
                 </asp:DataList>
                 <asp:ObjectDataSource ID="ObjectDataSource3" runat="server" SelectMethod="SelectListaInteresse" TypeName="ProjetoGrupo6.DAL.DALRelacaoInteresse">
@@ -65,19 +65,19 @@
                 <div id="feedUsuario">
                 <asp:DataList ID="DataList1_Feed" runat="server" DataSourceID="ObjectDataSource4">
                     <ItemTemplate>
-                        tipo:
-                        <asp:Label ID="tipoLabel" runat="server" Text='<%# Eval("tipo") %>' />
-                        <br />
-                        filme_name:
-                        <asp:Label ID="filme_nameLabel" runat="server" Text='<%# Eval("filme_name") %>' />
-                        <br />
-                        nome:
-                        <asp:Label ID="nomeLabel" runat="server" Text='<%# Eval("nome") %>' />
+                        <asp:LinkButton ID="LinkButtonUsuarioPost" runat="server" ForeColor="#333333" OnClick="LinkButtonUsuarioPost_Click" OnPreRender="LinkButtonUsuarioPost_PreRender" Text='<%# Eval("usuario") %>'></asp:LinkButton>
+                        <asp:Label ID="descricaoLabel" runat="server" Text='<%# Eval("descricao") %>' />
+                        &nbsp;<br />
+                        <asp:LinkButton ID="LinkButtonFilme_namePost" runat="server" ForeColor="#333333" OnClick="LinkButtonFilme_namePost_Click" Text='<%# Eval("filme_name") %>'></asp:LinkButton>
                         <br />
                         <br />
                     </ItemTemplate>
                 </asp:DataList>
-                    <asp:ObjectDataSource ID="ObjectDataSource4" runat="server"></asp:ObjectDataSource>
+                    <asp:ObjectDataSource ID="ObjectDataSource4" runat="server" SelectMethod="SelectAll" TypeName="ProjetoGrupo6.DAL.DALPost">
+                        <SelectParameters>
+                            <asp:SessionParameter Name="perfil" SessionField="perfil" Type="String" />
+                        </SelectParameters>
+                    </asp:ObjectDataSource>
                     </div>
                 </div>
                 </div>

@@ -34,8 +34,9 @@ namespace ProjetoGrupo6.Modelo
             this.filme_id = afilme_id;
             this.usuario = ausuario;
         }
-        public Post(string ausuario, string adescricao, string afilme_name)
+        public Post(int apost_id, string ausuario, string adescricao, string afilme_name)
         {
+            this.post_id = apost_id;
             this.usuario = ausuario;
             this.descricao = adescricao;
             this.filme_name = afilme_name;

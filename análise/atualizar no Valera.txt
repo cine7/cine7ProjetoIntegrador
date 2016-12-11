@@ -1,0 +1,3 @@
+- stored procedures de feed e post
+
+- excluir coluna dataNascimento de post

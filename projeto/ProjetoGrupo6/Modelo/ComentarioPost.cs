@@ -10,7 +10,7 @@ namespace ProjetoGrupo6.Modelo
         public int comentariopost_id { get; set; }
 	    public string descricao { get; set; }
 	    public DateTime dataHora { get; set; }
-	    public int comentario_id { get; set; }
+	    public int post_id { get; set; }
         public string usuarioComentario { get; set; }
 
         public ComentarioPost() 
@@ -18,14 +18,23 @@ namespace ProjetoGrupo6.Modelo
             this.comentariopost_id = 0;
             this.descricao = "";
             this.dataHora = DateTime.Now;
-            this.comentario_id = 0;
+            this.post_id = 0;
             this.usuarioComentario = "";
         }
 
-        public ComentarioPost(string adescricao, int acomentario_id, string ausuarioComentario) 
+        public ComentarioPost(int acomentariopost_id, DateTime adataHora, string adescricao, int apost_id, string ausuarioComentario)
+        {
+            this.comentariopost_id = acomentariopost_id;
+            this.dataHora = adataHora;
+            this.descricao = adescricao;
+            this.post_id = apost_id;
+            this.usuarioComentario = ausuarioComentario;
+        }
+
+        public ComentarioPost(string adescricao, int apost_id, string ausuarioComentario) 
         {
             this.descricao = adescricao;
-            this.comentario_id = acomentario_id;
+            this.post_id = apost_id;
             this.usuarioComentario = ausuarioComentario;
         }
     }

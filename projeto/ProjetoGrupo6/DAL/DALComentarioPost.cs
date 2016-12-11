@@ -20,83 +20,61 @@ namespace ProjetoGrupo6.DAL
 
         // SELECT NOS COMENTÁRIOS DE UM FILME
         [DataObjectMethod(DataObjectMethodType.Select)]
-        public List<Modelo.Comentario> SelectComentario(int filme_id)
+        public List<Modelo.Comentario> SelectComentario(int post_id)
         {
-            // Variavel para armazenar um comentário
             Modelo.Comentario aComentario;
-            // Cria Lista Vazia
             List<Modelo.Comentario> aListComentario = new List<Modelo.Comentario>();
-            // Cria Conexão com banco de dados
             SqlConnection conn = new SqlConnection(connectionString);
-            // Abre conexão com o banco de dados
             conn.Open();
-            // Cria comando SQL
             SqlCommand cmd = conn.CreateCommand();
-            // define SQL do comando
-            cmd.CommandText = "SELECT comentario_id, data, descricao, filme_id, usuario FROM ComentarioPost where filme_id = @filme_id";
-            cmd.Parameters.AddWithValue("@filme_id", filme_id);
-            // Executa comando, gerando objeto DbDataReader
+            cmd.CommandText = "SELECT comentariopost_id, dataHora, descricao, post_id, usuarioComentario FROM ComentarioPost where post_id = @post_id";
+            cmd.Parameters.AddWithValue("@post_id", post_id);
             SqlDataReader dr = cmd.ExecuteReader();
-            // Le titulo do livro do resultado e apresenta no segundo rótulo
             if (dr.HasRows)
             {
-                while (dr.Read()) // Le o proximo registro
+                while (dr.Read())
                 {
-                    // Cria objeto com dados lidos do banco de dados
                     aComentario = new Modelo.Comentario(
-                        Convert.ToInt32(dr["comentario_id"]),
-                        Convert.ToDateTime(dr["data"]),
+                        Convert.ToInt32(dr["comentariopost_id"]),
+                        Convert.ToDateTime(dr["dataHora"]),
                         dr["descricao"].ToString(),
-                        Convert.ToInt32(dr["filme_id"].ToString()),
-                        dr["usuario"].ToString()
+                        Convert.ToInt32(dr["post_id"].ToString()),
+                        dr["usuarioComentario"].ToString()
                         );
-                    // Adiciona o livro lido à lista
                     aListComentario.Add(aComentario);
                 }
             }
-            // Fecha DataReader
             dr.Close();
-            // Fecha Conexão
             conn.Close();
             return aListComentario;
         }
 
         //INSERT EM UM COMENTÁRIO
         [DataObjectMethod(DataObjectMethodType.Insert)]
-        public void Insert(Modelo.Comentario obj)
+        public void Insert(Modelo.ComentarioPost obj)
         {
-            // Cria Conexão com banco de dados
             SqlConnection conn = new SqlConnection(connectionString);
-            // Abre conexão com o banco de dados
             conn.Open();
-            // Cria comando SQL
             SqlCommand com = conn.CreateCommand();
-            // Define comando de exclusão
-            SqlCommand cmd = new SqlCommand("INSERT INTO ComentarioPost (descricao, filme_id, usuario) VALUES (@descricao, @filme_id, @usuario)", conn);
+            SqlCommand cmd = new SqlCommand("INSERT INTO ComentarioPost (descricao, post_id, usuarioComentario) VALUES (@descricao, @post_id, @usuarioComentario)", conn);
             cmd.Parameters.AddWithValue("@descricao", obj.descricao);
-            cmd.Parameters.AddWithValue("@filme_id", obj.filme_id);
-            cmd.Parameters.AddWithValue("@usuario", obj.usuario);
+            cmd.Parameters.AddWithValue("@post_id", obj.post_id);
+            cmd.Parameters.AddWithValue("@usuarioComentario", obj.usuarioComentario);
 
-            // Executa Comando
             cmd.ExecuteNonQuery();
 
         }
 
         //DELETAR UM COMENTÁRIO
         [DataObjectMethod(DataObjectMethodType.Delete)]
-        public void Delete(int comentario_id)
+        public void Delete(int comentariopost_id)
         {
-            // Cria Conexão com banco de dados
             SqlConnection conn = new SqlConnection(connectionString);
-            // Abre conexão com o banco de dados
             conn.Open();
-            // Cria comando SQL
             SqlCommand com = conn.CreateCommand();
-            // Define comando de exclusão
-            SqlCommand cmd = new SqlCommand("DELETE FROM ComentarioPost WHERE comentario_id = @comentario_id", conn);
-            cmd.Parameters.AddWithValue("@comentario_id", comentario_id);
+            SqlCommand cmd = new SqlCommand("DELETE FROM ComentarioPost WHERE comentariopost_id = @comentariopost_id", conn);
+            cmd.Parameters.AddWithValue("@comentariopost_id", comentariopost_id);
 
-            // Executa Comando
             cmd.ExecuteNonQuery();
         }
     }

@@ -1,14 +1,32 @@
-editar perfil - quase
+editar perfil - quase. Corrigir
 
-gênero de filme -NÃO VAI DAR MAIS
+gênero de filme - NÃO VAI DAR MAIS
 
 notificação - NÃO VAI DAR MAIS. Apenas criar tabela e dar insert
 
-linha do tempo - Está retornando a quantidade de caracteres da string
+linha do tempo - Está retornando a quantidade de caracteres da string. Já sei como resolver
 
 coluna na tabela de post
 
-DALMedia não faz sentido!
+DALMedia não faz sentido! - ajeitando
 
-FAZER QUANDO CHEGAR EM CASA 08/12
-- corrigir erros na modelagem
+Corrigir erros na modelagem - Em andamento
+
+IMAGEMUsuario
+- criar um diretório para cada usuário
+- excluir imagem no upload
+- tornar imagem quadrada no insert
+
+Post
+- fazer o rolé simples
+
+CRUD
+- tornar tudo um só form
+- criar método null
+
+FILME
+- se labelMedia -> visibilidade = false
+
+PESQUISAR USUÁRIO
+
+TEXTAREA fixo 
