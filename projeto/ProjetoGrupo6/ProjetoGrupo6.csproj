@@ -84,6 +84,7 @@
     <Content Include="UsuarioNormal\CRUDFilme.aspx" />
     <Content Include="UsuarioNormal\Filme.aspx" />
     <Content Include="UsuarioNormal\Home.aspx" />
+    <Content Include="UsuarioNormal\ListaFavoritos.aspx" />
     <Content Include="UsuarioNormal\ResultadoPesquisa.aspx" />
     <Content Include="UsuarioNormal\Usuario.aspx" />
     <Content Include="UsuarioNormal\EditarPerfil.aspx" />
@@ -189,6 +190,13 @@
     </Compile>
     <Compile Include="UsuarioNormal\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioNormal\ListaFavoritos.aspx.cs">
+      <DependentUpon>ListaFavoritos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioNormal\ListaFavoritos.aspx.designer.cs">
+      <DependentUpon>ListaFavoritos.aspx</DependentUpon>
     </Compile>
     <Compile Include="UsuarioNormal\ResultadoPesquisa.aspx.cs">
       <DependentUpon>ResultadoPesquisa.aspx</DependentUpon>

@@ -1,3 +1,5 @@
 - stored procedures de feed e post
 
 - excluir coluna dataNascimento de post
+
+- stored procedures de listarTodo favoritos, vistos e interesses

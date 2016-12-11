@@ -125,5 +125,10 @@ namespace ProjetoGrupo6.UsuarioNormal
         {
             Response.Redirect("~/UsuarioNormal/Filme.aspx?Filme=" + (sender as LinkButton).Text);
         }
+
+        protected void LinkButtonVerMaisFavoritos_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/UsuarioNormal/ListaFavoritos.aspx");
+        }
     }
 }

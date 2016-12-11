@@ -31,6 +31,7 @@
                         <asp:SessionParameter Name="perfil" SessionField="perfil" Type="String" />
                     </SelectParameters>
                 </asp:ObjectDataSource>
+                    <asp:LinkButton ID="LinkButtonVerMaisFavoritos" runat="server" ForeColor="#333333" OnClick="LinkButtonVerMaisFavoritos_Click">Ver mais</asp:LinkButton>
                 <br />
                 Filmes Vistos<asp:DataList ID="DataListVistos" runat="server" DataSourceID="ObjectDataSource2" RepeatDirection="Horizontal">
                     <ItemTemplate>
@@ -42,6 +43,7 @@
                         <asp:SessionParameter Name="perfil" SessionField="perfil" Type="String" />
                     </SelectParameters>
                 </asp:ObjectDataSource>
+                    <asp:LinkButton ID="LinkButtonVerMaisVistos" runat="server" ForeColor="#333333">Ver mais</asp:LinkButton>
                 <br />
                 Filmes que quero assistir<asp:DataList ID="DataListInteresses" runat="server" DataSourceID="ObjectDataSource3" RepeatDirection="Horizontal">
                     <ItemTemplate>
@@ -53,6 +55,7 @@
                         <asp:SessionParameter Name="perfil" SessionField="perfil" Type="String" />
                     </SelectParameters>
                 </asp:ObjectDataSource>
+                    <asp:LinkButton ID="LinkButtonVerMaisInteresses" runat="server" ForeColor="#333333">Ver mais</asp:LinkButton>
                 <br />
                 <br/>
                 <br/>

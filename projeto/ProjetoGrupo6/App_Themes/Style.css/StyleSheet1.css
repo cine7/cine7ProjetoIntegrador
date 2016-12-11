@@ -87,6 +87,8 @@ a:hover {
 #filmes {
     position:relative;
     width:50%;
+    top: 4px;
+    left: 13px;
 }
 .labelUsuario {
     font-size:20px;

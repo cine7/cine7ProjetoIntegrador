@@ -42,7 +42,7 @@
                                 <br />
                             </ItemTemplate>
                         </asp:DataList>
-                        <asp:ObjectDataSource ID="ObjectDataSource2" runat="server" SelectMethod="SelectComentario" TypeName="ProjetoGrupo6.DAL.DALComentarioPost">
+                        <asp:ObjectDataSource ID="ObjectDataSource2" runat="server" SelectMethod="SelectComentarioPost" TypeName="ProjetoGrupo6.DAL.DALComentarioPost">
                             <SelectParameters>
                                 <asp:SessionParameter Name="post_id" SessionField="post_id" Type="Int32" />
                             </SelectParameters>
