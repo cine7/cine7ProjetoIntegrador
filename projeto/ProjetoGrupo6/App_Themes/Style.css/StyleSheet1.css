@@ -98,6 +98,11 @@ a:hover {
     left: 70%; 
     width:50%; 
 }
+/*HOME ANONIMO*/
+#homeAnonimo {
+    position: relative; left: 40%; width:261px;
+}
+
 /*LOGIN*/
 #login {
     position: relative; left: 40%; width:261px;

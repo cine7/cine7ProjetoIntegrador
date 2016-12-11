@@ -23,3 +23,8 @@ C:\Users\20141011110212.IFRN\Documents\GitHub\cine7ProjetoIntegrador\projeto\Pro
 C:\Users\20141011110212.IFRN\Documents\GitHub\cine7ProjetoIntegrador\projeto\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
 C:\Users\20141011110212.IFRN\Documents\GitHub\cine7ProjetoIntegrador\projeto\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
 C:\Users\20141011110212.IFRN\Documents\GitHub\cine7ProjetoIntegrador\projeto\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
+C:\Users\clara\Documents\GitHub\cine7ProjetoIntegrador\projeto\ProjetoGrupo6\bin\ProjetoGrupo6.dll
+C:\Users\clara\Documents\GitHub\cine7ProjetoIntegrador\projeto\ProjetoGrupo6\bin\ProjetoGrupo6.pdb
+C:\Users\clara\Documents\GitHub\cine7ProjetoIntegrador\projeto\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.csprojResolveAssemblyReference.cache
+C:\Users\clara\Documents\GitHub\cine7ProjetoIntegrador\projeto\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.dll
+C:\Users\clara\Documents\GitHub\cine7ProjetoIntegrador\projeto\ProjetoGrupo6\obj\Debug\ProjetoGrupo6.pdb
