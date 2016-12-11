@@ -11,7 +11,7 @@ namespace ProjetoGrupo6.UsuarioNormal
 {
     public partial class Home1 : System.Web.UI.Page
     {
-        string caminhoImagem, post_id;
+        string caminhoImagem, post_id, comentarioFeed;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["usuario"] == null)
@@ -115,10 +115,30 @@ namespace ProjetoGrupo6.UsuarioNormal
         protected void ButtonComentarioPost_Click(object sender, EventArgs e)
         {
             DAL.DALComentarioPost DALComentarioPost = new DAL.DALComentarioPost();
-            Modelo.ComentarioPost comentariopost = new Modelo.ComentarioPost(TextBoxComentarioFeed.Text, int.Parse(post_id), Session["usuario"].ToString());
+            string usuarioComentarioFeed = Session["usuario"].ToString();
+            Modelo.ComentarioPost comentariopost = new Modelo.ComentarioPost(comentarioFeed, int.Parse((sender as Button).CommandName), usuarioComentarioFeed);
             DALComentarioPost.Insert(comentariopost);
 
             Response.Redirect("~/UsuarioNormal/Home.aspx");
+        }
+
+        protected void TextBoxComentarioFeed_PreRender(object sender, EventArgs e)
+        {
+        }
+
+        protected void ButtonComentarioPost_PreRender(object sender, EventArgs e)
+        {
+            (sender as Button).CommandName = post_id;
+        }
+
+        protected void TextBoxComentarioFeed_TextChanged(object sender, EventArgs e)
+        {
+            comentarioFeed = (sender as TextBox).Text;
+        }
+
+        protected void DataList1_Load(object sender, EventArgs e)
+        {
+            Session["post_id"] = post_id;
         }
     }
 }

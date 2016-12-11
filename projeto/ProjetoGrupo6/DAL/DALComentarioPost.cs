@@ -20,15 +20,15 @@ namespace ProjetoGrupo6.DAL
 
         // SELECT NOS COMENTÁRIOS DE UM FILME
         [DataObjectMethod(DataObjectMethodType.Select)]
-        public List<Modelo.Comentario> SelectComentario(int post_id)
+        public List<Modelo.Comentario> SelectComentarioPost(int post_id)
         {
             Modelo.Comentario aComentario;
             List<Modelo.Comentario> aListComentario = new List<Modelo.Comentario>();
             SqlConnection conn = new SqlConnection(connectionString);
             conn.Open();
             SqlCommand cmd = conn.CreateCommand();
-            cmd.CommandText = "SELECT comentariopost_id, dataHora, descricao, post_id, usuarioComentario FROM ComentarioPost where post_id = @post_id";
-            cmd.Parameters.AddWithValue("@post_id", post_id);
+            cmd.CommandText = "SELECT comentariopost_id, dataHora, descricao, post_id, usuarioComentario FROM ComentarioPost";
+            //cmd.Parameters.AddWithValue("@post_id", post_id);
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.HasRows)
             {

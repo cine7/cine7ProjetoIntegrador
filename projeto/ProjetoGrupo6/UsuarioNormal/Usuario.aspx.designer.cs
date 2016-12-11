@@ -67,6 +67,15 @@ namespace ProjetoGrupo6.UsuarioNormal {
         protected global::System.Web.UI.WebControls.ObjectDataSource ObjectDataSource1;
         
         /// <summary>
+        /// LinkButtonVerMaisFavoritos control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonVerMaisFavoritos;
+        
+        /// <summary>
         /// DataListVistos control.
         /// </summary>
         /// <remarks>
@@ -85,6 +94,15 @@ namespace ProjetoGrupo6.UsuarioNormal {
         protected global::System.Web.UI.WebControls.ObjectDataSource ObjectDataSource2;
         
         /// <summary>
+        /// LinkButtonVerMaisVistos control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonVerMaisVistos;
+        
+        /// <summary>
         /// DataListInteresses control.
         /// </summary>
         /// <remarks>
@@ -101,6 +119,15 @@ namespace ProjetoGrupo6.UsuarioNormal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ObjectDataSource ObjectDataSource3;
+        
+        /// <summary>
+        /// LinkButtonVerMaisInteresses control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonVerMaisInteresses;
         
         /// <summary>
         /// DataList1_Feed control.

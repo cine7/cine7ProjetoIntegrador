@@ -8,7 +8,7 @@
                 <asp:Image ID="ImagePerfil" runat="server" BorderStyle="None" Width="100px" />
             </div>
             <div class="col-md-9">
-                <asp:DataList ID="DataList1" runat="server" DataSourceID="ObjectDataSource1">
+                <asp:DataList ID="DataList1" runat="server" DataSourceID="ObjectDataSource1" OnLoad="DataList1_Load">
                     <ItemTemplate>
                         <asp:Label ID="post_idLabel" runat="server" OnPreRender="post_idLabel_PreRender" Text='<%# Eval("post_id") %>'></asp:Label>
                         <asp:Label ID="descricaoLabel" runat="server" Text='<%# Eval("descricao") %>' />
@@ -19,11 +19,34 @@
                         &nbsp;<asp:Label ID="LabelNegativosFeed" runat="server" OnPreRender="LabelNegativosFeed_PreRender" Text="Label"></asp:Label>
                         &nbsp;<asp:ImageButton ID="ImageButtonNegativarFeed" runat="server" CommandName="podt_id" ImageUrl="~/Imagens/negativar.png" OnClick="ImageButtonNegativarFeed_Click" OnPreRender="ImageButtonNegativarFeed_PreRender" Width="20px" />
                         <br />
-                        <asp:TextBox ID="TextBoxComentarioFeed" runat="server" Height="38px" TextMode="MultiLine"></asp:TextBox>
+                        <asp:TextBox ID="TextBoxComentarioFeed" runat="server" Height="38px" TextMode="MultiLine" OnPreRender="TextBoxComentarioFeed_PreRender" OnTextChanged="TextBoxComentarioFeed_TextChanged"></asp:TextBox>
                         <br />
-                        <asp:Button ID="ButtonComentarioPost" runat="server" OnClick="ButtonComentarioPost_Click" Text="Button" />
-                        <asp:DataList ID="DataList2" runat="server">
+                        <asp:Button ID="ButtonComentarioPost" runat="server" OnClick="ButtonComentarioPost_Click" Text="Button" CommandName="post_id" OnPreRender="ButtonComentarioPost_PreRender" />
+                        <asp:DataList ID="DataList2" runat="server" DataSourceID="ObjectDataSource2">
+                            <ItemTemplate>
+                                comentario_id:
+                                <asp:Label ID="comentario_idLabel" runat="server" Text='<%# Eval("comentario_id") %>' />
+                                <br />
+                                descricao:
+                                <asp:Label ID="descricaoLabel" runat="server" Text='<%# Eval("descricao") %>' />
+                                <br />
+                                data:
+                                <asp:Label ID="dataLabel" runat="server" Text='<%# Eval("data") %>' />
+                                <br />
+                                filme_id:
+                                <asp:Label ID="filme_idLabel" runat="server" Text='<%# Eval("filme_id") %>' />
+                                <br />
+                                usuario:
+                                <asp:Label ID="usuarioLabel" runat="server" Text='<%# Eval("usuario") %>' />
+                                <br />
+                                <br />
+                            </ItemTemplate>
                         </asp:DataList>
+                        <asp:ObjectDataSource ID="ObjectDataSource2" runat="server" SelectMethod="SelectComentario" TypeName="ProjetoGrupo6.DAL.DALComentarioPost">
+                            <SelectParameters>
+                                <asp:SessionParameter Name="post_id" SessionField="post_id" Type="Int32" />
+                            </SelectParameters>
+                        </asp:ObjectDataSource>
                     </ItemTemplate>
                 </asp:DataList>
                 <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="SelectFeed" TypeName="ProjetoGrupo6.DAL.DALPost">
