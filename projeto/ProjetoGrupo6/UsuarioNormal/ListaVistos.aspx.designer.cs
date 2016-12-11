@@ -10,16 +10,16 @@
 namespace ProjetoGrupo6.UsuarioNormal {
     
     
-    public partial class ListaFavoritos {
+    public partial class ListaVistos {
         
         /// <summary>
-        /// LabelFilmesFavoritosTitleTodos control.
+        /// LabelFilmesVistosTitlesTodos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelFilmesFavoritosTitleTodos;
+        protected global::System.Web.UI.WebControls.Label LabelFilmesVistosTitlesTodos;
         
         /// <summary>
         /// DataList1 control.

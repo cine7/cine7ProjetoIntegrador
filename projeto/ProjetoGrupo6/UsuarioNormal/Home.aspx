@@ -8,7 +8,7 @@
                 <asp:Image ID="ImagePerfil" runat="server" BorderStyle="None" Width="100px" />
             </div>
             <div class="col-md-9">
-                <asp:DataList ID="DataList1" runat="server" DataSourceID="ObjectDataSource1" OnLoad="DataList1_Load">
+                <asp:DataList ID="DataList1" runat="server" DataSourceID="ObjectDataSource1" OnLoad="DataList1_Load" OnPreRender="DataList1_PreRender">
                     <ItemTemplate>
                         <asp:Label ID="post_idLabel" runat="server" OnPreRender="post_idLabel_PreRender" Text='<%# Eval("post_id") %>'></asp:Label>
                         <asp:Label ID="descricaoLabel" runat="server" Text='<%# Eval("descricao") %>' />
@@ -22,22 +22,17 @@
                         <asp:TextBox ID="TextBoxComentarioFeed" runat="server" Height="38px" TextMode="MultiLine" OnPreRender="TextBoxComentarioFeed_PreRender" OnTextChanged="TextBoxComentarioFeed_TextChanged"></asp:TextBox>
                         <br />
                         <asp:Button ID="ButtonComentarioPost" runat="server" OnClick="ButtonComentarioPost_Click" Text="Button" CommandName="post_id" OnPreRender="ButtonComentarioPost_PreRender" />
-                        <asp:DataList ID="DataList2" runat="server" DataSourceID="ObjectDataSource2">
+                        <asp:DataList ID="DataList2" runat="server" DataSourceID="ObjectDataSource2" OnLoad="DataList2_Load" OnPreRender="DataList2_PreRender">
                             <ItemTemplate>
-                                comentario_id:
-                                <asp:Label ID="comentario_idLabel" runat="server" Text='<%# Eval("comentario_id") %>' />
+                                <asp:Label ID="comentariopost_idLabel" runat="server" Text='<%# Eval("comentariopost_id") %>' />
                                 <br />
-                                descricao:
                                 <asp:Label ID="descricaoLabel" runat="server" Text='<%# Eval("descricao") %>' />
                                 <br />
-                                data:
-                                <asp:Label ID="dataLabel" runat="server" Text='<%# Eval("data") %>' />
+                                <asp:Label ID="dataLabel" runat="server" Text='<%# Eval("dataHora") %>' />
                                 <br />
-                                filme_id:
-                                <asp:Label ID="filme_idLabel" runat="server" Text='<%# Eval("filme_id") %>' />
+                                <asp:Label ID="post_idLabel" runat="server" Text='<%# Eval("post_id") %>' />
                                 <br />
-                                usuario:
-                                <asp:Label ID="usuarioLabel" runat="server" Text='<%# Eval("usuario") %>' />
+                                <asp:Label ID="usuarioComentarioLabel" runat="server" Text='<%# Eval("usuarioComentario") %>' />
                                 <br />
                                 <br />
                             </ItemTemplate>

@@ -2,12 +2,13 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:DataList ID="DataList1" runat="server" DataSourceID="ObjectDataSource1">
+    <asp:Label ID="LabelFilmesFavoritosTitleTodos" runat="server" Text="FILMES FAVORITOS"></asp:Label>
+    <asp:DataList ID="DataList1" runat="server" DataSourceID="ObjectDataSource1" RepeatColumns="4">
         <ItemTemplate>
-            <asp:ImageButton ID="ImageButtonListaFavoritosTodos" runat="server" ImageUrl='<%# Eval("caminhoImagem") %>' OnClick="ImageButtonListaFavoritosTodos_Click" />
+            <asp:ImageButton ID="ImageButtonListaFavoritosTodos" runat="server" Height="225px" ImageUrl='<%# Eval("caminhoImagem") %>' OnClick="ImageButtonListaFavoritosTodos_Click" Width="150px" />
         </ItemTemplate>
     </asp:DataList>
-    <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="SelectListaFavorito" TypeName="ProjetoGrupo6.DAL.DALRelacaoFavorito">
+    <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="SelectListaFavoritoTodos" TypeName="ProjetoGrupo6.DAL.DALRelacaoFavorito">
         <SelectParameters>
             <asp:SessionParameter Name="perfil" SessionField="perfil" Type="String" />
         </SelectParameters>

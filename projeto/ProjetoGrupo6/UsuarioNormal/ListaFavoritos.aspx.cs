@@ -11,7 +11,6 @@ namespace ProjetoGrupo6.UsuarioNormal
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["perfil"] = Request.QueryString["Usuario"];
         }
 
         protected void ImageButtonListaFavoritosTodos_Click(object sender, ImageClickEventArgs e)

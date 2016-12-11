@@ -136,9 +136,25 @@ namespace ProjetoGrupo6.UsuarioNormal
             comentarioFeed = (sender as TextBox).Text;
         }
 
+        protected void DataList2_Load(object sender, EventArgs e)
+        {
+            //Session["post_id"] = post_id;
+        }
+
+        protected void DataList2_PreRender(object sender, EventArgs e)
+        {
+            //Session["post_id"] = post_id;
+        }
         protected void DataList1_Load(object sender, EventArgs e)
         {
-            Session["post_id"] = post_id;
+            //Session["post_id"] = post_id;
+            Session["post_id"] = (sender as DataList).AccessKey;
         }
+
+        protected void DataList1_PreRender(object sender, EventArgs e)
+        {
+            (sender as DataList).AccessKey = post_id;
+        }
+
     }
 }

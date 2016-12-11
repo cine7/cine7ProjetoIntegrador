@@ -85,6 +85,8 @@
     <Content Include="UsuarioNormal\Filme.aspx" />
     <Content Include="UsuarioNormal\Home.aspx" />
     <Content Include="UsuarioNormal\ListaFavoritos.aspx" />
+    <Content Include="UsuarioNormal\ListaInteresses.aspx" />
+    <Content Include="UsuarioNormal\ListaVistos.aspx" />
     <Content Include="UsuarioNormal\ResultadoPesquisa.aspx" />
     <Content Include="UsuarioNormal\Usuario.aspx" />
     <Content Include="UsuarioNormal\EditarPerfil.aspx" />
@@ -197,6 +199,20 @@
     </Compile>
     <Compile Include="UsuarioNormal\ListaFavoritos.aspx.designer.cs">
       <DependentUpon>ListaFavoritos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioNormal\ListaInteresses.aspx.cs">
+      <DependentUpon>ListaInteresses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioNormal\ListaInteresses.aspx.designer.cs">
+      <DependentUpon>ListaInteresses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioNormal\ListaVistos.aspx.cs">
+      <DependentUpon>ListaVistos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioNormal\ListaVistos.aspx.designer.cs">
+      <DependentUpon>ListaVistos.aspx</DependentUpon>
     </Compile>
     <Compile Include="UsuarioNormal\ResultadoPesquisa.aspx.cs">
       <DependentUpon>ResultadoPesquisa.aspx</DependentUpon>

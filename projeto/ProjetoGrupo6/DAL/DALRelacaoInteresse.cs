@@ -21,18 +21,13 @@ namespace ProjetoGrupo6.DAL
         [DataObjectMethod(DataObjectMethodType.Insert)]
         public void Insert(Modelo.RelacaoInteresse obj)
         {
-            // Cria Conexão com banco de dados
             SqlConnection conn = new SqlConnection(connectionString);
-            // Abre conexão com o banco de dados
             conn.Open();
-            // Cria comando SQL
             SqlCommand com = conn.CreateCommand();
-            // Define comando de exclusão
             SqlCommand cmd = new SqlCommand("INSERT INTO RelacaoInteresse(filme_id, usuario) VALUES (@filme_id, @usuario)", conn);
             cmd.Parameters.AddWithValue("@filme_id", obj.filme_id);
             cmd.Parameters.AddWithValue("@usuario", obj.usuario);
 
-            // Executa Comando
             cmd.ExecuteNonQuery();
 
         }
@@ -42,18 +37,13 @@ namespace ProjetoGrupo6.DAL
         [DataObjectMethod(DataObjectMethodType.Delete)]
         public void Delete(Modelo.RelacaoInteresse obj)
         {
-            // Cria Conexão com banco de dados
             SqlConnection conn = new SqlConnection(connectionString);
-            // Abre conexão com o banco de dados
             conn.Open();
-            // Cria comando SQL
             SqlCommand com = conn.CreateCommand();
-            // Define comando de exclusão
             SqlCommand cmd = new SqlCommand("DELETE FROM RelacaoInteresse WHERE filme_id = @filme_id and usuario = @usuario", conn);
             cmd.Parameters.AddWithValue("@filme_id", obj.filme_id);
             cmd.Parameters.AddWithValue("@usuario", obj.usuario);
 
-            // Executa Comando
             cmd.ExecuteNonQuery();
         }
 
@@ -62,34 +52,24 @@ namespace ProjetoGrupo6.DAL
         public bool Select(Modelo.RelacaoInteresse obj)
         {
             bool validar = true;
-            // Cria Conexão com banco de dados
             SqlConnection conn = new SqlConnection(connectionString);
-            // Abre conexão com o banco de dados
             conn.Open();
-            // Cria comando SQL
             SqlCommand com = conn.CreateCommand();
-            // Define comando de exclusão
             SqlCommand cmd = new SqlCommand("Select dataHora FROM RelacaoInteresse where filme_id = @filme_id and usuario = @usuario", conn);
             cmd.Parameters.AddWithValue("@filme_id", obj.filme_id);
             cmd.Parameters.AddWithValue("@usuario", obj.usuario);
-            // Executa comando, gerando objeto DbDataReader
             SqlDataReader dr = cmd.ExecuteReader();
-            // Le titulo do livro do resultado e apresenta no segundo rótulo
             if (dr.HasRows)
             {
-                while (dr.Read()) // Le o proximo registro
+                while (dr.Read())
                 {
-                    // Cria objeto com dados lidos do banco de dados
                     if (dr["dataHora"] != null)
                     {
                         validar = false;
                     }
-                    // Adiciona o livro lido à lista
                 }
             }
-            // Fecha DataReader
             dr.Close();
-            // Fecha Conexão
             conn.Close();
             return validar;
         }
@@ -98,29 +78,20 @@ namespace ProjetoGrupo6.DAL
         public int SelectQuantidadeInteresse(Modelo.RelacaoInteresse obj)
         {
             int quantidade = 0;
-            // Cria Lista Vazia
-            // Cria Conexão com banco de dados
             SqlConnection conn = new SqlConnection(connectionString);
-            // Abre conexão com o banco de dados
             conn.Open();
-            // Cria comando SQL
             SqlCommand cmd = conn.CreateCommand();
-            // define SQL do comando
             cmd.CommandText = "SELECT * FROM RelacaoInteresse where filme_id = @filme_id";
             cmd.Parameters.AddWithValue("@filme_id", obj.filme_id);
-            // Executa comando, gerando objeto DbDataReader
             SqlDataReader dr = cmd.ExecuteReader();
-            // Le titulo do livro do resultado e apresenta no segundo rótulo
             if (dr.HasRows)
             {
-                while (dr.Read()) // Le o proximo registro
+                while (dr.Read())
                 {
                     quantidade++;
                 }
             }
-            // Fecha DataReader
             dr.Close();
-            // Fecha Conexão
             conn.Close();
             return quantidade;
         }
@@ -130,7 +101,6 @@ namespace ProjetoGrupo6.DAL
         public List<Modelo.RelacaoInteresse> SelectListaInteresse(string perfil)
         {
             Modelo.RelacaoInteresse aFavorito;
-            // Cria Lista Vazia
             List<Modelo.RelacaoInteresse> aListFavorito = new List<Modelo.RelacaoInteresse>();
             SqlConnection conn = new SqlConnection(connectionString);
             conn.Open();
@@ -143,6 +113,31 @@ namespace ProjetoGrupo6.DAL
                 while (dr.Read())
                 {
                     aFavorito = new Modelo.RelacaoInteresse(dr["caminhoImagem"].ToString());
+                    aListFavorito.Add(aFavorito);
+                }
+            }
+            dr.Close();
+            conn.Close();
+            return aListFavorito;
+        }
+
+        // SELECT EM TODOS OS INTERESSES DE UM USUÁRIO
+        [DataObjectMethod(DataObjectMethodType.Select)]
+        public List<Modelo.RelacaoFavorito> SelectListaFavoritoTodos(string perfil)
+        {
+            Modelo.RelacaoFavorito aFavorito;
+            List<Modelo.RelacaoFavorito> aListFavorito = new List<Modelo.RelacaoFavorito>();
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "exec sp_SelectInteressesUsuarioTodos @perfil";
+            cmd.Parameters.AddWithValue("@perfil", perfil);
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    aFavorito = new Modelo.RelacaoFavorito(dr["filme_name"].ToString(), dr["caminhoImagem"].ToString());
                     aListFavorito.Add(aFavorito);
                 }
             }

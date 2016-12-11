@@ -137,7 +137,7 @@ namespace ProjetoGrupo6.DAL
             {
                 while (dr.Read())
                 {
-                    aFavorito = new Modelo.RelacaoFavorito(dr["caminhoImagem"].ToString());
+                    aFavorito = new Modelo.RelacaoFavorito(dr["filme_name"].ToString(), dr["caminhoImagem"].ToString());
                     aListFavorito.Add(aFavorito);
                 }
             }
