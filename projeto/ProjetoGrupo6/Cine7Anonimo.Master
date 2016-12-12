@@ -17,17 +17,10 @@
     <form id="form1" runat="server">
         <div class="clearfix" style=" width:auto; height:100px; background-color:#3D0207">
        <p id="logo" style="float: left; line-height: 100px">
-           <asp:ImageButton ID="ImageButtonLogo" runat="server" Height="83px" ImageUrl="~/Imagens/logoBranco.png" />
+           <asp:ImageButton ID="ImageButtonLogo" runat="server" Height="83px" ImageUrl="~/Imagens/logoBranco.png" Width="59px" />
             </p>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<asp:TextBox ID="TextBoxPesquisar" runat="server" CssClass="pesquisa" Width="200px"></asp:TextBox>
        <ul class="list-unstyled list-inline lista-menu-principal" style="color: #fff;">
-           <li>
-               <div class="dropdown" id="dropdownMenu1" aria-haspopup="true" aria-expanded="true">
-                   <a class="dropdown-toggle" data-toggle="dropdown">Filmes</a>
-                   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                   </ul>
-               </div>
-           </li>
            <li><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Login.aspx">Login</asp:HyperLink></li>
            <li><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/CriarLogin.aspx">Cadastro</asp:HyperLink></li>
        </ul>

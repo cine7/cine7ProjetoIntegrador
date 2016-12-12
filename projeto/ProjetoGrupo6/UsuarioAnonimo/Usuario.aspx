@@ -1,8 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Cine7Normal.Master" AutoEventWireup="true" CodeBehind="Usuario.aspx.cs" Inherits="ProjetoGrupo6.UsuarioNormal.Usuario" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Cine7Anonimo.Master" AutoEventWireup="true" CodeBehind="Usuario.aspx.cs" Inherits="ProjetoGrupo6.UsuarioAnonimo.Usuario" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container-fluid">
+        <div class="container-fluid">
         <div class="row">
             <div class="col-md-3">
             <br /> 
@@ -10,9 +10,8 @@
                 <asp:Image ID="ImagePerfil" runat="server" Height="40px" Width="40px" />
                 <asp:Label ID="LabelUsuario" runat="server" Text="Label" CssClass="labelUsuario"></asp:Label></b>
             &nbsp;&nbsp;
-            <asp:LinkButton ID="LinkButtonSeguirEditar" runat="server" ForeColor="Black" OnClick="LinkButtonSeguirEditar_Click">Seguir</asp:LinkButton>
-            &nbsp;<asp:LinkButton ID="LinkButtonCRUDFilme" runat="server" ForeColor="Black" OnClick="LinkButtonCRUDFilme_Click">CRUDFilme</asp:LinkButton>
-            <br />
+            <asp:LinkButton ID="LinkButtonSeguirEditar" runat="server" ForeColor="Black" OnClick="AnonimoClick_Click">Seguir</asp:LinkButton>
+            &nbsp;<br />
                 </div>
          </div>
         <br />
@@ -68,7 +67,7 @@
                 <div id="feedUsuario">
                 <asp:DataList ID="DataList1_Feed" runat="server" DataSourceID="ObjectDataSource4">
                     <ItemTemplate>
-                        <asp:LinkButton ID="LinkButtonUsuarioPost" runat="server" ForeColor="#333333" OnClick="LinkButtonUsuarioPost_Click" OnPreRender="LinkButtonUsuarioPost_PreRender" Text='<%# Eval("usuario") %>'></asp:LinkButton>
+                        <asp:LinkButton ID="LinkButtonUsuarioPost" runat="server" ForeColor="#333333" OnClick="LinkButtonUsuarioPost_Click" Text='<%# Eval("usuario") %>'></asp:LinkButton>
                         <asp:Label ID="descricaoLabel" runat="server" Text='<%# Eval("descricao") %>' />
                         &nbsp;<br />
                         <asp:LinkButton ID="LinkButtonFilme_namePost" runat="server" ForeColor="#333333" OnClick="LinkButtonFilme_namePost_Click" Text='<%# Eval("filme_name") %>'></asp:LinkButton>

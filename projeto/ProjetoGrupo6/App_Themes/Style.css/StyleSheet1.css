@@ -51,7 +51,6 @@ li{
     position:relative;
     bottom:-53px;
     left: 126px;
-    height: 1px;
     width: 17px;
 }
 #faleconosco {
@@ -70,13 +69,17 @@ li{
     left:700px;
     top:-600px;
 }
-
+/*CADASTRO*/
+[id*="ContentPlaceHolder1_RadioButton"]
+{
+    font-weight:100;
+}
 /*MENU*/
 a:hover {
     color:#fff;
 }
 /*USUARIO*/
-[id*="ContentPlaceHolder1_DataList1_tipoLabel"]
+[for*="ContentPlaceHolder1_DataList1_tipoLabel"]
 {
     width:100%;
     border:1px solid;
@@ -100,7 +103,6 @@ a:hover {
 }
 /*HOME ANONIMO*/
 #homeAnonimo {
-    position: relative; left: 40%; width:261px;
 }
 
 /*LOGIN*/

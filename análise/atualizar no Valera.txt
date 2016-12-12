@@ -3,3 +3,9 @@
 - excluir coluna dataNascimento de post
 
 - stored procedures de listarTodo favoritos, vistos e interesses
+
+- DALs de inserts UsersInRoles
+
+- Usuario.aspx.cs
+
+- excluir coluna gênero

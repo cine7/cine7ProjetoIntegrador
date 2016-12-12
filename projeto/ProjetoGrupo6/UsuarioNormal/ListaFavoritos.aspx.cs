@@ -20,5 +20,11 @@ namespace ProjetoGrupo6.UsuarioNormal
             Session["filme_name"] = filme_name;
             Response.Redirect("~/UsuarioNormal/Filme.aspx?Filme=" + filme_name);
         }
+
+        protected void LinkButtonListaFavoritosTodos_Click(object sender, EventArgs e)
+        {
+            Session["filme_name"] = (sender as LinkButton).Text;
+            Response.Redirect("~/UsuarioNormal/Filme.aspx?Filme=" + (sender as LinkButton).Text);
+        }
     }
 }

@@ -11,6 +11,7 @@ namespace ProjetoGrupo6.UsuarioAnonimo
 {
     public partial class Filme : System.Web.UI.Page
     {
+        string comentario_id;
         protected void Page_Load(object sender, EventArgs e)
         {
             // Conferindo se o usuário da Sessão não é Normal
@@ -19,60 +20,121 @@ namespace ProjetoGrupo6.UsuarioAnonimo
                 Response.Redirect("~/UsuarioNormal/Filme.aspx");
             }
 
-            // Atribuindo o nome da filme a label
             LabelFilme.Text = Request.QueryString["Filme"];
 
-            Session["filme_name"] = LabelFilme.Text;
-
-            
-            // Lendo o restante das informações dos filmes
-            string aSQLConecStr;
-
-            // Lendo a conexão de dados do Web.Config
-            aSQLConecStr = ConfigurationManager.ConnectionStrings["2016TiiGrupo6ConnectionString"].ConnectionString;
-
-            // Abrindo a Conexão com o banco de dados
-            SqlConnection aSQLCon = new SqlConnection(aSQLConecStr);
-            aSQLCon.Open();
+            DAL.DALFilme DALFilme = new DAL.DALFilme();
+            Modelo.Filme filme = DALFilme.SelectFilme(LabelFilme.Text);
+            LabelFilme_id.Text = filme.filme_id.ToString();
+            LabelAno.Text = filme.ano.ToString();
+            LabelSinopse.Text = filme.sinopse.ToString();
+            LabelDiretor.Text = filme.diretor.ToString();
+            LabelProdutora.Text = filme.produtora.ToString();
+            LabelDuracao.Text = filme.duracao.ToString();
+            ImageFilme.ImageUrl = filme.caminhoImagem.ToString();
 
 
-            // Cria comando SQL
-            SqlCommand cmd = aSQLCon.CreateCommand();
-            // define SQL do comando
-            cmd.CommandText = "Select * FROM Filme where filme_name = @filme_name";
-
-            cmd.Parameters.AddWithValue("@filme_name", LabelFilme.Text);
-
-            SqlDataReader dr = cmd.ExecuteReader();
-            if (dr.HasRows)
-            {
-                while (dr.Read()) // Le o proximo registro
-                {
-                    // Cria objeto com dados lidos do banco de dados
-                    LabelFilme_id.Text = dr["filme_id"].ToString();
-                    LabelAno.Text = dr["ano"].ToString();
-                    LabelSinopse.Text = dr["sinopse"].ToString();
-                    LabelDiretor.Text = dr["diretor"].ToString();
-                    LabelProdutora.Text = dr["produtora"].ToString();
-                    LabelDuracao.Text = dr["duracao"].ToString();
-                    // Adiciona o livro lido à lista
-                }
-            }
-
-            dr.Close();
-            aSQLCon.Close();
             Session["filme_id"] = int.Parse(LabelFilme_id.Text);
+
+
+            //BotãoFavorito
+            ImageButtonFavorito.Attributes.Add("onmouseover", "ContentPlaceHolder1_ImageButtonFavorito.src = '/Imagens/desfavoritarButton.png';");
+            ImageButtonFavorito.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonFavorito.src = '/Imagens/favoritarButton.png';");
+
+            DAL.DALRelacaoFavorito DALRelacaoFavorito = new DAL.DALRelacaoFavorito();
+            Modelo.RelacaoFavorito relacaofavorito2 = new Modelo.RelacaoFavorito(int.Parse(LabelFilme_id.Text));
+            LabelQuantidadeFavorito.Text = DALRelacaoFavorito.SelectQuantidadeFavorito(relacaofavorito2).ToString();
+
+            //BotãoInteresse
+            ImageButtonInteresse.Attributes.Add("onmouseover", "ContentPlaceHolder1_ImageButtonInteresse.src = '/Imagens/tvInteresseButton.png';");
+            ImageButtonInteresse.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonInteresse.src = '/Imagens/cancelarInteresseButton.png';");
+
+            DAL.DALRelacaoInteresse DALRelacaoInteresse = new DAL.DALRelacaoInteresse();
+            Modelo.RelacaoInteresse relacaointeresse2 = new Modelo.RelacaoInteresse(int.Parse(LabelFilme_id.Text));
+            LabelQuantidadeInteresse.Text = DALRelacaoInteresse.SelectQuantidadeInteresse(relacaointeresse2).ToString();
+
+            //BotãoVisto
+            ImageButtonVisto.Attributes.Add("onmouseover", "ContentPlaceHolder1_ImageButtonVisto.src = '/Imagens/cancelarVisto.png';");
+            ImageButtonVisto.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonVisto.src = '/Imagens/vistoButton.png';");
+
+            DAL.DALRelacaoVisto DALRelacaoVisto = new DAL.DALRelacaoVisto();
+            Modelo.RelacaoVisto relacaovisto2 = new Modelo.RelacaoVisto(int.Parse(LabelFilme_id.Text));
+            LabelQuantidadeVisto.Text = DALRelacaoVisto.SelectQuantidadeVisto(relacaovisto2).ToString();
+
+            /*ESTRELA ACESA CASO O FILME ESTEJA AVALIADO*/
+            ImageButtonEstrela1.Attributes.Add("onmouseover", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaAcesa.png");
+            ImageButtonEstrela1.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaApagada.png'");
+
+            ImageButtonEstrela2.Attributes.Add("onmouseover", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaAcesa.png';");
+            ImageButtonEstrela2.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaApagada.png';");
+
+            ImageButtonEstrela3.Attributes.Add("onmouseover", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaAcesa.png';");
+            ImageButtonEstrela3.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaApagada.png';");
+
+            ImageButtonEstrela4.Attributes.Add("onmouseover", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela4.src = '/Imagens/estrelaAcesa.png';");
+            ImageButtonEstrela4.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela4.src = '/Imagens/estrelaApagada.png';");
+
+            ImageButtonEstrela5.Attributes.Add("onmouseover", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela4.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela5.src = '/Imagens/estrelaAcesa.png';");
+            ImageButtonEstrela5.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela4.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela5.src = '/Imagens/estrelaApagada.png';");
+
+            ImageButtonEstrela6.Attributes.Add("onmouseover", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela4.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela5.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela6.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaAcesa.png';");
+            ImageButtonEstrela6.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela4.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela5.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela6.src = '/Imagens/estrelaApagada.png';");
+
+            ImageButtonEstrela7.Attributes.Add("onmouseover", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela4.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela5.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela6.src = '/Imagens/estrelaAcesa.png'; ContentPlaceHolder1_ImageButtonEstrela7.src = '/Imagens/estrelaAcesa.png';");
+            ImageButtonEstrela7.Attributes.Add("onmouseout", "ContentPlaceHolder1_ImageButtonEstrela1.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela2.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela3.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela4.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela5.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela6.src = '/Imagens/estrelaApagada.png'; ContentPlaceHolder1_ImageButtonEstrela7.src = '/Imagens/estrelaApagada.png';");
+
+            DAL.DALRelacaoAvaliacao DALRelacaoAvaliacao = new DAL.DALRelacaoAvaliacao();
+            Modelo.RelacaoAvaliacao relacaoavaliacao3 = new Modelo.RelacaoAvaliacao(int.Parse(LabelFilme_id.Text));
+            LabelQuantidadeAvaliacao.Text = DALRelacaoAvaliacao.SelectQuantidadeAvaliacao(relacaoavaliacao3).ToString();
+            if (LabelQuantidadeAvaliacao.Text != "0") LabelMediaAvaliacao.Text = DALFilme.SelectMediaFilme(relacaoavaliacao3).ToString();
+            else LabelMediaAvaliacao.Text = "";
             
+        }
+
+        protected void comentario_idLabel_PreRender(object sender, EventArgs e)
+        {
+            (sender as Label).Visible = true;
+            comentario_id = (sender as Label).Text;
+            (sender as Label).Visible = false;
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-
+            Response.Write("<script>alert('Para ter acesso a essa funcionalidade, você precisa estar cadastrado');</script>");
         }
 
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/UsuarioAnonimo/ResultadoPesquisa.aspx?Filme=" + LabelFilme.Text);
+        }
+
+        protected void AnonimoClick_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Write("<script>alert('Para ter acesso a essa funcionalidade, você precisa estar cadastrado');</script>");
+        }
+
+        protected void ImageButtonVisto_Click(object sender, ImageClickEventArgs e)
+        {
+
+        }
+
+        protected void LinkButtonUsuario_Click(object sender, EventArgs e)
+        {
+            String usuario = (sender as LinkButton).Text;
+            Response.Redirect("~/UsuarioAnonimo/Usuario.aspx?Usuario=" + usuario);
+        }
+
+        protected void LabelPostivos_PreRender(object sender, EventArgs e)
+        {
+            DAL.DALAvaliacaoComentario DALAvaliacaoComentario = new DAL.DALAvaliacaoComentario();
+            int x = DALAvaliacaoComentario.SelectQuantidadeAvaliacao(1, int.Parse(comentario_id));
+            (sender as Label).Text = x.ToString();
+        }
+
+        protected void LabelNegativos_PreRender(object sender, EventArgs e)
+        {
+            DAL.DALAvaliacaoComentario DALAvaliacaoComentario = new DAL.DALAvaliacaoComentario();
+            int x = DALAvaliacaoComentario.SelectQuantidadeAvaliacao(1, int.Parse(comentario_id));
+            (sender as Label).Text = x.ToString();
         }
 
 

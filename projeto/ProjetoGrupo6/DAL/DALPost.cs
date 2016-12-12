@@ -86,6 +86,7 @@ namespace ProjetoGrupo6.DAL
                               dr["usuario"].ToString(),
                               dr["descricao"].ToString(),
                               dr["filme_name"].ToString());
+                    aListPost.Add(aPost);
                 }
             }
             dr.Close();

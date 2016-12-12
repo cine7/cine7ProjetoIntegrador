@@ -6,6 +6,8 @@
     <asp:DataList ID="DataList1" runat="server" DataSourceID="ObjectDataSource1" RepeatColumns="4">
         <ItemTemplate>
             <asp:ImageButton ID="ImageButtonListaFavoritosTodos" runat="server" Height="225px" ImageUrl='<%# Eval("caminhoImagem") %>' OnClick="ImageButtonListaFavoritosTodos_Click" Width="150px" />
+            <br />
+            <asp:LinkButton ID="LinkButtonListaFavoritosTodos" runat="server" ForeColor="#333333" OnClick="LinkButtonListaFavoritosTodos_Click" Text='<%# Eval("filme_name") %>'></asp:LinkButton>
         </ItemTemplate>
     </asp:DataList>
     <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="SelectListaFavoritoTodos" TypeName="ProjetoGrupo6.DAL.DALRelacaoFavorito">

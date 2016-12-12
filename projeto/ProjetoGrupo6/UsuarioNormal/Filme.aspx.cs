@@ -888,7 +888,6 @@ namespace ProjetoGrupo6.UsuarioNormal
 
         protected void LabelPostivos_PreRender(object sender, EventArgs e)
         {
-
             DAL.DALAvaliacaoComentario DALAvaliacaoComentario = new DAL.DALAvaliacaoComentario();
             int x = DALAvaliacaoComentario.SelectQuantidadeAvaliacao(1, int.Parse(comentario_id));
             (sender as Label).Text = x.ToString();

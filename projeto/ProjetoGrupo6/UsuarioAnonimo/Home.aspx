@@ -4,22 +4,18 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class ="row">
         <div id ="homeAnonimo">
-        <div class ="col-md-3"></div>  
-        <div class ="col-md-6"> 
-            <b>TOP 10 MENSAL</b><br />
-            1º: Lorem Ipsum <br />
-            2º: Lorem Ipsum <br />
-            3º: Lorem Ipsum <br />
-            4º: Lorem Ipsum <br />
-            5º: Lorem Ipsum <br />
-            6º: Lorem Ipsum <br />
-            7º: Lorem Ipsum <br />
-            8º: Lorem Ipsum <br />
-            9º: Lorem Ipsum <br />
-           10º: Lorem Ipsum <br />
-         </div>
-        <div class ="col-md-3">
-        </div> 
+                TOP 10 CINE7<asp:DataList ID="DataList1" runat="server" DataSourceID="ObjectDataSource1" RepeatColumns="5">
+                    <ItemTemplate>
+                        <asp:ImageButton ID="ImageButtonFilmeHome" runat="server" Height="300px" ImageUrl='<%# Eval("caminhoImagem") %>' OnClick="ImageButtonFilmeHome_Click" Width="200px" />
+                        <br />
+                        <asp:LinkButton ID="LinkButtonFilme_nameHome" runat="server" ForeColor="#333333" OnClick="LinkButtonFilme_nameHome_Click" Text='<%# Eval("filme_name") %>'></asp:LinkButton>
+                    </ItemTemplate>
+                </asp:DataList>
+                <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="SelectFilmeHome" TypeName="ProjetoGrupo6.DAL.DALFilme">
+                </asp:ObjectDataSource>
+                <br />
+             </div>
+            </div> 
        </div> 
     </div>
 </asp:Content>

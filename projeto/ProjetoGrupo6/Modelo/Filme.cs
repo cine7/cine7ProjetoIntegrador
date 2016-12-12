@@ -64,5 +64,10 @@ namespace ProjetoGrupo6.Modelo
             this.filme_name = afilme_name;
             this.caminhoImagem = acaminhoImagem;
         }
+        public Filme(string afilme_name, string acaminhoImagem)
+        {
+            this.filme_name = afilme_name;
+            this.caminhoImagem = acaminhoImagem;
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -9,6 +10,7 @@ namespace ProjetoGrupo6.UsuarioNormal
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
+        string nomeAtual = "", emailAtual = "", paisAtual = "", sexoAtual = "", caminhoImagemAtual = "";
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["usuario"] == null)
@@ -18,47 +20,47 @@ namespace ProjetoGrupo6.UsuarioNormal
             DAL.DALUsuario DALUsuario = new DAL.DALUsuario();
             Modelo.Usuario usuario = DALUsuario.SelectUsuario(Session["usuario"].ToString());
 
-            /*TextBoxNome.Text = usuario.nome;
-            TextBoxEmail.Text = usuario.email;
-            TextBoxPais.Text = usuario.pais;
-            TextBoxSexo.Text = usuario.sexo;
-            ImagePerfil.ImageUrl = usuario.caminhoImagem;*/
+            nomeAtual = usuario.nome;
+            emailAtual = usuario.email;
+            paisAtual = usuario.pais;
+            sexoAtual = usuario.sexo;
+            caminhoImagemAtual = usuario.caminhoImagem;
 
         }
 
-        protected void ButtonEditarNome_Click(object sender, EventArgs e)
+        protected void ButtonEditarInfosPerfil_Click(object sender, EventArgs e)
         {
+            string novoNome = "", novoEmail = "", novoPais= "", novoSexo = "", novoCaminhoImagem = "";
+
+            if (TextBoxNome.Text == "") novoNome = nomeAtual;
+            else novoNome = TextBoxNome.Text;
+
+            if (TextBoxEmail.Text == "") novoEmail = emailAtual;
+            else novoEmail = TextBoxEmail.Text;
+
+            if (TextBoxPais.Text == "") novoPais = paisAtual;
+            else novoPais = TextBoxPais.Text;
+
+            if (RadioButtonEditarFeminino.Checked == false && RadioButtonEditarMasculino.Checked == false) novoSexo = sexoAtual;
+            else {
+                if (RadioButtonEditarFeminino.Checked == true) novoSexo = "Feminino";
+                if (RadioButtonEditarFeminino.Checked == true) novoSexo = "Masculino";
+            }
+
+            novoCaminhoImagem = FileUploadEditarImagemPerfil.FileName;
+            if (novoCaminhoImagem == "") novoCaminhoImagem = caminhoImagemAtual;
+            else { novoCaminhoImagem = "~/Imagens/Perfil/" + FileUploadEditarImagemPerfil.FileName; UploadImagem(); }
+
             DAL.DALUsuario DALUsuario = new DAL.DALUsuario();
-            DALUsuario.UpdateNome(TextBoxNome.Text, Session["usuario"].ToString());
+            Modelo.Usuario usuarioEditar = new Modelo.Usuario(novoNome, novoEmail, novoPais, novoSexo, novoCaminhoImagem);
+            DALUsuario.UpdateInfosPerfil(usuarioEditar, Session["usuario"].ToString());
             Response.Redirect("~/UsuarioNormal/EditarPerfil.aspx");
         }
 
-        protected void ButtonEditarEmail_Click(object sender, EventArgs e)
+        public void UploadImagem()
         {
-            DAL.DALUsuario DALUsuario = new DAL.DALUsuario();
-            DALUsuario.UpdateEmail(TextBoxEmail.Text, Session["usuario"].ToString());
-            Response.Redirect("~/UsuarioNormal/EditarPerfil.aspx");
-        }
-
-        protected void ButtonEditarPais_Click(object sender, EventArgs e)
-        {
-            DAL.DALUsuario DALUsuario = new DAL.DALUsuario();
-            DALUsuario.UpdatePais(TextBoxPais.Text, Session["usuario"].ToString());
-            Response.Redirect("~/UsuarioNormal/EditarPerfil.aspx");
-        }
-
-        protected void ButtonEditarSexo_Click(object sender, EventArgs e)
-        {
-            DAL.DALUsuario DALUsuario = new DAL.DALUsuario();
-            DALUsuario.UpdateSexo(TextBoxSexo.Text, Session["usuario"].ToString());
-            Response.Redirect("~/UsuarioNormal/EditarPerfil.aspx");
-        }
-
-        protected void ButtonEditarCaminhoImagem_Click(object sender, EventArgs e)
-        {
-            DAL.DALUsuario DALUsuario = new DAL.DALUsuario();
-            DALUsuario.UpdateCaminhoImagem(FileUploadEditarImagemPerfil.FileName, Session["usuario"].ToString());
-            Response.Redirect("~/UsuarioNormal/EditarPerfil.aspx");
+            string directory = Request.PhysicalApplicationPath;
+            FileUploadEditarImagemPerfil.SaveAs(directory + "/Imagens/Perfil/" + FileUploadEditarImagemPerfil.FileName);
         }
     }
 }

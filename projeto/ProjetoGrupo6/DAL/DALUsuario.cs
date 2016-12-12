@@ -24,14 +24,14 @@ namespace ProjetoGrupo6.DAL
         {
             SqlConnection conn = new SqlConnection(connectionString);
             conn.Open();
-            SqlCommand cmd = new SqlCommand("INSERT INTO Usuario(usuario, senha, nome, email, pais, caminhoImagem) VALUES (@usuario, @senha, @nome, @email, @pais, @caminhoImagem)", conn);
+            SqlCommand cmd = new SqlCommand("INSERT INTO Usuario(usuario, senha, nome, email, pais, sexo, caminhoImagem) VALUES (@usuario, @senha, @nome, @email, @pais, @sexo, @caminhoImagem)", conn);
             cmd.Parameters.AddWithValue("@usuario", obj.usuario);
             cmd.Parameters.AddWithValue("@senha", obj.senha);
             cmd.Parameters.AddWithValue("@nome", obj.nome);
             cmd.Parameters.AddWithValue("@email", obj.email);
             cmd.Parameters.AddWithValue("@pais", obj.pais);
             cmd.Parameters.AddWithValue("@sexo", obj.sexo);
-            cmd.Parameters.AddWithValue("@caminhoImagem", "~/Imagens/Perfil/" + obj.caminhoImagem);
+            cmd.Parameters.AddWithValue("@caminhoImagem", obj.caminhoImagem);
             cmd.ExecuteNonQuery();
         }
 
@@ -101,12 +101,16 @@ namespace ProjetoGrupo6.DAL
 
         //UPDATE NOME DO USUÁRIO
         [DataObjectMethod(DataObjectMethodType.Update)]
-        public void UpdateNome(string nome, string usuario)
+        public void UpdateInfosPerfil(Modelo.Usuario obj, string usuario)
         {
             SqlConnection conn = new SqlConnection(connectionString);
             conn.Open();
-            SqlCommand cmd = new SqlCommand("UPDATE Usuario set nome = @nome where usuario = @usuario", conn);
-            cmd.Parameters.AddWithValue("@nome", nome);
+            SqlCommand cmd = new SqlCommand("UPDATE Usuario set nome = @nome, email = @email, pais = @pais, sexo = @sexo, caminhoImagem = @caminhoImagem where usuario = @usuario", conn);
+            cmd.Parameters.AddWithValue("@nome", obj.nome);
+            cmd.Parameters.AddWithValue("@email", obj.email);
+            cmd.Parameters.AddWithValue("@pais", obj.pais);
+            cmd.Parameters.AddWithValue("@sexo", obj.sexo);
+            cmd.Parameters.AddWithValue("@caminhoImagem", obj.caminhoImagem);
             cmd.Parameters.AddWithValue("@usuario", usuario);
             cmd.ExecuteNonQuery();
         }

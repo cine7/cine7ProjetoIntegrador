@@ -111,6 +111,71 @@ namespace ProjetoGrupo6.DAL
             return aFilme;
         }
 
+        //SELECT EM INFORMAÇÕES DE UM FILME PELO ID
+        [DataObjectMethod(DataObjectMethodType.Select)]
+        public Modelo.Filme SelectFilmePorId(int filme_id)
+        {
+            Modelo.Filme aFilme = new Modelo.Filme();
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "Select * from Filme where filme_id = @filme_id";
+            cmd.Parameters.AddWithValue("@filme_id", filme_id);
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    aFilme = new Modelo.Filme(
+                        dr["filme_name"].ToString(),
+                        Convert.ToInt32(dr["ano"]),
+                        dr["sinopse"].ToString(),
+                        dr["diretor"].ToString(),
+                        dr["produtora"].ToString(),
+                        Convert.ToInt32(dr["duracao"]),
+                        dr["caminhoImagem"].ToString()
+                        );
+                }
+            }
+            dr.Close();
+            conn.Close();
+            return aFilme;
+        }
+
+        //SELECT TODOS FILMES DA PESQUISA
+        [DataObjectMethod(DataObjectMethodType.Select)]
+        public List<Modelo.Filme> SelectAllFilmeCRUD(string filme)
+        {
+            Modelo.Filme aFilme;
+            List<Modelo.Filme> aListFilme = new List<Modelo.Filme>();
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "Select filme_id, filme_name, ano, sinopse, diretor, produtora, duracao, caminhoImagem from Filme where filme_name like '%' + @filme_name + '%'";
+            cmd.Parameters.AddWithValue("@filme_name", filme);
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    aFilme = new Modelo.Filme(
+                        Convert.ToInt32(dr["filme_id"]),
+                        dr["filme_name"].ToString(),
+                        Convert.ToInt32(dr["ano"]),
+                        dr["sinopse"].ToString(),
+                        dr["diretor"].ToString(),
+                        dr["produtora"].ToString(),
+                        Convert.ToInt32(dr["duracao"]),
+                        dr["caminhoImagem"].ToString()
+                        );
+                    aListFilme.Add(aFilme);
+                }
+            }
+            dr.Close();
+            conn.Close();
+            return aListFilme;
+        }
+
         // SELECT NO NOME PELO CAMINHO DA IMAGEM
         [DataObjectMethod(DataObjectMethodType.Select)]
         public string SelectFilmeNamePorImagem(string caminhoImagem)
@@ -132,6 +197,32 @@ namespace ProjetoGrupo6.DAL
             dr.Close();
             conn.Close();
             return filme_name;
+        }
+        
+        [DataObjectMethod(DataObjectMethodType.Select)]
+        public List<Modelo.Filme> SelectFilmeHome()
+        {
+            List<Modelo.Filme> aListFilme = new List<Modelo.Filme>();
+            Modelo.Filme aFilme = new Modelo.Filme();
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "Select TOP 10 filme_name, caminhoImagem from Filme order by media desc";
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    aFilme = new Modelo.Filme(
+                        dr["filme_name"].ToString(),
+                        dr["caminhoImagem"].ToString()
+                        );
+                    aListFilme.Add(aFilme);
+                }
+            }
+            dr.Close();
+            conn.Close();
+            return aListFilme;
         }
 
         //INSERT EM UM FILME
@@ -182,7 +273,7 @@ namespace ProjetoGrupo6.DAL
             {
                 while (dr.Read())
                 {
-                    if (dr["media"] != null) media = Convert.ToDouble(dr["media"]); //ISSO NÃO FAZ SENTIDO
+                    media = Convert.ToDouble(dr["media"]);
                 }
             }
             dr.Close();
@@ -199,6 +290,26 @@ namespace ProjetoGrupo6.DAL
             conn.Open();
             SqlCommand cmd = conn.CreateCommand();
             cmd.CommandText = "DELETE FROM Filme where filme_id = @filme_id";
+            cmd.Parameters.AddWithValue("@filme_id", filme_id);
+
+            cmd.ExecuteNonQuery();
+        }
+
+        //UPDATE NO FILME
+        [DataObjectMethod(DataObjectMethodType.Update)]
+        public void UpdateFilme(Modelo.Filme obj, int filme_id)
+        {
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            SqlCommand com = conn.CreateCommand();
+            SqlCommand cmd = new SqlCommand("UPDATE Filme set filme_name = @filme_name, ano = @ano, sinopse = @sinopse, diretor = @diretor, produtora = @produtora, duracao = @duracao, caminhoImagem = @caminhoImagem where filme_id = @filme_id", conn);
+            cmd.Parameters.AddWithValue("@filme_name", obj.filme_name);
+            cmd.Parameters.AddWithValue("@ano", obj.ano);
+            cmd.Parameters.AddWithValue("@sinopse", obj.sinopse);
+            cmd.Parameters.AddWithValue("@diretor", obj.diretor);
+            cmd.Parameters.AddWithValue("@produtora", obj.produtora);
+            cmd.Parameters.AddWithValue("@duracao", obj.duracao);
+            cmd.Parameters.AddWithValue("@caminhoImagem", obj.caminhoImagem);
             cmd.Parameters.AddWithValue("@filme_id", filme_id);
 
             cmd.ExecuteNonQuery();

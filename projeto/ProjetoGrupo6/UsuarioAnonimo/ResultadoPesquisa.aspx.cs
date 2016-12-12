@@ -27,5 +27,12 @@ namespace ProjetoGrupo6.UsuarioAnonimo
         {
 
         }
+
+        protected void LinkButtonFilme_namePesquisa_Click(object sender, EventArgs e)
+        {
+            String filme_name = (sender as LinkButton).Text;
+            Session["filme_name"] = filme_name;
+            Response.Redirect("~/UsuarioAnonimo/Filme.aspx?Filme=" + filme_name);            
+        }
     }
 }

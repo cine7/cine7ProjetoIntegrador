@@ -5,7 +5,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-3">
-                <asp:Image ID="ImagePerfil" runat="server" BorderStyle="None" Width="100px" />
+                <asp:Image ID="ImagePerfil" runat="server" BorderStyle="None" Width="150px" Height="150px" />
             </div>
             <div class="col-md-9">
                 <asp:DataList ID="DataList1" runat="server" DataSourceID="ObjectDataSource1" OnLoad="DataList1_Load" OnPreRender="DataList1_PreRender">

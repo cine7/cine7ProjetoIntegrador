@@ -21,10 +21,16 @@ namespace ProjetoGrupo6.CriarLogin
         {
             string usuario = TextBoxUsuario.Text, senha = TextBoxSenha.Text, email = TextBoxEmail.Text;
 
+            string sexo = "";
+            if (RadioButtonFeminino.Checked == true) sexo = "Feminino";
+            else
+                if (RadioButtonMasculino.Checked == true) sexo = "Masculino";
+
             DAL.DALUsuario DALUsuario = new DAL.DALUsuario();
-            Modelo.Usuario usuariodal = new Modelo.Usuario(usuario, senha, TextBoxNome.Text, email, TextBoxPais.Text, TextBoxSexo.Text, FileUploadImagem.FileName);
+            Modelo.Usuario usuariodal = new Modelo.Usuario(usuario, senha, TextBoxNome.Text, email, TextBoxPais.Text, sexo, "~/Imagens/Perfil/" + FileUploadImagem.FileName);
             DALUsuario.Insert(usuariodal);
             UploadImagem();
+            //System.IO.Directory.CreateDirectory("~/Imagens/Perfil/" + usuario);
             Membership.CreateUser(usuario, senha, email);
             DAL.DALaspnet_UsersInRoles DALaspnet_UsersInRoles = new DAL.DALaspnet_UsersInRoles();
             if (TextBoxCodigoAdministrador.Text == "adm123")
@@ -35,7 +41,6 @@ namespace ProjetoGrupo6.CriarLogin
             {
                 DALaspnet_UsersInRoles.InsertNormal(usuario);
             }
-            //Roles.AddUserToRole(usuario, "Normal");
             Response.Redirect("~/Login.aspx");
         }
 

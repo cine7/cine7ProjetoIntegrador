@@ -21,7 +21,8 @@ namespace ProjetoGrupo6.UsuarioNormal
             }
             DAL.DALaspnet_UsersInRoles DALaspnet_UsersInRoles = new DAL.DALaspnet_UsersInRoles();
             string roleUsuario = DALaspnet_UsersInRoles.SelectUserRole(Session["usuario"].ToString());
-            if (roleUsuario == "e941bc42-522f-4cb3-9ce6-92b349af7b3a")
+            //if (roleUsuario == "e941bc42-522f-4cb3-9ce6-92b349af7b3a")
+            if (roleUsuario == "33b63735-44f1-4c8e-aa15-86586ffa3411")
             {
                 LinkButtonCRUDFilme.Visible = true;
             }
@@ -123,12 +124,23 @@ namespace ProjetoGrupo6.UsuarioNormal
 
         protected void LinkButtonFilme_namePost_Click(object sender, EventArgs e)
         {
+            Session["filme_name"] = (sender as LinkButton).Text;
             Response.Redirect("~/UsuarioNormal/Filme.aspx?Filme=" + (sender as LinkButton).Text);
         }
 
         protected void LinkButtonVerMaisFavoritos_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/UsuarioNormal/ListaFavoritos.aspx");
+        }
+
+        protected void LinkButtonVerMaisVistos_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/UsuarioNormal/ListaVistos.aspx");
+        }
+
+        protected void LinkButtonVerMaisInteresses_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/UsuarioNormal/ListaInteresses.aspx");
         }
     }
 }

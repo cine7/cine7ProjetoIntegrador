@@ -22,15 +22,6 @@ namespace ProjetoGrupo6.UsuarioNormal {
         protected global::System.Web.UI.WebControls.TextBox TextBoxNome;
         
         /// <summary>
-        /// ButtonEditarNome control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonEditarNome;
-        
-        /// <summary>
         /// TextBoxEmail control.
         /// </summary>
         /// <remarks>
@@ -38,15 +29,6 @@ namespace ProjetoGrupo6.UsuarioNormal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBoxEmail;
-        
-        /// <summary>
-        /// ButtonEditarEmail control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonEditarEmail;
         
         /// <summary>
         /// TextBoxPais control.
@@ -58,31 +40,22 @@ namespace ProjetoGrupo6.UsuarioNormal {
         protected global::System.Web.UI.WebControls.TextBox TextBoxPais;
         
         /// <summary>
-        /// ButtonEditarPais control.
+        /// RadioButtonEditarMasculino control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonEditarPais;
+        protected global::System.Web.UI.WebControls.RadioButton RadioButtonEditarMasculino;
         
         /// <summary>
-        /// TextBoxSexo control.
+        /// RadioButtonEditarFeminino control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxSexo;
-        
-        /// <summary>
-        /// ButtonEditarSexo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonEditarSexo;
+        protected global::System.Web.UI.WebControls.RadioButton RadioButtonEditarFeminino;
         
         /// <summary>
         /// ImagePerfil control.
@@ -103,12 +76,48 @@ namespace ProjetoGrupo6.UsuarioNormal {
         protected global::System.Web.UI.WebControls.FileUpload FileUploadEditarImagemPerfil;
         
         /// <summary>
-        /// ButtonEditarCaminhoImagem control.
+        /// ButtonEditarInfosPerfil control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonEditarCaminhoImagem;
+        protected global::System.Web.UI.WebControls.Button ButtonEditarInfosPerfil;
+        
+        /// <summary>
+        /// TextBoxSenhaAtual control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxSenhaAtual;
+        
+        /// <summary>
+        /// TextBoxNovaSenha control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxNovaSenha;
+        
+        /// <summary>
+        /// TextBoxConfirmarNovaSenha control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxConfirmarNovaSenha;
+        
+        /// <summary>
+        /// ButtonAlterarSenha control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonAlterarSenha;
     }
 }

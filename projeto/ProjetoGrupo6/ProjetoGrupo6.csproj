@@ -78,9 +78,13 @@
     <Content Include="js\jquery.js" />
     <Content Include="UsuarioAnonimo\Filme.aspx" />
     <Content Include="UsuarioAnonimo\Home.aspx" />
+    <Content Include="UsuarioAnonimo\ListaFavoritos.aspx" />
+    <Content Include="UsuarioAnonimo\ListaInteresses.aspx" />
+    <Content Include="UsuarioAnonimo\ListaVistos.aspx" />
     <Content Include="UsuarioAnonimo\ResultadoPesquisa.aspx" />
     <Content Include="CriarLogin.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="UsuarioAnonimo\Usuario.aspx" />
     <Content Include="UsuarioNormal\CRUDFilme.aspx" />
     <Content Include="UsuarioNormal\Filme.aspx" />
     <Content Include="UsuarioNormal\Home.aspx" />
@@ -150,6 +154,27 @@
     <Compile Include="UsuarioAnonimo\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UsuarioAnonimo\ListaFavoritos.aspx.cs">
+      <DependentUpon>ListaFavoritos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioAnonimo\ListaFavoritos.aspx.designer.cs">
+      <DependentUpon>ListaFavoritos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioAnonimo\ListaInteresses.aspx.cs">
+      <DependentUpon>ListaInteresses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioAnonimo\ListaInteresses.aspx.designer.cs">
+      <DependentUpon>ListaInteresses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioAnonimo\ListaVistos.aspx.cs">
+      <DependentUpon>ListaVistos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioAnonimo\ListaVistos.aspx.designer.cs">
+      <DependentUpon>ListaVistos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UsuarioAnonimo\ResultadoPesquisa.aspx.cs">
       <DependentUpon>ResultadoPesquisa.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -172,6 +197,13 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuarioAnonimo\Usuario.aspx.cs">
+      <DependentUpon>Usuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioAnonimo\Usuario.aspx.designer.cs">
+      <DependentUpon>Usuario.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UsuarioNormal\CRUDFilme.aspx.cs">
       <DependentUpon>CRUDFilme.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

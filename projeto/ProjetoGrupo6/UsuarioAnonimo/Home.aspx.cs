@@ -14,5 +14,20 @@ namespace ProjetoGrupo6.UsuarioAnonimo
         {
 
         }
+
+        protected void ImageButtonFilmeHome_Click(object sender, ImageClickEventArgs e)
+        {
+            DAL.DALFilme DALFilme = new DAL.DALFilme();
+            string filme_name = DALFilme.SelectFilmeNamePorImagem((sender as ImageButton).ImageUrl);
+            Session["filme_name"] = filme_name;
+            Response.Redirect("~/UsuarioAnonimo/Filme.aspx?Filme=" + filme_name);
+        }
+
+        protected void LinkButtonFilme_nameHome_Click(object sender, EventArgs e)
+        {
+            String filme_name = (sender as LinkButton).Text;
+            Session["filme_name"] = filme_name;
+            Response.Redirect("~/UsuarioAnonimo/Filme.aspx?Filme=" + filme_name);   
+        }
     }
 }
