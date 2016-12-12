@@ -15,6 +15,7 @@ namespace ProjetoGrupo6.UsuarioNormal
         bool validarSegue;
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (Session["usuario"] == null)
             {
                 Response.Redirect("~/Login.aspx");
@@ -29,7 +30,7 @@ namespace ProjetoGrupo6.UsuarioNormal
             else LinkButtonCRUDFilme.Visible = false;
             LabelUsuario.Text = Request.QueryString["Usuario"];
 
-            Session["perfil"] = Request.QueryString["Usuario"];
+            Session["perfil"] = LabelUsuario.Text;
 
             usuario = Session["usuario"].ToString();
 
@@ -40,18 +41,18 @@ namespace ProjetoGrupo6.UsuarioNormal
             else
             {
                 DAL.DALSegue DALSegue = new DAL.DALSegue();
-                Modelo.Segue segue = new Modelo.Segue(Request.QueryString["Usuario"].ToString(), Session["usuario"].ToString());
+                Modelo.Segue segue = new Modelo.Segue(LabelUsuario.Text, usuario);
                 validarSegue = DALSegue.SelectValidar(segue);
                 if (validarSegue == true)
                     LinkButtonSeguirEditar.Text = "Seguindo";
             }
 
-                DAL.DALUsuario DALUsuario = new DAL.DALUsuario();
-                Modelo.Usuario usuario1 = new Modelo.Usuario(Session["usuario"].ToString());
-                string caminhoImagem = DALUsuario.SelectCaminhoImagem(usuario1);
+            DAL.DALUsuario DALUsuario = new DAL.DALUsuario();
+            Modelo.Usuario usuario1 = new Modelo.Usuario(Session["usuario"].ToString());
+            string caminhoImagem = DALUsuario.SelectCaminhoImagem(usuario1);
 
 
-                ImagePerfil.ImageUrl = caminhoImagem;
+            ImagePerfil.ImageUrl = caminhoImagem;
         }
             
 

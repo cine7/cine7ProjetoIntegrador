@@ -75,8 +75,8 @@ namespace ProjetoGrupo6.DAL
             SqlConnection conn = new SqlConnection(connectionString);
             conn.Open();
             SqlCommand cmd = conn.CreateCommand();
-            cmd.CommandText = "exec sp_SelectPost1 @perfil";
-            cmd.Parameters.AddWithValue("@perfil", perfil);
+            cmd.CommandText = "exec sp_SelectPost @perfil";
+            cmd.Parameters.AddWithValue("@perfil", "admFinal");
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.HasRows)
             {
@@ -105,7 +105,7 @@ namespace ProjetoGrupo6.DAL
             SqlConnection conn = new SqlConnection(connectionString);
             conn.Open();
             SqlCommand cmd = conn.CreateCommand();
-            cmd.CommandText = "exec sp_SelectFeed1 @perfil";
+            cmd.CommandText = "exec sp_SelectFeed @perfil";
             cmd.Parameters.AddWithValue("@perfil", perfil);
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.HasRows)

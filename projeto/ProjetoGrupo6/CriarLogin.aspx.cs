@@ -26,22 +26,36 @@ namespace ProjetoGrupo6.CriarLogin
             else
                 if (RadioButtonMasculino.Checked == true) sexo = "Masculino";
 
+
+
             DAL.DALUsuario DALUsuario = new DAL.DALUsuario();
-            Modelo.Usuario usuariodal = new Modelo.Usuario(usuario, senha, TextBoxNome.Text, email, TextBoxPais.Text, sexo, "~/Imagens/Perfil/" + FileUploadImagem.FileName);
-            DALUsuario.Insert(usuariodal);
-            UploadImagem();
-            //System.IO.Directory.CreateDirectory("~/Imagens/Perfil/" + usuario);
-            Membership.CreateUser(usuario, senha, email);
-            DAL.DALaspnet_UsersInRoles DALaspnet_UsersInRoles = new DAL.DALaspnet_UsersInRoles();
-            if (TextBoxCodigoAdministrador.Text == "adm123")
+
+            bool existe = DALUsuario.VerificarUsuario(usuario);
+            if (existe == true)
             {
-                DALaspnet_UsersInRoles.InsertAdministrador(usuario);
+                Response.Write("<script>alert('O usuário inserindo já existe. Tente outro');</script>");
+
+                Response.Redirect("~/CriarLogin.aspx");
             }
-            else 
+            else
             {
-                DALaspnet_UsersInRoles.InsertNormal(usuario);
+                Modelo.Usuario usuariodal = new Modelo.Usuario(usuario, senha, TextBoxNome.Text, email, TextBoxPais.Text, sexo, "~/Imagens/Perfil/" + FileUploadImagem.FileName);
+                DALUsuario.Insert(usuariodal);
+                UploadImagem();
+                //System.IO.Directory.CreateDirectory("~/Imagens/Perfil/" + usuario);
+                Membership.CreateUser(usuario, senha, email);
+                DAL.DALaspnet_UsersInRoles DALaspnet_UsersInRoles = new DAL.DALaspnet_UsersInRoles();
+                if (TextBoxCodigoAdministrador.Text == "adm123")
+                {
+                    DALaspnet_UsersInRoles.InsertAdministrador(usuario);
+                }
+                else
+                {
+                    DALaspnet_UsersInRoles.InsertNormal(usuario);
+                }
+
+                Response.Redirect("~/Login.aspx");
             }
-            Response.Redirect("~/Login.aspx");
         }
 
         public void UploadImagem() 

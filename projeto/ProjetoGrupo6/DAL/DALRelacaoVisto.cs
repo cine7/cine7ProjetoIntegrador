@@ -103,7 +103,7 @@ namespace ProjetoGrupo6.DAL
             SqlConnection conn = new SqlConnection(connectionString);
             conn.Open();
             SqlCommand cmd = conn.CreateCommand();
-            cmd.CommandText = "exec sp_SelectVistosUsuario1 @perfil";
+            cmd.CommandText = "exec sp_SelectVistosUsuario @perfil";
             cmd.Parameters.AddWithValue("@perfil", perfil);
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.HasRows)
@@ -128,7 +128,7 @@ namespace ProjetoGrupo6.DAL
             SqlConnection conn = new SqlConnection(connectionString);
             conn.Open();
             SqlCommand cmd = conn.CreateCommand();
-            cmd.CommandText = "exec sp_SelectVistosUsuarioTodos1 @perfil";
+            cmd.CommandText = "exec sp_SelectVistosUsuarioTodos @perfil";
             cmd.Parameters.AddWithValue("@perfil", perfil);
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.HasRows)

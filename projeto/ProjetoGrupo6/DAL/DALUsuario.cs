@@ -37,6 +37,29 @@ namespace ProjetoGrupo6.DAL
 
         //SELECT NO CAMINHO DA IMAGEM
         [DataObjectMethod(DataObjectMethodType.Select)]
+        public bool VerificarUsuario(string usuario)
+        {
+            bool validar = false;
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "Select usuario from Usuario where usuario = @usuario";
+            cmd.Parameters.AddWithValue("@usuario", usuario);
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    if(dr["usuario"] != null) validar = true;
+                }
+            }
+            dr.Close();
+            conn.Close();
+            return validar;
+        }
+
+        //SELECT NO CAMINHO DA IMAGEM
+        [DataObjectMethod(DataObjectMethodType.Select)]
         public string SelectCaminhoImagem(Modelo.Usuario obj)
         {
             string caminhoImagem = "";

@@ -21,7 +21,7 @@
                 <div id="filmes">
                 Filmes Favoritos<asp:DataList ID="DataListFavoritos" runat="server" DataSourceID="ObjectDataSource1" RepeatDirection="Horizontal">
                     <ItemTemplate>
-                        <asp:ImageButton ID="ImageButtonFilmeFavoritoTop" runat="server" Height="150px" ImageUrl='<%# Eval("caminhoImagem") %>' OnClick="ImageButtonFilmeFavoritoTop_Click" Width="100px" />
+                        <asp:ImageButton ID="ImageButton3" runat="server" Height="150px" OnClick="ImageButtonFilmeFavoritoTop_Click" Width="100px" ImageUrl='<%# Eval("caminhoImagem") %>' />
                         <br />
                         <br />
                     </ItemTemplate>
@@ -35,7 +35,9 @@
                 <br />
                 Filmes Vistos<asp:DataList ID="DataListVistos" runat="server" DataSourceID="ObjectDataSource2" RepeatDirection="Horizontal">
                     <ItemTemplate>
-                        &nbsp;<asp:ImageButton ID="ImageButtonFilmeVistoTop" runat="server" ImageUrl='<%# Eval("caminhoImagem") %>' width="100px" height="150px" OnClick="ImageButtonFilmeVistoTop_Click" />
+                        <asp:ImageButton ID="ImageButton4" runat="server" Height="150px" ImageUrl='<%# Eval("caminhoImagem") %>' OnClick="ImageButtonFilmeVistoTop_Click" Width="100px" />
+                        <br />
+                        <br />
                     </ItemTemplate>
                 </asp:DataList>
                 <asp:ObjectDataSource ID="ObjectDataSource2" runat="server" SelectMethod="SelectListaVisto" TypeName="ProjetoGrupo6.DAL.DALRelacaoVisto">
@@ -47,7 +49,9 @@
                 <br />
                 Filmes que quero assistir<asp:DataList ID="DataListInteresses" runat="server" DataSourceID="ObjectDataSource3" RepeatDirection="Horizontal">
                     <ItemTemplate>
-                        <asp:ImageButton ID="ImageButtonFilmeInteresseTop" runat="server" ImageUrl='<%# Eval("caminhoImagem") %>' width="100px" height="150px" OnClick="ImageButtonFilmeInteresseTop_Click" />
+                        <asp:ImageButton ID="ImageButton5" runat="server" Height="150px" OnClick="ImageButtonFilmeInteresseTop_Click" Width="100px" ImageUrl='<%# Eval("caminhoImagem") %>' />
+                        <br />
+                        <br />
                     </ItemTemplate>
                 </asp:DataList>
                 <asp:ObjectDataSource ID="ObjectDataSource3" runat="server" SelectMethod="SelectListaInteresse" TypeName="ProjetoGrupo6.DAL.DALRelacaoInteresse">
