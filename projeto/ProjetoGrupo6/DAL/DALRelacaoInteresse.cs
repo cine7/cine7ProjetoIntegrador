@@ -105,7 +105,7 @@ namespace ProjetoGrupo6.DAL
             SqlConnection conn = new SqlConnection(connectionString);
             conn.Open();
             SqlCommand cmd = conn.CreateCommand();
-            cmd.CommandText = "exec sp_SelectInteressesUsuario @perfil";
+            cmd.CommandText = "exec sp_SelectInteressesUsuario1 @perfil";
             cmd.Parameters.AddWithValue("@perfil", perfil);
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.HasRows)
@@ -123,27 +123,46 @@ namespace ProjetoGrupo6.DAL
 
         // SELECT EM TODOS OS INTERESSES DE UM USUÁRIO
         [DataObjectMethod(DataObjectMethodType.Select)]
-        public List<Modelo.RelacaoFavorito> SelectListaFavoritoTodos(string perfil)
+        public List<Modelo.RelacaoInteresse> SelectListaInteresseTodos(string perfil)
         {
-            Modelo.RelacaoFavorito aFavorito;
-            List<Modelo.RelacaoFavorito> aListFavorito = new List<Modelo.RelacaoFavorito>();
+            Modelo.RelacaoInteresse aFavorito;
+            List<Modelo.RelacaoInteresse> aListFavorito = new List<Modelo.RelacaoInteresse>();
             SqlConnection conn = new SqlConnection(connectionString);
             conn.Open();
             SqlCommand cmd = conn.CreateCommand();
-            cmd.CommandText = "exec sp_SelectInteressesUsuarioTodos @perfil";
+            cmd.CommandText = "exec sp_SelectInteressesUsuarioTodos1 @perfil";
             cmd.Parameters.AddWithValue("@perfil", perfil);
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.HasRows)
             {
                 while (dr.Read())
                 {
-                    aFavorito = new Modelo.RelacaoFavorito(dr["filme_name"].ToString(), dr["caminhoImagem"].ToString());
+                    aFavorito = new Modelo.RelacaoInteresse(dr["filme_name"].ToString(), dr["caminhoImagem"].ToString());
                     aListFavorito.Add(aFavorito);
                 }
             }
             dr.Close();
             conn.Close();
             return aListFavorito;
+        }
+
+
+        //DELETAR UM FILME DA LISTA DE FAVORITOS DE UM USUÁRIO
+        [DataObjectMethod(DataObjectMethodType.Update)]
+        public void DeletePorId(int filme_id)
+        {
+            // Cria Conexão com banco de dados
+            SqlConnection conn = new SqlConnection(connectionString);
+            // Abre conexão com o banco de dados
+            conn.Open();
+            // Cria comando SQL
+            SqlCommand com = conn.CreateCommand();
+            // Define comando de exclusão
+            SqlCommand cmd = new SqlCommand("DELETE from  RelacaoInteresse WHERE filme_id = @filme_id", conn);
+            cmd.Parameters.AddWithValue("@filme_id", filme_id);
+
+            // Executa Comando
+            cmd.ExecuteNonQuery();
         }
     }
 }

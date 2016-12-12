@@ -11,7 +11,15 @@ namespace ProjetoGrupo6.UsuarioAnonimo
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Session["perfil"] = Request.QueryString["Usuario"];
+        }
 
+        protected void ImageButtonAnonimoFavoritosTodos_Click(object sender, ImageClickEventArgs e)
+        {
+            DAL.DALFilme DALFilme = new DAL.DALFilme();
+            string filme_name = DALFilme.SelectFilmeNamePorImagem((sender as ImageButton).ImageUrl);
+            Session["filme_name"] = filme_name;
+            Response.Redirect("~/UsuarioNormal/Filme.aspx?Filme=" + filme_name);
         }
     }
 }

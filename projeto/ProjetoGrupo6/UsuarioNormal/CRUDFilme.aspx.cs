@@ -50,6 +50,17 @@ namespace ProjetoGrupo6.UsuarioNormal
         protected void ButtonDelete_Click(object sender, EventArgs e)
         {
             DAL.DALFilme DALFilme = new DAL.DALFilme();
+            DAL.DALRelacaoAvaliacao DALRelacaoAvaliacao = new DAL.DALRelacaoAvaliacao();
+            DAL.DALRelacaoFavorito DALRelacaoFavorito = new DAL.DALRelacaoFavorito();
+            DAL.DALRelacaoInteresse DALRelacaoInteresse = new DAL.DALRelacaoInteresse();
+            DAL.DALRelacaoVisto DALRelacaoVisto = new DAL.DALRelacaoVisto();
+
+            DALRelacaoAvaliacao.DeletePorId(int.Parse(TextBoxFilme_idDelete.Text));
+            DALRelacaoFavorito.DeletePorId(int.Parse(TextBoxFilme_idDelete.Text));
+            DALRelacaoInteresse.DeletePorId(int.Parse(TextBoxFilme_idDelete.Text));
+            DALRelacaoVisto.DeletePorId(int.Parse(TextBoxFilme_idDelete.Text));
+
+
             DALFilme.DeleteCRUDFilme(int.Parse(TextBoxFilme_idDelete.Text));
             TextBoxFilme_idDelete.Text = "";
             Session["filme_nameDelete"] = "~^~^~^-=-=-=";

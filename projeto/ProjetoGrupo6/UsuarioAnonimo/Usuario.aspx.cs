@@ -59,22 +59,22 @@ namespace ProjetoGrupo6.UsuarioAnonimo
 
         protected void LinkButtonVerMaisFavoritos_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/UsuarioNormal/ListaFavoritos.aspx");
+            Response.Redirect("~/UsuarioAnonimo/ListaFavoritos.aspx?Usuario=" + LabelUsuario.Text);
         }
 
         protected void LinkButtonVerMaisVistos_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/UsuarioNormal/ListaVistos.aspx");
+            Response.Redirect("~/UsuarioAnonimo/ListaVistos.aspx?Usuario=" + LabelUsuario.Text);
         }
 
         protected void LinkButtonVerMaisInteresses_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/UsuarioAnonimo/ListaInteresses.aspx");
+            Response.Redirect("~/UsuarioAnonimo/ListaInteresses.aspx?Usuario=" + LabelUsuario.Text);
         }
 
         protected void LinkButtonUsuarioPost_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/UsuarioNormal/Usuario.aspx?Usuario=" + Session["usuario"].ToString());
+            Response.Redirect("~/UsuarioAnonimo/Usuario.aspx?Usuario=" + LabelUsuario.Text);
         }
 
         protected void LinkButtonFilme_namePost_Click(object sender, EventArgs e)

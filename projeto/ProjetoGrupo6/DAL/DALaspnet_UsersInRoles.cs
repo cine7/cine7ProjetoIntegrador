@@ -48,8 +48,8 @@ namespace ProjetoGrupo6.DAL
             Modelo.aspnet_Users aspnet_Users = new Modelo.aspnet_Users(userName);
             string userID = DALaspnet_Users.SelectUserID(aspnet_Users);
 
-            //SqlCommand cmd = new SqlCommand("insert into aspnet_UsersInRoles(userid, roleid) VALUES(@userid, 'E941BC42-522F-4CB3-9CE6-92B349AF7B3A')", conn);
-            SqlCommand cmd = new SqlCommand("insert into aspnet_UsersInRoles(userid, roleid) VALUES(@userid, '33B63735-44F1-4C8E-AA15-86586FFA3411')", conn);
+            SqlCommand cmd = new SqlCommand("insert into aspnet_UsersInRoles(userid, roleid) VALUES(@userid, 'E941BC42-522F-4CB3-9CE6-92B349AF7B3A')", conn);
+            //SqlCommand cmd = new SqlCommand("insert into aspnet_UsersInRoles(userid, roleid) VALUES(@userid, '33B63735-44F1-4C8E-AA15-86586FFA3411')", conn);
             cmd.Parameters.AddWithValue("@userid", userID);
 
             cmd.ExecuteNonQuery();

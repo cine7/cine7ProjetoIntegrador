@@ -14,7 +14,7 @@ namespace ProjetoGrupo6.UsuarioNormal
 
         }
 
-        protected void ImageButtonListaVistosTodos_Click(object sender, ImageClickEventArgs e)
+        protected void ImageButtonListaInteressesTodos_Click(object sender, ImageClickEventArgs e)
         {
             DAL.DALFilme DALFilme = new DAL.DALFilme();
             string filme_name = DALFilme.SelectFilmeNamePorImagem((sender as ImageButton).ImageUrl);
@@ -22,10 +22,11 @@ namespace ProjetoGrupo6.UsuarioNormal
             Response.Redirect("~/UsuarioNormal/Filme.aspx?Filme=" + filme_name);
         }
 
-        protected void LinkButtonListaVistosTodos_Click(object sender, EventArgs e)
+        protected void LinkButtonListaInteressesTodos_Click(object sender, EventArgs e)
         {
             Session["filme_name"] = (sender as LinkButton).Text;
             Response.Redirect("~/UsuarioNormal/Filme.aspx?Filme=" + (sender as LinkButton).Text);
         }
+
     }
 }

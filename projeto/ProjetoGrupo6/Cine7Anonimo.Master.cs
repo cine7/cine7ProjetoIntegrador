@@ -21,5 +21,15 @@ namespace ProjetoGrupo6
         {
             Response.Redirect("~/UsuarioAnonimo/ResultadoPesquisa.aspx?Filme=" + TextBoxPesquisar.Text);
         }
+
+        protected void ImageButtonRodaPeInstagram_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("www.facebook.com/sistemacine7");
+        }
+
+        protected void ImageButtonRodaPeFacebook_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("www.instagram.com/sistemacine7");
+        }
     }
 }

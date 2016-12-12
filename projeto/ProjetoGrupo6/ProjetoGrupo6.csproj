@@ -66,7 +66,9 @@
     <Content Include="Imagens\desfavoritarButton.png" />
     <Content Include="Imagens\estrelaAcesa.png" />
     <Content Include="Imagens\estrelaApagada.png" />
+    <Content Include="Imagens\facebook-logo-button %281%29.png" />
     <Content Include="Imagens\favoritarButton.png" />
+    <Content Include="Imagens\instagram-logo %281%29.png" />
     <Content Include="Imagens\logoBranco.png" />
     <Content Include="Imagens\lupaPesquisar.png" />
     <Content Include="Imagens\negativar.png" />

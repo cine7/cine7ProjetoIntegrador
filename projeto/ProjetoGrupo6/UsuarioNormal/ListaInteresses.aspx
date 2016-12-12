@@ -5,14 +5,15 @@
     <asp:Label ID="LabelFilmesInteressesTitleTodos" runat="server" Text="FILMES INTERESSES"></asp:Label>
 <asp:DataList ID="DataList1" runat="server" DataSourceID="ObjectDataSource1" RepeatColumns="4">
     <ItemTemplate>
-        <asp:ImageButton ID="ImageButtonListaInteressesTodos" runat="server" Height="225px" ImageUrl='<%# Eval("caminhoImagem") %>' OnClick="ImageButtonListaInteressesTodos_Click" Width="150px" />
         <br />
-        <asp:LinkButton ID="LinkButtonListaInteressesTodos" runat="server" ForeColor="#333333" OnClick="LinkButtonListaInteressesTodos_Click" Text='<%# Eval("filme_name") %>'></asp:LinkButton>
+        &nbsp;<asp:ImageButton ID="ImageButton1" runat="server" Height="300px" ImageUrl='<%# Eval("caminhoImagem") %>' OnClick="ImageButtonListaInteressesTodos_Click" Width="200px" />
         <br />
-<br />
+        <asp:LinkButton ID="LinkButton1" runat="server" ForeColor="#333333" OnClick="LinkButtonListaInteressesTodos_Click" Text='<%# Eval("filme_name") %>'></asp:LinkButton>
+        <br />
+        <br />
     </ItemTemplate>
 </asp:DataList>
-<asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="SelectListaFavoritoTodos" TypeName="ProjetoGrupo6.DAL.DALRelacaoInteresse">
+<asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="SelectListaInteresseTodos" TypeName="ProjetoGrupo6.DAL.DALRelacaoInteresse">
     <SelectParameters>
         <asp:SessionParameter Name="perfil" SessionField="perfil" Type="String" />
     </SelectParameters>

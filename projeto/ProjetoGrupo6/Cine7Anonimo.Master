@@ -31,8 +31,10 @@
         </asp:ContentPlaceHolder>
         <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
         <div id ="rodape" style=" width:auto; height:70px; background-color:#3D0207">
-            <asp:Image ID="Image1" runat="server" ImageAlign="Left" />&nbsp
-            <asp:HyperLink ID="FaleConosco" runat="server" NavigateUrl="~/FaleConosco.aspx"><p id ="faleconosco">Fale Conosco</p></asp:HyperLink>
+            &nbsp
+            <asp:ImageButton ID="ImageButtonRodaPeFacebook" runat="server" ImageUrl="~/Imagens/instagram-logo (1).png" Width="50px" OnClick="ImageButtonRodaPeFacebook_Click" /> &nbsp &nbsp &nbsp
+            &nbsp;<asp:ImageButton ID="ImageButtonRodaPeInstagram" runat="server" ImageUrl="~/Imagens/facebook-logo-button (1).png" Width="50px" OnClick="ImageButtonRodaPeInstagram_Click" />
+            
             </div>
     </form>
 </body>

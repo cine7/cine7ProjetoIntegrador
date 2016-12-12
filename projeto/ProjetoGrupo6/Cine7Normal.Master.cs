@@ -40,5 +40,15 @@ namespace ProjetoGrupo6
             Response.Redirect("~/UsuarioNormal/Usuario.aspx?Usuario=" + LinkButtonSessao.Text);
         }
 
+        protected void ImageButtonRodaPeFacebook_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("www.instagram.com/sistemacine7");
+        }
+
+        protected void ImageButtonRodaPeInstagram_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("www.facebook.com/sistemacine7");
+        }
+
     }
 }

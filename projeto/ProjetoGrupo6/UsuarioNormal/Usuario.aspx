@@ -68,10 +68,16 @@
                 <div id="feedUsuario">
                 <asp:DataList ID="DataList1_Feed" runat="server" DataSourceID="ObjectDataSource4">
                     <ItemTemplate>
+                        <asp:Label ID="Label3" runat="server" OnPreRender="Label3_PreRender" Text='<%# Eval("post_id") %>'></asp:Label>
                         <asp:LinkButton ID="LinkButtonUsuarioPost" runat="server" ForeColor="#333333" OnClick="LinkButtonUsuarioPost_Click" OnPreRender="LinkButtonUsuarioPost_PreRender" Text='<%# Eval("usuario") %>'></asp:LinkButton>
                         <asp:Label ID="descricaoLabel" runat="server" Text='<%# Eval("descricao") %>' />
                         &nbsp;<br />
                         <asp:LinkButton ID="LinkButtonFilme_namePost" runat="server" ForeColor="#333333" OnClick="LinkButtonFilme_namePost_Click" Text='<%# Eval("filme_name") %>'></asp:LinkButton>
+                        <br />
+                        <asp:Label ID="Label2" runat="server" OnPreRender="Label2_PreRender" Text="Label"></asp:Label>
+                        <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Imagens/positivar.jpg" OnClick="ImageButton1_Click" OnPreRender="ImageButton1_PreRender" Width="17px" />
+                        <asp:Label ID="Label1" runat="server" OnPreRender="Label1_PreRender" Text="Label"></asp:Label>
+                        <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/Imagens/negativar.png" OnClick="ImageButton2_Click" OnPreRender="ImageButton2_PreRender" Width="17px" />
                         <br />
                         <br />
                     </ItemTemplate>

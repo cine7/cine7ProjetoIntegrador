@@ -94,21 +94,21 @@ namespace ProjetoGrupo6 {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
         
         /// <summary>
-        /// Image1 control.
+        /// ImageButtonRodaPeFacebook control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image1;
+        protected global::System.Web.UI.WebControls.ImageButton ImageButtonRodaPeFacebook;
         
         /// <summary>
-        /// FaleConosco control.
+        /// ImageButtonRodaPeInstagram control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink FaleConosco;
+        protected global::System.Web.UI.WebControls.ImageButton ImageButtonRodaPeInstagram;
     }
 }

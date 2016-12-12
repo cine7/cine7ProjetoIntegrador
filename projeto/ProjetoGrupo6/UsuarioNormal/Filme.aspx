@@ -74,8 +74,6 @@
                 <asp:Label ID="descricaoLabel" runat="server" Text='<%# Eval("descricao") %>' />
                 <asp:LinkButton ID="LinkButtonApagar" runat="server" CommandName="comentario_id" ForeColor="#CC0000" OnClick="LinkButtonApagar_Click1" OnPreRender="LinkButtonApagar_PreRender1">X</asp:LinkButton>
                 <br />
-                <asp:Label ID="dataLabel" runat="server" Text='<%# Eval("data") %>' />
-                <br />
                 <asp:Label ID="LabelPostivos" runat="server" OnPreRender="LabelPostivos_PreRender" Text="Label"></asp:Label>
                 &nbsp;<asp:ImageButton ID="ImageButtonPositivar" runat="server" CommandName="comentario_id" ImageUrl="~/Imagens/positivar.jpg" OnClick="ImageButtonPositivar_Click" OnPreRender="ImageButtonPositivar_PreRender" Width="20px" />
                 <asp:Label ID="LabelNegativos" runat="server" OnPreRender="LabelNegativos_PreRender" Text="Label"></asp:Label>

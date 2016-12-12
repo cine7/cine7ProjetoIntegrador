@@ -27,5 +27,10 @@ namespace ProjetoGrupo6.UsuarioNormal
             Session["filme_name"] = (sender as LinkButton).Text;
             Response.Redirect("~/UsuarioNormal/Filme.aspx?Filme=" + (sender as LinkButton).Text);
         }
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+
+        }
     }
 }

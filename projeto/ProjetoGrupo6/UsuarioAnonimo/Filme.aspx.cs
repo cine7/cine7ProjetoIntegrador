@@ -92,9 +92,9 @@ namespace ProjetoGrupo6.UsuarioAnonimo
 
         protected void comentario_idLabel_PreRender(object sender, EventArgs e)
         {
-            (sender as Label).Visible = true;
+            /*(sender as Label).Visible = true;
             comentario_id = (sender as Label).Text;
-            (sender as Label).Visible = false;
+            (sender as Label).Visible = false;*/
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -125,16 +125,16 @@ namespace ProjetoGrupo6.UsuarioAnonimo
 
         protected void LabelPostivos_PreRender(object sender, EventArgs e)
         {
-            DAL.DALAvaliacaoComentario DALAvaliacaoComentario = new DAL.DALAvaliacaoComentario();
+            /*DAL.DALAvaliacaoComentario DALAvaliacaoComentario = new DAL.DALAvaliacaoComentario();
             int x = DALAvaliacaoComentario.SelectQuantidadeAvaliacao(1, int.Parse(comentario_id));
-            (sender as Label).Text = x.ToString();
+            (sender as Label).Text = x.ToString();*/
         }
 
         protected void LabelNegativos_PreRender(object sender, EventArgs e)
         {
-            DAL.DALAvaliacaoComentario DALAvaliacaoComentario = new DAL.DALAvaliacaoComentario();
+           /* DAL.DALAvaliacaoComentario DALAvaliacaoComentario = new DAL.DALAvaliacaoComentario();
             int x = DALAvaliacaoComentario.SelectQuantidadeAvaliacao(1, int.Parse(comentario_id));
-            (sender as Label).Text = x.ToString();
+            (sender as Label).Text = x.ToString();*/
         }
 
 

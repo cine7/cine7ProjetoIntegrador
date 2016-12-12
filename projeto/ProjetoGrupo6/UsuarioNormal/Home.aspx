@@ -28,8 +28,6 @@
                                 <br />
                                 <asp:Label ID="descricaoLabel" runat="server" Text='<%# Eval("descricao") %>' />
                                 <br />
-                                <asp:Label ID="dataLabel" runat="server" Text='<%# Eval("dataHora") %>' />
-                                <br />
                                 <asp:Label ID="post_idLabel" runat="server" Text='<%# Eval("post_id") %>' />
                                 <br />
                                 <asp:Label ID="usuarioComentarioLabel" runat="server" Text='<%# Eval("usuarioComentario") %>' />
