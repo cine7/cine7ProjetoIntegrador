@@ -14,7 +14,6 @@ namespace ProjetoGrupo6.Modelo
         public int filme_id { get; set; }
         public string usuario { get; set; }
         public string filme_name { get; set; }
-        public string usuarioNome { get; set; }
 
         // Construtor
         public Post()
