@@ -17,7 +17,7 @@ namespace ProjetoGrupo6.DAL
             connectionString = ConfigurationManager.ConnectionStrings["2016TiiGrupo6ConnectionString"].ConnectionString;
         }
 
-        //INSERT UM FILME NA LISTA DE FAVORITOS DE UM USUÁRIO
+        //INSERT EM UM POST
         [DataObjectMethod(DataObjectMethodType.Insert)]
         public void Insert(Modelo.Post obj)
         {
@@ -33,7 +33,7 @@ namespace ProjetoGrupo6.DAL
             cmd.ExecuteNonQuery();
         }
 
-        //INSERT UM FILME NA LISTA DE FAVORITOS DE UM USUÁRIO
+        //UPDATE EM UM POST
         [DataObjectMethod(DataObjectMethodType.Update)]
         public void Update(Modelo.Post obj)
         {
